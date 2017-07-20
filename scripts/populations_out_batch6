@@ -1,0 +1,616 @@
+Fst kernel smoothing: off
+Bootstrap resampling: off
+Percent samples limit per population: 0.75
+Locus Population limit: 4
+Minimum stack depth: 5
+Log liklihood filtering: off; threshold: 0
+Minor allele frequency cutoff: 0
+Maximum observed heterozygosity cutoff: 1
+Applying Fst correction: none.
+Parsing population map...
+The population map contained 264 samples, 9 population(s), 1 group(s).
+Reading the catalog...
+  Parsing ../stacks_b6/batch_6.catalog.tags.tsv
+  Parsing ../stacks_b6/batch_6.catalog.snps.tsv
+  Parsing ../stacks_b6/batch_6.catalog.alleles.tsv
+Reading matches to the catalog...
+  Parsing ../stacks_b6/PO010715_02.matches.tsv
+  Parsing ../stacks_b6/PO010715_02_rep.matches.tsv
+  Parsing ../stacks_b6/PO010715_04.matches.tsv
+  Parsing ../stacks_b6/PO010715_06.1.matches.tsv
+  Parsing ../stacks_b6/PO010715_08.1.matches.tsv
+  Parsing ../stacks_b6/PO010715_10.1.matches.tsv
+  Parsing ../stacks_b6/PO010715_11.1.matches.tsv
+  Parsing ../stacks_b6/PO010715_12.matches.tsv
+  Parsing ../stacks_b6/PO010715_17.1.matches.tsv
+  Parsing ../stacks_b6/PO010715_19.1.matches.tsv
+  Parsing ../stacks_b6/PO010715_26.matches.tsv
+  Parsing ../stacks_b6/PO010715_27.1.matches.tsv
+  Parsing ../stacks_b6/PO010715_28.1.matches.tsv
+  Parsing ../stacks_b6/PO010715_29.1.matches.tsv
+  Parsing ../stacks_b6/PO020515_01.matches.tsv
+  Parsing ../stacks_b6/PO020515_03.1.matches.tsv
+  Parsing ../stacks_b6/PO020515_05.1.matches.tsv
+  Parsing ../stacks_b6/PO020515_06.matches.tsv
+  Parsing ../stacks_b6/PO020515_08.1.matches.tsv
+  Parsing ../stacks_b6/PO020515_09.1.matches.tsv
+  Parsing ../stacks_b6/PO020515_10.1.matches.tsv
+  Parsing ../stacks_b6/PO020515_14.1.matches.tsv
+  Parsing ../stacks_b6/PO020515_15.1.matches.tsv
+  Parsing ../stacks_b6/PO020515_16.1.matches.tsv
+  Parsing ../stacks_b6/PO020515_17.1.matches.tsv
+  Parsing ../stacks_b6/PO031715_03.matches.tsv
+  Parsing ../stacks_b6/PO031715_04.matches.tsv
+  Parsing ../stacks_b6/PO031715_13.1.matches.tsv
+  Parsing ../stacks_b6/PO031715_20.1.matches.tsv
+  Parsing ../stacks_b6/PO031715_23.matches.tsv
+  Parsing ../stacks_b6/PO031715_24.matches.tsv
+  Parsing ../stacks_b6/GE011215_01.1.matches.tsv
+  Parsing ../stacks_b6/GE011215_07.1.matches.tsv
+  Parsing ../stacks_b6/GE011215_08.1.matches.tsv
+  Parsing ../stacks_b6/GE011215_09.1.matches.tsv
+  Parsing ../stacks_b6/GE011215_10.1.matches.tsv
+  Parsing ../stacks_b6/GE011215_14.1.matches.tsv
+  Parsing ../stacks_b6/GE011215_15.1.matches.tsv
+  Parsing ../stacks_b6/GE011215_16.1.matches.tsv
+  Parsing ../stacks_b6/GE011215_18.matches.tsv
+  Parsing ../stacks_b6/GE011215_19.matches.tsv
+  Parsing ../stacks_b6/GE011215_20.1.matches.tsv
+  Parsing ../stacks_b6/GE011215_21.1.matches.tsv
+  Parsing ../stacks_b6/GE011215_22.matches.tsv
+  Parsing ../stacks_b6/GE011215_24.1.matches.tsv
+  Parsing ../stacks_b6/GE011215_28.matches.tsv
+  Parsing ../stacks_b6/GE011215_29.1.matches.tsv
+  Parsing ../stacks_b6/GE011215_30.1.matches.tsv
+  Parsing ../stacks_b6/GE012315_01.1.matches.tsv
+  Parsing ../stacks_b6/GE012315_03.1.matches.tsv
+  Parsing ../stacks_b6/GE012315_04.1.matches.tsv
+  Parsing ../stacks_b6/GE012315_05.1.matches.tsv
+  Parsing ../stacks_b6/GE012315_06.1.matches.tsv
+  Parsing ../stacks_b6/GE012315_08.1.matches.tsv
+  Parsing ../stacks_b6/GE012315_09.1.matches.tsv
+  Parsing ../stacks_b6/GE012315_10.1.matches.tsv
+  Parsing ../stacks_b6/GE012315_11.1.matches.tsv
+  Parsing ../stacks_b6/GE012315_17.1.matches.tsv
+  Parsing ../stacks_b6/GE012315_20.1.matches.tsv
+  Parsing ../stacks_b6/GE012315_22.1.matches.tsv
+  Parsing ../stacks_b6/GEO012315_02.matches.tsv
+  Parsing ../stacks_b6/GEO012315_12.matches.tsv
+  Parsing ../stacks_b6/GEO012315_18.matches.tsv
+  Parsing ../stacks_b6/GEO012315_21.matches.tsv
+  Parsing ../stacks_b6/NA021015_02.1.matches.tsv
+  Parsing ../stacks_b6/NA021015_03.1.matches.tsv
+  Parsing ../stacks_b6/NA021015_06.1.matches.tsv
+  Parsing ../stacks_b6/NA021015_08.1.matches.tsv
+  Parsing ../stacks_b6/NA021015_09.1.matches.tsv
+  Parsing ../stacks_b6/NA021015_10.1.matches.tsv
+  Parsing ../stacks_b6/NA021015_13.1.matches.tsv
+  Parsing ../stacks_b6/NA021015_14.1.matches.tsv
+  Parsing ../stacks_b6/NA021015_16.1.matches.tsv
+  Parsing ../stacks_b6/NA021015_17.1.matches.tsv
+  Parsing ../stacks_b6/NA021015_21.1.matches.tsv
+  Parsing ../stacks_b6/NA021015_22.1.matches.tsv
+  Parsing ../stacks_b6/NA021015_23.matches.tsv
+  Parsing ../stacks_b6/NA021015_25.matches.tsv
+  Parsing ../stacks_b6/NA021015_26.matches.tsv
+  Parsing ../stacks_b6/NA021015_30.matches.tsv
+  Parsing ../stacks_b6/YS121315_08.1.matches.tsv
+  Parsing ../stacks_b6/YS121315_10.1.matches.tsv
+  Parsing ../stacks_b6/YS121315_12.matches.tsv
+  Parsing ../stacks_b6/YS121315_12_300.matches.tsv
+  Parsing ../stacks_b6/YS121315_14.1.matches.tsv
+  Parsing ../stacks_b6/YS121315_15.matches.tsv
+  Parsing ../stacks_b6/YS121315_16.matches.tsv
+  Parsing ../stacks_b6/YS121316_30.matches.tsv
+  Parsing ../stacks_b6/YS_121316_01.matches.tsv
+  Parsing ../stacks_b6/YS_121316_03.matches.tsv
+  Parsing ../stacks_b6/YS_121316_05.matches.tsv
+  Parsing ../stacks_b6/YS_121316_13.matches.tsv
+  Parsing ../stacks_b6/YS_121316_17.matches.tsv
+  Parsing ../stacks_b6/YS_121316_18.matches.tsv
+  Parsing ../stacks_b6/YS_121316_20.1.matches.tsv
+  Parsing ../stacks_b6/YS_121316_21.matches.tsv
+  Parsing ../stacks_b6/YS_121316_22.matches.tsv
+  Parsing ../stacks_b6/YS_121316_23.matches.tsv
+  Parsing ../stacks_b6/YS_121316_24.matches.tsv
+  Parsing ../stacks_b6/YS_121316_25.matches.tsv
+  Parsing ../stacks_b6/YS_121316_26.matches.tsv
+  Parsing ../stacks_b6/YS_121316_27.matches.tsv
+  Parsing ../stacks_b6/YS_121316_28.matches.tsv
+  Parsing ../stacks_b6/YS_121316_29.matches.tsv
+  Parsing ../stacks_b6/JUK07_01.matches.tsv
+  Parsing ../stacks_b6/JUK07_02.1.matches.tsv
+  Parsing ../stacks_b6/JUK07_02_rep.1.matches.tsv
+  Parsing ../stacks_b6/JUK07_03.matches.tsv
+  Parsing ../stacks_b6/JUK07_06.1.matches.tsv
+  Parsing ../stacks_b6/JUK07_09.1.matches.tsv
+  Parsing ../stacks_b6/JUK07_09_rep.1.matches.tsv
+  Parsing ../stacks_b6/JUK07_14.matches.tsv
+  Parsing ../stacks_b6/JUK07_15.matches.tsv
+  Parsing ../stacks_b6/JUK07_16.1.matches.tsv
+  Parsing ../stacks_b6/JUK07_16_rep.1.matches.tsv
+  Parsing ../stacks_b6/JUK07_17.matches.tsv
+  Parsing ../stacks_b6/JUK07_18.matches.tsv
+  Parsing ../stacks_b6/JUK07_19.matches.tsv
+  Parsing ../stacks_b6/JUK07_20.matches.tsv
+  Parsing ../stacks_b6/JUK07_22.matches.tsv
+  Parsing ../stacks_b6/JUK07_25.matches.tsv
+  Parsing ../stacks_b6/JUK07_26.matches.tsv
+  Parsing ../stacks_b6/JUK07_27.matches.tsv
+  Parsing ../stacks_b6/JUK07_28.matches.tsv
+  Parsing ../stacks_b6/JUK07_29.1.matches.tsv
+  Parsing ../stacks_b6/JUK07_30.matches.tsv
+  Parsing ../stacks_b6/JUK07_32.matches.tsv
+  Parsing ../stacks_b6/JUK07_36.1.matches.tsv
+  Parsing ../stacks_b6/JUK07_37.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_01.matches.tsv
+  Parsing ../stacks_b6/JB121807_03.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_04.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_05.matches.tsv
+  Parsing ../stacks_b6/JB121807_06.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_07.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_08.matches.tsv
+  Parsing ../stacks_b6/JB121807_08_rep.matches.tsv
+  Parsing ../stacks_b6/JB121807_09.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_11.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_12.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_14.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_16.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_19.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_20.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_21.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_23.matches.tsv
+  Parsing ../stacks_b6/JB121807_24.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_25.matches.tsv
+  Parsing ../stacks_b6/JB121807_27.matches.tsv
+  Parsing ../stacks_b6/JB121807_28.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_30.matches.tsv
+  Parsing ../stacks_b6/JB121807_31.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_32.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_33.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_34.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_35.matches.tsv
+  Parsing ../stacks_b6/JB121807_37.matches.tsv
+  Parsing ../stacks_b6/JB121807_38.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_41.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_42.matches.tsv
+  Parsing ../stacks_b6/JB121807_44.matches.tsv
+  Parsing ../stacks_b6/JB121807_45.1.matches.tsv
+  Parsing ../stacks_b6/JB121807_46.matches.tsv
+  Parsing ../stacks_b6/JB121807_47.matches.tsv
+  Parsing ../stacks_b6/JB121807_48.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_01.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_02.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_04.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_05.matches.tsv
+  Parsing ../stacks_b6/JB021108_05_rep.matches.tsv
+  Parsing ../stacks_b6/JB021108_06.matches.tsv
+  Parsing ../stacks_b6/JB021108_07.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_08.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_09.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_10.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_11.matches.tsv
+  Parsing ../stacks_b6/JB021108_12.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_13.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_14.matches.tsv
+  Parsing ../stacks_b6/JB021108_16.matches.tsv
+  Parsing ../stacks_b6/JB021108_17.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_19.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_20.matches.tsv
+  Parsing ../stacks_b6/JB021108_22.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_25.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_26.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_28.matches.tsv
+  Parsing ../stacks_b6/JB021108_29.matches.tsv
+  Parsing ../stacks_b6/JB021108_30.matches.tsv
+  Parsing ../stacks_b6/JB021108_31.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_32.matches.tsv
+  Parsing ../stacks_b6/JB021108_33.matches.tsv
+  Parsing ../stacks_b6/JB021108_34.matches.tsv
+  Parsing ../stacks_b6/JB021108_35.matches.tsv
+  Parsing ../stacks_b6/JB021108_35_rep.matches.tsv
+  Parsing ../stacks_b6/JB021108_36.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_36_rep.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_37.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_37_rep.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_38.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_39.matches.tsv
+  Parsing ../stacks_b6/JB021108_40.matches.tsv
+  Parsing ../stacks_b6/JB021108_41.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_44.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_45.matches.tsv
+  Parsing ../stacks_b6/JB021108_46.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_46_rep.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_47.1.matches.tsv
+  Parsing ../stacks_b6/JB021108_48.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_01.matches.tsv
+  Parsing ../stacks_b6/BOR07_02.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_03.matches.tsv
+  Parsing ../stacks_b6/BOR07_04.matches.tsv
+  Parsing ../stacks_b6/BOR07_05.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_06.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_07.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_08.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_09.matches.tsv
+  Parsing ../stacks_b6/BOR07_10.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_11.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_12.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_13.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_14.matches.tsv
+  Parsing ../stacks_b6/BOR07_15.matches.tsv
+  Parsing ../stacks_b6/BOR07_16.matches.tsv
+  Parsing ../stacks_b6/BOR07_17.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_18.matches.tsv
+  Parsing ../stacks_b6/BOR07_19.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_20.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_21.1.matches.tsv
+  Parsing ../stacks_b6/BOR07_22.matches.tsv
+  Parsing ../stacks_b6/GEO020414_10.matches.tsv
+  Parsing ../stacks_b6/GEO020414_11.matches.tsv
+  Parsing ../stacks_b6/GEO020414_11_300.matches.tsv
+  Parsing ../stacks_b6/GEO020414_13.matches.tsv
+  Parsing ../stacks_b6/GEO020414_13_300.matches.tsv
+  Parsing ../stacks_b6/GEO020414_14.matches.tsv
+  Parsing ../stacks_b6/GEO020414_14_300.matches.tsv
+  Parsing ../stacks_b6/GEO020414_15.matches.tsv
+  Parsing ../stacks_b6/GEO020414_15_300.matches.tsv
+  Parsing ../stacks_b6/GEO020414_16.matches.tsv
+  Parsing ../stacks_b6/GEO020414_16_300.matches.tsv
+  Parsing ../stacks_b6/GEO020414_17.matches.tsv
+  Parsing ../stacks_b6/GEO020414_17_300.matches.tsv
+  Parsing ../stacks_b6/GEO020414_2.matches.tsv
+  Parsing ../stacks_b6/GEO020414_23.matches.tsv
+  Parsing ../stacks_b6/GEO020414_23_300.matches.tsv
+  Parsing ../stacks_b6/GEO020414_24.matches.tsv
+  Parsing ../stacks_b6/GEO020414_24_300.matches.tsv
+  Parsing ../stacks_b6/GEO020414_25.matches.tsv
+  Parsing ../stacks_b6/GEO020414_25_300.matches.tsv
+  Parsing ../stacks_b6/GEO020414_26.matches.tsv
+  Parsing ../stacks_b6/GEO020414_27.matches.tsv
+  Parsing ../stacks_b6/GEO020414_29.matches.tsv
+  Parsing ../stacks_b6/GEO020414_3.matches.tsv
+  Parsing ../stacks_b6/GEO020414_30.matches.tsv
+  Parsing ../stacks_b6/GEO020414_4.matches.tsv
+  Parsing ../stacks_b6/GEO020414_5.matches.tsv
+  Parsing ../stacks_b6/GEO020414_6.matches.tsv
+  Parsing ../stacks_b6/GEO020414_7.matches.tsv
+  Parsing ../stacks_b6/GEO020414_8.matches.tsv
+  Parsing ../stacks_b6/GEO020414_8_300.matches.tsv
+  Parsing ../stacks_b6/GEO020414_9.matches.tsv
+  Parsing ../stacks_b6/GEO020414_9_300.matches.tsv
+Catalog is not reference aligned, arbitrarily ordering catalog loci.
+Working on 264 samples.
+Working on 9 population(s):
+    Pohang15: PO010715_02, PO010715_02_rep, PO010715_04, PO010715_06.1, PO010715_08.1, PO010715_10.1, PO010715_11.1, PO010715_12, PO010715_17.1, PO010715_19.1, PO010715_26, PO010715_27.1, PO010715_28.1, PO010715_29.1, PO020515_01, PO020515_03.1, PO020515_05.1, PO020515_06, PO020515_08.1, PO020515_09.1, PO020515_10.1, PO020515_14.1, PO020515_15.1, PO020515_16.1, PO020515_17.1, PO031715_03, PO031715_04, PO031715_13.1, PO031715_20.1, PO031715_23, PO031715_24
+    Geoje15: GE011215_01.1, GE011215_07.1, GE011215_08.1, GE011215_09.1, GE011215_10.1, GE011215_14.1, GE011215_15.1, GE011215_16.1, GE011215_18, GE011215_19, GE011215_20.1, GE011215_21.1, GE011215_22, GE011215_24.1, GE011215_28, GE011215_29.1, GE011215_30.1, GE012315_01.1, GE012315_03.1, GE012315_04.1, GE012315_05.1, GE012315_06.1, GE012315_08.1, GE012315_09.1, GE012315_10.1, GE012315_11.1, GE012315_17.1, GE012315_20.1, GE012315_22.1, GEO012315_02, GEO012315_12, GEO012315_18, GEO012315_21
+    Namhae15: NA021015_02.1, NA021015_03.1, NA021015_06.1, NA021015_08.1, NA021015_09.1, NA021015_10.1, NA021015_13.1, NA021015_14.1, NA021015_16.1, NA021015_17.1, NA021015_21.1, NA021015_22.1, NA021015_23, NA021015_25, NA021015_26, NA021015_30
+    YellowSea16: YS121315_08.1, YS121315_10.1, YS121315_12, YS121315_12_300, YS121315_14.1, YS121315_15, YS121315_16, YS121316_30, YS_121316_01, YS_121316_03, YS_121316_05, YS_121316_13, YS_121316_17, YS_121316_18, YS_121316_20.1, YS_121316_21, YS_121316_22, YS_121316_23, YS_121316_24, YS_121316_25, YS_121316_26, YS_121316_27, YS_121316_28, YS_121316_29
+    Jukbyeon07: JUK07_01, JUK07_02.1, JUK07_02_rep.1, JUK07_03, JUK07_06.1, JUK07_09.1, JUK07_09_rep.1, JUK07_14, JUK07_15, JUK07_16.1, JUK07_16_rep.1, JUK07_17, JUK07_18, JUK07_19, JUK07_20, JUK07_22, JUK07_25, JUK07_26, JUK07_27, JUK07_28, JUK07_29.1, JUK07_30, JUK07_32, JUK07_36.1, JUK07_37.1
+    JinhaeBay07: JB121807_01, JB121807_03.1, JB121807_04.1, JB121807_05, JB121807_06.1, JB121807_07.1, JB121807_08, JB121807_08_rep, JB121807_09.1, JB121807_11.1, JB121807_12.1, JB121807_14.1, JB121807_16.1, JB121807_19.1, JB121807_20.1, JB121807_21.1, JB121807_23, JB121807_24.1, JB121807_25, JB121807_27, JB121807_28.1, JB121807_30, JB121807_31.1, JB121807_32.1, JB121807_33.1, JB121807_34.1, JB121807_35, JB121807_37, JB121807_38.1, JB121807_41.1, JB121807_42, JB121807_44, JB121807_45.1, JB121807_46, JB121807_47, JB121807_48.1
+    JinhaeBay08: JB021108_01.1, JB021108_02.1, JB021108_04.1, JB021108_05, JB021108_05_rep, JB021108_06, JB021108_07.1, JB021108_08.1, JB021108_09.1, JB021108_10.1, JB021108_11, JB021108_12.1, JB021108_13.1, JB021108_14, JB021108_16, JB021108_17.1, JB021108_19.1, JB021108_20, JB021108_22.1, JB021108_25.1, JB021108_26.1, JB021108_28, JB021108_29, JB021108_30, JB021108_31.1, JB021108_32, JB021108_33, JB021108_34, JB021108_35, JB021108_35_rep, JB021108_36.1, JB021108_36_rep.1, JB021108_37.1, JB021108_37_rep.1, JB021108_38.1, JB021108_39, JB021108_40, JB021108_41.1, JB021108_44.1, JB021108_45, JB021108_46.1, JB021108_46_rep.1, JB021108_47.1, JB021108_48.1
+    Boryeong07: BOR07_01, BOR07_02.1, BOR07_03, BOR07_04, BOR07_05.1, BOR07_06.1, BOR07_07.1, BOR07_08.1, BOR07_09, BOR07_10.1, BOR07_11.1, BOR07_12.1, BOR07_13.1, BOR07_14, BOR07_15, BOR07_16, BOR07_17.1, BOR07_18, BOR07_19.1, BOR07_20.1, BOR07_21.1, BOR07_22
+    Geoje14: GEO020414_10, GEO020414_11, GEO020414_11_300, GEO020414_13, GEO020414_13_300, GEO020414_14, GEO020414_14_300, GEO020414_15, GEO020414_15_300, GEO020414_16, GEO020414_16_300, GEO020414_17, GEO020414_17_300, GEO020414_2, GEO020414_23, GEO020414_23_300, GEO020414_24, GEO020414_24_300, GEO020414_25, GEO020414_25_300, GEO020414_26, GEO020414_27, GEO020414_29, GEO020414_3, GEO020414_30, GEO020414_4, GEO020414_5, GEO020414_6, GEO020414_7, GEO020414_8, GEO020414_8_300, GEO020414_9, GEO020414_9_300
+Working on 1 group(s) of populations:
+    defaultgrp: Pohang15, Geoje15, Namhae15, YellowSea16, Jukbyeon07, JinhaeBay07, JinhaeBay08, Boryeong07, Geoje14
+Populating observed haplotypes for 264 samples, 483173 loci.
+Removed 138 samples from loci that are below the minimum stack depth of 5x
+Removing 449607 loci that did not pass sample/population constraints... retained 33566 loci.
+Loading model outputs for 264 samples, 33566 loci.
+  Parsing ../stacks_b6/PO010715_02.tags.tsv
+  Parsing ../stacks_b6/PO010715_02_rep.tags.tsv
+  Parsing ../stacks_b6/PO010715_04.tags.tsv
+  Parsing ../stacks_b6/PO010715_06.1.tags.tsv
+  Parsing ../stacks_b6/PO010715_08.1.tags.tsv
+  Parsing ../stacks_b6/PO010715_10.1.tags.tsv
+  Parsing ../stacks_b6/PO010715_11.1.tags.tsv
+  Parsing ../stacks_b6/PO010715_12.tags.tsv
+  Parsing ../stacks_b6/PO010715_17.1.tags.tsv
+  Parsing ../stacks_b6/PO010715_19.1.tags.tsv
+  Parsing ../stacks_b6/PO010715_26.tags.tsv
+  Parsing ../stacks_b6/PO010715_27.1.tags.tsv
+  Parsing ../stacks_b6/PO010715_28.1.tags.tsv
+  Parsing ../stacks_b6/PO010715_29.1.tags.tsv
+  Parsing ../stacks_b6/PO020515_01.tags.tsv
+  Parsing ../stacks_b6/PO020515_03.1.tags.tsv
+  Parsing ../stacks_b6/PO020515_05.1.tags.tsv
+  Parsing ../stacks_b6/PO020515_06.tags.tsv
+  Parsing ../stacks_b6/PO020515_08.1.tags.tsv
+  Parsing ../stacks_b6/PO020515_09.1.tags.tsv
+  Parsing ../stacks_b6/PO020515_10.1.tags.tsv
+  Parsing ../stacks_b6/PO020515_14.1.tags.tsv
+  Parsing ../stacks_b6/PO020515_15.1.tags.tsv
+  Parsing ../stacks_b6/PO020515_16.1.tags.tsv
+  Parsing ../stacks_b6/PO020515_17.1.tags.tsv
+  Parsing ../stacks_b6/PO031715_03.tags.tsv
+  Parsing ../stacks_b6/PO031715_04.tags.tsv
+  Parsing ../stacks_b6/PO031715_13.1.tags.tsv
+  Parsing ../stacks_b6/PO031715_20.1.tags.tsv
+  Parsing ../stacks_b6/PO031715_23.tags.tsv
+  Parsing ../stacks_b6/PO031715_24.tags.tsv
+  Parsing ../stacks_b6/GE011215_01.1.tags.tsv
+  Parsing ../stacks_b6/GE011215_07.1.tags.tsv
+  Parsing ../stacks_b6/GE011215_08.1.tags.tsv
+  Parsing ../stacks_b6/GE011215_09.1.tags.tsv
+  Parsing ../stacks_b6/GE011215_10.1.tags.tsv
+  Parsing ../stacks_b6/GE011215_14.1.tags.tsv
+  Parsing ../stacks_b6/GE011215_15.1.tags.tsv
+  Parsing ../stacks_b6/GE011215_16.1.tags.tsv
+  Parsing ../stacks_b6/GE011215_18.tags.tsv
+  Parsing ../stacks_b6/GE011215_19.tags.tsv
+  Parsing ../stacks_b6/GE011215_20.1.tags.tsv
+  Parsing ../stacks_b6/GE011215_21.1.tags.tsv
+  Parsing ../stacks_b6/GE011215_22.tags.tsv
+  Parsing ../stacks_b6/GE011215_24.1.tags.tsv
+  Parsing ../stacks_b6/GE011215_28.tags.tsv
+  Parsing ../stacks_b6/GE011215_29.1.tags.tsv
+  Parsing ../stacks_b6/GE011215_30.1.tags.tsv
+  Parsing ../stacks_b6/GE012315_01.1.tags.tsv
+  Parsing ../stacks_b6/GE012315_03.1.tags.tsv
+  Parsing ../stacks_b6/GE012315_04.1.tags.tsv
+  Parsing ../stacks_b6/GE012315_05.1.tags.tsv
+  Parsing ../stacks_b6/GE012315_06.1.tags.tsv
+  Parsing ../stacks_b6/GE012315_08.1.tags.tsv
+  Parsing ../stacks_b6/GE012315_09.1.tags.tsv
+  Parsing ../stacks_b6/GE012315_10.1.tags.tsv
+  Parsing ../stacks_b6/GE012315_11.1.tags.tsv
+  Parsing ../stacks_b6/GE012315_17.1.tags.tsv
+  Parsing ../stacks_b6/GE012315_20.1.tags.tsv
+  Parsing ../stacks_b6/GE012315_22.1.tags.tsv
+  Parsing ../stacks_b6/GEO012315_02.tags.tsv
+  Parsing ../stacks_b6/GEO012315_12.tags.tsv
+  Parsing ../stacks_b6/GEO012315_18.tags.tsv
+  Parsing ../stacks_b6/GEO012315_21.tags.tsv
+  Parsing ../stacks_b6/NA021015_02.1.tags.tsv
+  Parsing ../stacks_b6/NA021015_03.1.tags.tsv
+  Parsing ../stacks_b6/NA021015_06.1.tags.tsv
+  Parsing ../stacks_b6/NA021015_08.1.tags.tsv
+  Parsing ../stacks_b6/NA021015_09.1.tags.tsv
+  Parsing ../stacks_b6/NA021015_10.1.tags.tsv
+  Parsing ../stacks_b6/NA021015_13.1.tags.tsv
+  Parsing ../stacks_b6/NA021015_14.1.tags.tsv
+  Parsing ../stacks_b6/NA021015_16.1.tags.tsv
+  Parsing ../stacks_b6/NA021015_17.1.tags.tsv
+  Parsing ../stacks_b6/NA021015_21.1.tags.tsv
+  Parsing ../stacks_b6/NA021015_22.1.tags.tsv
+  Parsing ../stacks_b6/NA021015_23.tags.tsv
+  Parsing ../stacks_b6/NA021015_25.tags.tsv
+  Parsing ../stacks_b6/NA021015_26.tags.tsv
+  Parsing ../stacks_b6/NA021015_30.tags.tsv
+  Parsing ../stacks_b6/YS121315_08.1.tags.tsv
+  Parsing ../stacks_b6/YS121315_10.1.tags.tsv
+  Parsing ../stacks_b6/YS121315_12.tags.tsv
+  Parsing ../stacks_b6/YS121315_12_300.tags.tsv
+  Parsing ../stacks_b6/YS121315_14.1.tags.tsv
+  Parsing ../stacks_b6/YS121315_15.tags.tsv
+  Parsing ../stacks_b6/YS121315_16.tags.tsv
+  Parsing ../stacks_b6/YS121316_30.tags.tsv
+  Parsing ../stacks_b6/YS_121316_01.tags.tsv
+  Parsing ../stacks_b6/YS_121316_03.tags.tsv
+  Parsing ../stacks_b6/YS_121316_05.tags.tsv
+  Parsing ../stacks_b6/YS_121316_13.tags.tsv
+  Parsing ../stacks_b6/YS_121316_17.tags.tsv
+  Parsing ../stacks_b6/YS_121316_18.tags.tsv
+  Parsing ../stacks_b6/YS_121316_20.1.tags.tsv
+  Parsing ../stacks_b6/YS_121316_21.tags.tsv
+  Parsing ../stacks_b6/YS_121316_22.tags.tsv
+  Parsing ../stacks_b6/YS_121316_23.tags.tsv
+  Parsing ../stacks_b6/YS_121316_24.tags.tsv
+  Parsing ../stacks_b6/YS_121316_25.tags.tsv
+  Parsing ../stacks_b6/YS_121316_26.tags.tsv
+  Parsing ../stacks_b6/YS_121316_27.tags.tsv
+  Parsing ../stacks_b6/YS_121316_28.tags.tsv
+  Parsing ../stacks_b6/YS_121316_29.tags.tsv
+  Parsing ../stacks_b6/JUK07_01.tags.tsv
+  Parsing ../stacks_b6/JUK07_02.1.tags.tsv
+  Parsing ../stacks_b6/JUK07_02_rep.1.tags.tsv
+  Parsing ../stacks_b6/JUK07_03.tags.tsv
+  Parsing ../stacks_b6/JUK07_06.1.tags.tsv
+  Parsing ../stacks_b6/JUK07_09.1.tags.tsv
+  Parsing ../stacks_b6/JUK07_09_rep.1.tags.tsv
+  Parsing ../stacks_b6/JUK07_14.tags.tsv
+  Parsing ../stacks_b6/JUK07_15.tags.tsv
+  Parsing ../stacks_b6/JUK07_16.1.tags.tsv
+  Parsing ../stacks_b6/JUK07_16_rep.1.tags.tsv
+  Parsing ../stacks_b6/JUK07_17.tags.tsv
+  Parsing ../stacks_b6/JUK07_18.tags.tsv
+  Parsing ../stacks_b6/JUK07_19.tags.tsv
+  Parsing ../stacks_b6/JUK07_20.tags.tsv
+  Parsing ../stacks_b6/JUK07_22.tags.tsv
+  Parsing ../stacks_b6/JUK07_25.tags.tsv
+  Parsing ../stacks_b6/JUK07_26.tags.tsv
+  Parsing ../stacks_b6/JUK07_27.tags.tsv
+  Parsing ../stacks_b6/JUK07_28.tags.tsv
+  Parsing ../stacks_b6/JUK07_29.1.tags.tsv
+  Parsing ../stacks_b6/JUK07_30.tags.tsv
+  Parsing ../stacks_b6/JUK07_32.tags.tsv
+  Parsing ../stacks_b6/JUK07_36.1.tags.tsv
+  Parsing ../stacks_b6/JUK07_37.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_01.tags.tsv
+  Parsing ../stacks_b6/JB121807_03.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_04.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_05.tags.tsv
+  Parsing ../stacks_b6/JB121807_06.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_07.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_08.tags.tsv
+  Parsing ../stacks_b6/JB121807_08_rep.tags.tsv
+  Parsing ../stacks_b6/JB121807_09.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_11.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_12.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_14.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_16.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_19.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_20.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_21.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_23.tags.tsv
+  Parsing ../stacks_b6/JB121807_24.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_25.tags.tsv
+  Parsing ../stacks_b6/JB121807_27.tags.tsv
+  Parsing ../stacks_b6/JB121807_28.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_30.tags.tsv
+  Parsing ../stacks_b6/JB121807_31.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_32.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_33.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_34.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_35.tags.tsv
+  Parsing ../stacks_b6/JB121807_37.tags.tsv
+  Parsing ../stacks_b6/JB121807_38.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_41.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_42.tags.tsv
+  Parsing ../stacks_b6/JB121807_44.tags.tsv
+  Parsing ../stacks_b6/JB121807_45.1.tags.tsv
+  Parsing ../stacks_b6/JB121807_46.tags.tsv
+  Parsing ../stacks_b6/JB121807_47.tags.tsv
+  Parsing ../stacks_b6/JB121807_48.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_01.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_02.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_04.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_05.tags.tsv
+  Parsing ../stacks_b6/JB021108_05_rep.tags.tsv
+  Parsing ../stacks_b6/JB021108_06.tags.tsv
+  Parsing ../stacks_b6/JB021108_07.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_08.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_09.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_10.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_11.tags.tsv
+  Parsing ../stacks_b6/JB021108_12.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_13.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_14.tags.tsv
+  Parsing ../stacks_b6/JB021108_16.tags.tsv
+  Parsing ../stacks_b6/JB021108_17.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_19.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_20.tags.tsv
+  Parsing ../stacks_b6/JB021108_22.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_25.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_26.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_28.tags.tsv
+  Parsing ../stacks_b6/JB021108_29.tags.tsv
+  Parsing ../stacks_b6/JB021108_30.tags.tsv
+  Parsing ../stacks_b6/JB021108_31.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_32.tags.tsv
+  Parsing ../stacks_b6/JB021108_33.tags.tsv
+  Parsing ../stacks_b6/JB021108_34.tags.tsv
+  Parsing ../stacks_b6/JB021108_35.tags.tsv
+  Parsing ../stacks_b6/JB021108_35_rep.tags.tsv
+  Parsing ../stacks_b6/JB021108_36.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_36_rep.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_37.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_37_rep.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_38.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_39.tags.tsv
+  Parsing ../stacks_b6/JB021108_40.tags.tsv
+  Parsing ../stacks_b6/JB021108_41.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_44.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_45.tags.tsv
+  Parsing ../stacks_b6/JB021108_46.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_46_rep.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_47.1.tags.tsv
+  Parsing ../stacks_b6/JB021108_48.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_01.tags.tsv
+  Parsing ../stacks_b6/BOR07_02.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_03.tags.tsv
+  Parsing ../stacks_b6/BOR07_04.tags.tsv
+  Parsing ../stacks_b6/BOR07_05.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_06.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_07.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_08.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_09.tags.tsv
+  Parsing ../stacks_b6/BOR07_10.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_11.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_12.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_13.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_14.tags.tsv
+  Parsing ../stacks_b6/BOR07_15.tags.tsv
+  Parsing ../stacks_b6/BOR07_16.tags.tsv
+  Parsing ../stacks_b6/BOR07_17.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_18.tags.tsv
+  Parsing ../stacks_b6/BOR07_19.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_20.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_21.1.tags.tsv
+  Parsing ../stacks_b6/BOR07_22.tags.tsv
+  Parsing ../stacks_b6/GEO020414_10.tags.tsv
+  Parsing ../stacks_b6/GEO020414_11.tags.tsv
+  Parsing ../stacks_b6/GEO020414_11_300.tags.tsv
+  Parsing ../stacks_b6/GEO020414_13.tags.tsv
+  Parsing ../stacks_b6/GEO020414_13_300.tags.tsv
+  Parsing ../stacks_b6/GEO020414_14.tags.tsv
+  Parsing ../stacks_b6/GEO020414_14_300.tags.tsv
+  Parsing ../stacks_b6/GEO020414_15.tags.tsv
+  Parsing ../stacks_b6/GEO020414_15_300.tags.tsv
+  Parsing ../stacks_b6/GEO020414_16.tags.tsv
+  Parsing ../stacks_b6/GEO020414_16_300.tags.tsv
+  Parsing ../stacks_b6/GEO020414_17.tags.tsv
+  Parsing ../stacks_b6/GEO020414_17_300.tags.tsv
+  Parsing ../stacks_b6/GEO020414_2.tags.tsv
+  Parsing ../stacks_b6/GEO020414_23.tags.tsv
+  Parsing ../stacks_b6/GEO020414_23_300.tags.tsv
+  Parsing ../stacks_b6/GEO020414_24.tags.tsv
+  Parsing ../stacks_b6/GEO020414_24_300.tags.tsv
+  Parsing ../stacks_b6/GEO020414_25.tags.tsv
+  Parsing ../stacks_b6/GEO020414_25_300.tags.tsv
+  Parsing ../stacks_b6/GEO020414_26.tags.tsv
+  Parsing ../stacks_b6/GEO020414_27.tags.tsv
+  Parsing ../stacks_b6/GEO020414_29.tags.tsv
+  Parsing ../stacks_b6/GEO020414_3.tags.tsv
+  Parsing ../stacks_b6/GEO020414_30.tags.tsv
+  Parsing ../stacks_b6/GEO020414_4.tags.tsv
+  Parsing ../stacks_b6/GEO020414_5.tags.tsv
+  Parsing ../stacks_b6/GEO020414_6.tags.tsv
+  Parsing ../stacks_b6/GEO020414_7.tags.tsv
+  Parsing ../stacks_b6/GEO020414_8.tags.tsv
+  Parsing ../stacks_b6/GEO020414_8_300.tags.tsv
+  Parsing ../stacks_b6/GEO020414_9.tags.tsv
+  Parsing ../stacks_b6/GEO020414_9_300.tags.tsv
+Generating nucleotide-level summary statistics for population 'Pohang15'
+Population 'Pohang15' contained 102 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Geoje15'
+Population 'Geoje15' contained 116 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Namhae15'
+Population 'Namhae15' contained 90 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'YellowSea16'
+Population 'YellowSea16' contained 123 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Jukbyeon07'
+Population 'Jukbyeon07' contained 145 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'JinhaeBay07'
+Population 'JinhaeBay07' contained 62 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'JinhaeBay08'
+Population 'JinhaeBay08' contained 88 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Boryeong07'
+Population 'Boryeong07' contained 105 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Geoje14'
+Population 'Geoje14' contained 116 incompatible loci -- more than two alleles present.
+Tallying loci across populations...done.
+Pruned 976 variant sites due to filter constraints (more with --verbose).
+Removing 1080 additional loci for which all variant sites were filtered... retained 32486 loci.
+Regenerating nucleotide-level summary statistics for population 'Pohang15'
+Population 'Pohang15' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Geoje15'
+Population 'Geoje15' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Namhae15'
+Population 'Namhae15' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'YellowSea16'
+Population 'YellowSea16' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Jukbyeon07'
+Population 'Jukbyeon07' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'JinhaeBay07'
+Population 'JinhaeBay07' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'JinhaeBay08'
+Population 'JinhaeBay08' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Boryeong07'
+Population 'Boryeong07' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Geoje14'
+Population 'Geoje14' contained 0 incompatible loci -- more than two alleles present.
+Re-tallying loci across populations...done.
+Generating haplotype-level summary statistics for population 'Pohang15'
+Generating haplotype-level summary statistics for population 'Geoje15'
+Generating haplotype-level summary statistics for population 'Namhae15'
+Generating haplotype-level summary statistics for population 'YellowSea16'
+Generating haplotype-level summary statistics for population 'Jukbyeon07'
+Generating haplotype-level summary statistics for population 'JinhaeBay07'
+Generating haplotype-level summary statistics for population 'JinhaeBay08'
+Generating haplotype-level summary statistics for population 'Boryeong07'
+Generating haplotype-level summary statistics for population 'Geoje14'
+Writing 32486 loci to summary statistics file, '../stacks_b6/batch_6.sumstats.tsv'
+Writing 32486 loci to observed haplotype file, '../stacks_b6/batch_6.haplotypes.tsv'
+Writing population alleles to FASTA file '../stacks_b6/batch_6.fa'
+Writing population data to GenePop file '../stacks_b6/batch_6.genepop'
+Populations is done.

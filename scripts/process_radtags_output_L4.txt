@@ -1,0 +1,12 @@
+Processing paired-end data.
+Using Phred+33 encoding for quality scores.
+Reads will be truncated to 142bp
+Found 1 paired input file(s).
+Searching for single-end, inlined barcodes.
+Error opening barcode file 'scripts/barcodes_L4.txt'
+Processing paired-end data.
+Using Phred+33 encoding for quality scores.
+Reads will be truncated to 142bp
+Found 1 paired input file(s).
+Searching for single-end, inlined barcodes.
+Error opening barcode file 'scripts/barcodes_L4.txt'

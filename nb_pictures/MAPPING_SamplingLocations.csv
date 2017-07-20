@@ -1,0 +1,9 @@
+location_code,location,abbreviation,Region,Subregion,latitude,longitude,sampling_year
+1,Boryeong,BOR,South Korea,West ,36.29805556,126.4575,2007-2008
+2,Sea Block,SB,South Korea,West ,36.84916667,125.1386111,2015-2016
+3,Namhae,NAM,South Korea,South,34.73694444,127.9172222,2014-2015
+4,Jinhae Bay,JB,South Korea,South,35.03388889,128.6025,2007-2008
+5,Geoje,GE,South Korea,South,34.7444444,128.5325,2014-2015
+6,Pohang,POH,South Korea,Southeast,36.05416667,129.4661111,2014-2015
+7,Jukbyeon,JUK,South Korea,East,36.98833333,129.4425,2007-2008
+8,Mukho / Sokcho,MUK/SOC,South Korea,East,37.54138889,129.1491667,2015-2016

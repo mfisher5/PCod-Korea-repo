@@ -1,0 +1,12 @@
+Processing single-end data.
+Using Phred+33 encoding for quality scores.
+Reads will be truncated to 142bp
+Found 1 input file(s).
+Searching for single-end, inlined barcodes.
+Error opening barcode file 'scripts/barcodes_L3.txt'
+Processing single-end data.
+Using Phred+33 encoding for quality scores.
+Reads will be truncated to 142bp
+Found 1 input file(s).
+Searching for single-end, inlined barcodes.
+Error opening barcode file 'scripts/barcodes_L3.txt'

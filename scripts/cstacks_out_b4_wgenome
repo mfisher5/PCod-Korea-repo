@@ -1,0 +1,990 @@
+cstacks paramters selected:
+  Loci matched based on genomic location.
+  Gapped alignments: disabled
+Constructing catalog from 90 samples.
+Initializing new catalog...
+  Parsing ../batch_4_wgenome/PO020515_06.tags.tsv
+  Parsing ../batch_4_wgenome/PO020515_06.snps.tsv
+  Parsing ../batch_4_wgenome/PO020515_06.alleles.tsv
+  25195 loci were newly added to the catalog.
+Building an index of the catalog.
+Processing sample ../batch_4_wgenome/PO020515_06 [2 of 90]
+  Parsing ../batch_4_wgenome/PO010715_26.tags.tsv
+  Parsing ../batch_4_wgenome/PO010715_26.snps.tsv
+  Parsing ../batch_4_wgenome/PO010715_26.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24542 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  330 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/PO010715_26 [3 of 90]
+  Parsing ../batch_4_wgenome/PO031715_23.tags.tsv
+  Parsing ../batch_4_wgenome/PO031715_23.snps.tsv
+  Parsing ../batch_4_wgenome/PO031715_23.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24484 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  39 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/PO031715_23 [4 of 90]
+  Parsing ../batch_4_wgenome/PO031715_04.tags.tsv
+  Parsing ../batch_4_wgenome/PO031715_04.snps.tsv
+  Parsing ../batch_4_wgenome/PO031715_04.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24529 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  3 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/PO031715_04 [5 of 90]
+  Parsing ../batch_4_wgenome/PO020515_08.1.tags.tsv
+  Parsing ../batch_4_wgenome/PO020515_08.1.snps.tsv
+  Parsing ../batch_4_wgenome/PO020515_08.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24506 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  2 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/PO020515_08.1 [6 of 90]
+  Parsing ../batch_4_wgenome/PO010715_02.tags.tsv
+  Parsing ../batch_4_wgenome/PO010715_02.snps.tsv
+  Parsing ../batch_4_wgenome/PO010715_02.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24818 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/PO010715_02 [7 of 90]
+  Parsing ../batch_4_wgenome/PO010715_12.tags.tsv
+  Parsing ../batch_4_wgenome/PO010715_12.snps.tsv
+  Parsing ../batch_4_wgenome/PO010715_12.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24527 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/PO010715_12 [8 of 90]
+  Parsing ../batch_4_wgenome/PO010715_11.1.tags.tsv
+  Parsing ../batch_4_wgenome/PO010715_11.1.snps.tsv
+  Parsing ../batch_4_wgenome/PO010715_11.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24375 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/PO010715_11.1 [9 of 90]
+  Parsing ../batch_4_wgenome/PO031715_20.1.tags.tsv
+  Parsing ../batch_4_wgenome/PO031715_20.1.snps.tsv
+  Parsing ../batch_4_wgenome/PO031715_20.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24119 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/PO031715_20.1 [10 of 90]
+  Parsing ../batch_4_wgenome/PO020515_10.1.tags.tsv
+  Parsing ../batch_4_wgenome/PO020515_10.1.snps.tsv
+  Parsing ../batch_4_wgenome/PO020515_10.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  23752 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/PO020515_10.1 [11 of 90]
+  Parsing ../batch_4_wgenome/GE011215_15.1.tags.tsv
+  Parsing ../batch_4_wgenome/GE011215_15.1.snps.tsv
+  Parsing ../batch_4_wgenome/GE011215_15.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24314 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GE011215_15.1 [12 of 90]
+  Parsing ../batch_4_wgenome/GEO012315_12.tags.tsv
+  Parsing ../batch_4_wgenome/GEO012315_12.snps.tsv
+  Parsing ../batch_4_wgenome/GEO012315_12.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24745 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO012315_12 [13 of 90]
+  Parsing ../batch_4_wgenome/GE011215_18.tags.tsv
+  Parsing ../batch_4_wgenome/GE011215_18.snps.tsv
+  Parsing ../batch_4_wgenome/GE011215_18.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24761 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GE011215_18 [14 of 90]
+  Parsing ../batch_4_wgenome/GE011215_22.tags.tsv
+  Parsing ../batch_4_wgenome/GE011215_22.snps.tsv
+  Parsing ../batch_4_wgenome/GE011215_22.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24766 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GE011215_22 [15 of 90]
+  Parsing ../batch_4_wgenome/GEO012315_18.tags.tsv
+  Parsing ../batch_4_wgenome/GEO012315_18.snps.tsv
+  Parsing ../batch_4_wgenome/GEO012315_18.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24273 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO012315_18 [16 of 90]
+  Parsing ../batch_4_wgenome/GEO012315_02.tags.tsv
+  Parsing ../batch_4_wgenome/GEO012315_02.snps.tsv
+  Parsing ../batch_4_wgenome/GEO012315_02.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24455 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO012315_02 [17 of 90]
+  Parsing ../batch_4_wgenome/GE012315_11.1.tags.tsv
+  Parsing ../batch_4_wgenome/GE012315_11.1.snps.tsv
+  Parsing ../batch_4_wgenome/GE012315_11.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24600 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GE012315_11.1 [18 of 90]
+  Parsing ../batch_4_wgenome/GE011215_14.1.tags.tsv
+  Parsing ../batch_4_wgenome/GE011215_14.1.snps.tsv
+  Parsing ../batch_4_wgenome/GE011215_14.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24386 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GE011215_14.1 [19 of 90]
+  Parsing ../batch_4_wgenome/GE011215_30.1.tags.tsv
+  Parsing ../batch_4_wgenome/GE011215_30.1.snps.tsv
+  Parsing ../batch_4_wgenome/GE011215_30.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24589 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GE011215_30.1 [20 of 90]
+  Parsing ../batch_4_wgenome/GEO012315_21.tags.tsv
+  Parsing ../batch_4_wgenome/GEO012315_21.snps.tsv
+  Parsing ../batch_4_wgenome/GEO012315_21.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24304 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO012315_21 [21 of 90]
+  Parsing ../batch_4_wgenome/NA021015_22.1.tags.tsv
+  Parsing ../batch_4_wgenome/NA021015_22.1.snps.tsv
+  Parsing ../batch_4_wgenome/NA021015_22.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24424 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/NA021015_22.1 [22 of 90]
+  Parsing ../batch_4_wgenome/NA021015_17.1.tags.tsv
+  Parsing ../batch_4_wgenome/NA021015_17.1.snps.tsv
+  Parsing ../batch_4_wgenome/NA021015_17.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24250 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/NA021015_17.1 [23 of 90]
+  Parsing ../batch_4_wgenome/NA021015_10.1.tags.tsv
+  Parsing ../batch_4_wgenome/NA021015_10.1.snps.tsv
+  Parsing ../batch_4_wgenome/NA021015_10.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24214 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/NA021015_10.1 [24 of 90]
+  Parsing ../batch_4_wgenome/NA021015_25.tags.tsv
+  Parsing ../batch_4_wgenome/NA021015_25.snps.tsv
+  Parsing ../batch_4_wgenome/NA021015_25.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24727 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/NA021015_25 [25 of 90]
+  Parsing ../batch_4_wgenome/NA021015_30.tags.tsv
+  Parsing ../batch_4_wgenome/NA021015_30.snps.tsv
+  Parsing ../batch_4_wgenome/NA021015_30.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24632 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/NA021015_30 [26 of 90]
+  Parsing ../batch_4_wgenome/NA021015_06.1.tags.tsv
+  Parsing ../batch_4_wgenome/NA021015_06.1.snps.tsv
+  Parsing ../batch_4_wgenome/NA021015_06.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24482 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/NA021015_06.1 [27 of 90]
+  Parsing ../batch_4_wgenome/NA021015_26.tags.tsv
+  Parsing ../batch_4_wgenome/NA021015_26.snps.tsv
+  Parsing ../batch_4_wgenome/NA021015_26.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24702 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/NA021015_26 [28 of 90]
+  Parsing ../batch_4_wgenome/NA021015_09.1.tags.tsv
+  Parsing ../batch_4_wgenome/NA021015_09.1.snps.tsv
+  Parsing ../batch_4_wgenome/NA021015_09.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24486 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/NA021015_09.1 [29 of 90]
+  Parsing ../batch_4_wgenome/NA021015_16.1.tags.tsv
+  Parsing ../batch_4_wgenome/NA021015_16.1.snps.tsv
+  Parsing ../batch_4_wgenome/NA021015_16.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24332 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/NA021015_16.1 [30 of 90]
+  Parsing ../batch_4_wgenome/NA021015_14.1.tags.tsv
+  Parsing ../batch_4_wgenome/NA021015_14.1.snps.tsv
+  Parsing ../batch_4_wgenome/NA021015_14.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24398 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/NA021015_14.1 [31 of 90]
+  Parsing ../batch_4_wgenome/YS_121316_13.tags.tsv
+  Parsing ../batch_4_wgenome/YS_121316_13.snps.tsv
+  Parsing ../batch_4_wgenome/YS_121316_13.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24635 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/YS_121316_13 [32 of 90]
+  Parsing ../batch_4_wgenome/YS121315_16.tags.tsv
+  Parsing ../batch_4_wgenome/YS121315_16.snps.tsv
+  Parsing ../batch_4_wgenome/YS121315_16.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24689 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/YS121315_16 [33 of 90]
+  Parsing ../batch_4_wgenome/YS121315_15.tags.tsv
+  Parsing ../batch_4_wgenome/YS121315_15.snps.tsv
+  Parsing ../batch_4_wgenome/YS121315_15.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24390 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/YS121315_15 [34 of 90]
+  Parsing ../batch_4_wgenome/YS_121316_24.tags.tsv
+  Parsing ../batch_4_wgenome/YS_121316_24.snps.tsv
+  Parsing ../batch_4_wgenome/YS_121316_24.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24752 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/YS_121316_24 [35 of 90]
+  Parsing ../batch_4_wgenome/YS_121316_01.tags.tsv
+  Parsing ../batch_4_wgenome/YS_121316_01.snps.tsv
+  Parsing ../batch_4_wgenome/YS_121316_01.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24764 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/YS_121316_01 [36 of 90]
+  Parsing ../batch_4_wgenome/YS121315_15.tags.tsv
+  Parsing ../batch_4_wgenome/YS121315_15.snps.tsv
+  Parsing ../batch_4_wgenome/YS121315_15.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24390 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/YS121315_15 [37 of 90]
+  Parsing ../batch_4_wgenome/YS_121316_17.tags.tsv
+  Parsing ../batch_4_wgenome/YS_121316_17.snps.tsv
+  Parsing ../batch_4_wgenome/YS_121316_17.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24611 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/YS_121316_17 [38 of 90]
+  Parsing ../batch_4_wgenome/YS_121316_21.tags.tsv
+  Parsing ../batch_4_wgenome/YS_121316_21.snps.tsv
+  Parsing ../batch_4_wgenome/YS_121316_21.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24752 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/YS_121316_21 [39 of 90]
+  Parsing ../batch_4_wgenome/YS_121316_22.tags.tsv
+  Parsing ../batch_4_wgenome/YS_121316_22.snps.tsv
+  Parsing ../batch_4_wgenome/YS_121316_22.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24714 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/YS_121316_22 [40 of 90]
+  Parsing ../batch_4_wgenome/YS_121316_24.tags.tsv
+  Parsing ../batch_4_wgenome/YS_121316_24.snps.tsv
+  Parsing ../batch_4_wgenome/YS_121316_24.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24752 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/YS_121316_24 [41 of 90]
+  Parsing ../batch_4_wgenome/JUK07_30.tags.tsv
+  Parsing ../batch_4_wgenome/JUK07_30.snps.tsv
+  Parsing ../batch_4_wgenome/JUK07_30.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24494 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JUK07_30 [42 of 90]
+  Parsing ../batch_4_wgenome/JUK07_32.tags.tsv
+  Parsing ../batch_4_wgenome/JUK07_32.snps.tsv
+  Parsing ../batch_4_wgenome/JUK07_32.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24579 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JUK07_32 [43 of 90]
+  Parsing ../batch_4_wgenome/JUK07_06.1.tags.tsv
+  Parsing ../batch_4_wgenome/JUK07_06.1.snps.tsv
+  Parsing ../batch_4_wgenome/JUK07_06.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24797 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JUK07_06.1 [44 of 90]
+  Parsing ../batch_4_wgenome/JUK07_02.1.tags.tsv
+  Parsing ../batch_4_wgenome/JUK07_02.1.snps.tsv
+  Parsing ../batch_4_wgenome/JUK07_02.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24788 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JUK07_02.1 [45 of 90]
+  Parsing ../batch_4_wgenome/JUK07_15.tags.tsv
+  Parsing ../batch_4_wgenome/JUK07_15.snps.tsv
+  Parsing ../batch_4_wgenome/JUK07_15.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24430 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JUK07_15 [46 of 90]
+  Parsing ../batch_4_wgenome/JUK07_29.1.tags.tsv
+  Parsing ../batch_4_wgenome/JUK07_29.1.snps.tsv
+  Parsing ../batch_4_wgenome/JUK07_29.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24645 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JUK07_29.1 [47 of 90]
+  Parsing ../batch_4_wgenome/JUK07_19.tags.tsv
+  Parsing ../batch_4_wgenome/JUK07_19.snps.tsv
+  Parsing ../batch_4_wgenome/JUK07_19.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24037 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JUK07_19 [48 of 90]
+  Parsing ../batch_4_wgenome/JUK07_27.tags.tsv
+  Parsing ../batch_4_wgenome/JUK07_27.snps.tsv
+  Parsing ../batch_4_wgenome/JUK07_27.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24077 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JUK07_27 [49 of 90]
+  Parsing ../batch_4_wgenome/JUK07_09.1.tags.tsv
+  Parsing ../batch_4_wgenome/JUK07_09.1.snps.tsv
+  Parsing ../batch_4_wgenome/JUK07_09.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24687 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JUK07_09.1 [50 of 90]
+  Parsing ../batch_4_wgenome/JUK07_26.tags.tsv
+  Parsing ../batch_4_wgenome/JUK07_26.snps.tsv
+  Parsing ../batch_4_wgenome/JUK07_26.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24021 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JUK07_26 [51 of 90]
+  Parsing ../batch_4_wgenome/JB121807_44.tags.tsv
+  Parsing ../batch_4_wgenome/JB121807_44.snps.tsv
+  Parsing ../batch_4_wgenome/JB121807_44.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24139 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB121807_44 [52 of 90]
+  Parsing ../batch_4_wgenome/JB121807_31.1.tags.tsv
+  Parsing ../batch_4_wgenome/JB121807_31.1.snps.tsv
+  Parsing ../batch_4_wgenome/JB121807_31.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  23129 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB121807_31.1 [53 of 90]
+  Parsing ../batch_4_wgenome/JB121807_46.tags.tsv
+  Parsing ../batch_4_wgenome/JB121807_46.snps.tsv
+  Parsing ../batch_4_wgenome/JB121807_46.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  22804 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB121807_46 [54 of 90]
+  Parsing ../batch_4_wgenome/JB121807_38.1.tags.tsv
+  Parsing ../batch_4_wgenome/JB121807_38.1.snps.tsv
+  Parsing ../batch_4_wgenome/JB121807_38.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  22496 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB121807_38.1 [55 of 90]
+  Parsing ../batch_4_wgenome/JB121807_14.1.tags.tsv
+  Parsing ../batch_4_wgenome/JB121807_14.1.snps.tsv
+  Parsing ../batch_4_wgenome/JB121807_14.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  22319 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB121807_14.1 [56 of 90]
+  Parsing ../batch_4_wgenome/JB121807_33.1.tags.tsv
+  Parsing ../batch_4_wgenome/JB121807_33.1.snps.tsv
+  Parsing ../batch_4_wgenome/JB121807_33.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  22454 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB121807_33.1 [57 of 90]
+  Parsing ../batch_4_wgenome/JB121807_03.1.tags.tsv
+  Parsing ../batch_4_wgenome/JB121807_03.1.snps.tsv
+  Parsing ../batch_4_wgenome/JB121807_03.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  23957 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB121807_03.1 [58 of 90]
+  Parsing ../batch_4_wgenome/JB121807_11.1.tags.tsv
+  Parsing ../batch_4_wgenome/JB121807_11.1.snps.tsv
+  Parsing ../batch_4_wgenome/JB121807_11.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24606 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB121807_11.1 [59 of 90]
+  Parsing ../batch_4_wgenome/JB121807_21.1.tags.tsv
+  Parsing ../batch_4_wgenome/JB121807_21.1.snps.tsv
+  Parsing ../batch_4_wgenome/JB121807_21.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  21803 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB121807_21.1 [60 of 90]
+  Parsing ../batch_4_wgenome/JB121807_37.tags.tsv
+  Parsing ../batch_4_wgenome/JB121807_37.snps.tsv
+  Parsing ../batch_4_wgenome/JB121807_37.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  23604 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB121807_37 [61 of 90]
+  Parsing ../batch_4_wgenome/JB021108_19.1.tags.tsv
+  Parsing ../batch_4_wgenome/JB021108_19.1.snps.tsv
+  Parsing ../batch_4_wgenome/JB021108_19.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  23794 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB021108_19.1 [62 of 90]
+  Parsing ../batch_4_wgenome/JB021108_05.tags.tsv
+  Parsing ../batch_4_wgenome/JB021108_05.snps.tsv
+  Parsing ../batch_4_wgenome/JB021108_05.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24872 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB021108_05 [63 of 90]
+  Parsing ../batch_4_wgenome/JB021108_32.tags.tsv
+  Parsing ../batch_4_wgenome/JB021108_32.snps.tsv
+  Parsing ../batch_4_wgenome/JB021108_32.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24806 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB021108_32 [64 of 90]
+  Parsing ../batch_4_wgenome/JB021108_45.tags.tsv
+  Parsing ../batch_4_wgenome/JB021108_45.snps.tsv
+  Parsing ../batch_4_wgenome/JB021108_45.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24443 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB021108_45 [65 of 90]
+  Parsing ../batch_4_wgenome/JB021108_12.1.tags.tsv
+  Parsing ../batch_4_wgenome/JB021108_12.1.snps.tsv
+  Parsing ../batch_4_wgenome/JB021108_12.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24308 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB021108_12.1 [66 of 90]
+  Parsing ../batch_4_wgenome/JB021108_37.1.tags.tsv
+  Parsing ../batch_4_wgenome/JB021108_37.1.snps.tsv
+  Parsing ../batch_4_wgenome/JB021108_37.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24252 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB021108_37.1 [67 of 90]
+  Parsing ../batch_4_wgenome/JB021108_30.tags.tsv
+  Parsing ../batch_4_wgenome/JB021108_30.snps.tsv
+  Parsing ../batch_4_wgenome/JB021108_30.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24698 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB021108_30 [68 of 90]
+  Parsing ../batch_4_wgenome/JB021108_16.tags.tsv
+  Parsing ../batch_4_wgenome/JB021108_16.snps.tsv
+  Parsing ../batch_4_wgenome/JB021108_16.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24603 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB021108_16 [69 of 90]
+  Parsing ../batch_4_wgenome/JB021108_46.1.tags.tsv
+  Parsing ../batch_4_wgenome/JB021108_46.1.snps.tsv
+  Parsing ../batch_4_wgenome/JB021108_46.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24659 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB021108_46.1 [70 of 90]
+  Parsing ../batch_4_wgenome/JB021108_48.1.tags.tsv
+  Parsing ../batch_4_wgenome/JB021108_48.1.snps.tsv
+  Parsing ../batch_4_wgenome/JB021108_48.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  23491 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/JB021108_48.1 [71 of 90]
+  Parsing ../batch_4_wgenome/GEO020414_24_300.tags.tsv
+  Parsing ../batch_4_wgenome/GEO020414_24_300.snps.tsv
+  Parsing ../batch_4_wgenome/GEO020414_24_300.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24359 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO020414_24_300 [72 of 90]
+  Parsing ../batch_4_wgenome/GEO020414_7.tags.tsv
+  Parsing ../batch_4_wgenome/GEO020414_7.snps.tsv
+  Parsing ../batch_4_wgenome/GEO020414_7.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24584 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO020414_7 [73 of 90]
+  Parsing ../batch_4_wgenome/GEO020414_4.tags.tsv
+  Parsing ../batch_4_wgenome/GEO020414_4.snps.tsv
+  Parsing ../batch_4_wgenome/GEO020414_4.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24541 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO020414_4 [74 of 90]
+  Parsing ../batch_4_wgenome/GEO020414_11_300.tags.tsv
+  Parsing ../batch_4_wgenome/GEO020414_11_300.snps.tsv
+  Parsing ../batch_4_wgenome/GEO020414_11_300.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24543 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO020414_11_300 [75 of 90]
+  Parsing ../batch_4_wgenome/GEO020414_9_300.tags.tsv
+  Parsing ../batch_4_wgenome/GEO020414_9_300.snps.tsv
+  Parsing ../batch_4_wgenome/GEO020414_9_300.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24011 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO020414_9_300 [76 of 90]
+  Parsing ../batch_4_wgenome/GEO020414_3.tags.tsv
+  Parsing ../batch_4_wgenome/GEO020414_3.snps.tsv
+  Parsing ../batch_4_wgenome/GEO020414_3.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24257 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO020414_3 [77 of 90]
+  Parsing ../batch_4_wgenome/GEO020414_23_300.tags.tsv
+  Parsing ../batch_4_wgenome/GEO020414_23_300.snps.tsv
+  Parsing ../batch_4_wgenome/GEO020414_23_300.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24678 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO020414_23_300 [78 of 90]
+  Parsing ../batch_4_wgenome/GEO020414_13_300.tags.tsv
+  Parsing ../batch_4_wgenome/GEO020414_13_300.snps.tsv
+  Parsing ../batch_4_wgenome/GEO020414_13_300.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  23978 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO020414_13_300 [79 of 90]
+  Parsing ../batch_4_wgenome/GEO020414_16_300.tags.tsv
+  Parsing ../batch_4_wgenome/GEO020414_16_300.snps.tsv
+  Parsing ../batch_4_wgenome/GEO020414_16_300.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24227 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO020414_16_300 [80 of 90]
+  Parsing ../batch_4_wgenome/GEO020414_8_300.tags.tsv
+  Parsing ../batch_4_wgenome/GEO020414_8_300.snps.tsv
+  Parsing ../batch_4_wgenome/GEO020414_8_300.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24581 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/GEO020414_8_300 [81 of 90]
+  Parsing ../batch_4_wgenome/BOR07_14.tags.tsv
+  Parsing ../batch_4_wgenome/BOR07_14.snps.tsv
+  Parsing ../batch_4_wgenome/BOR07_14.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24811 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/BOR07_14 [82 of 90]
+  Parsing ../batch_4_wgenome/BOR07_11.1.tags.tsv
+  Parsing ../batch_4_wgenome/BOR07_11.1.snps.tsv
+  Parsing ../batch_4_wgenome/BOR07_11.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24782 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/BOR07_11.1 [83 of 90]
+  Parsing ../batch_4_wgenome/BOR07_22.tags.tsv
+  Parsing ../batch_4_wgenome/BOR07_22.snps.tsv
+  Parsing ../batch_4_wgenome/BOR07_22.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24697 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/BOR07_22 [84 of 90]
+  Parsing ../batch_4_wgenome/BOR07_12.1.tags.tsv
+  Parsing ../batch_4_wgenome/BOR07_12.1.snps.tsv
+  Parsing ../batch_4_wgenome/BOR07_12.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24354 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/BOR07_12.1 [85 of 90]
+  Parsing ../batch_4_wgenome/BOR07_10.1.tags.tsv
+  Parsing ../batch_4_wgenome/BOR07_10.1.snps.tsv
+  Parsing ../batch_4_wgenome/BOR07_10.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24353 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/BOR07_10.1 [86 of 90]
+  Parsing ../batch_4_wgenome/BOR07_09.tags.tsv
+  Parsing ../batch_4_wgenome/BOR07_09.snps.tsv
+  Parsing ../batch_4_wgenome/BOR07_09.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24603 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/BOR07_09 [87 of 90]
+  Parsing ../batch_4_wgenome/BOR07_07.1.tags.tsv
+  Parsing ../batch_4_wgenome/BOR07_07.1.snps.tsv
+  Parsing ../batch_4_wgenome/BOR07_07.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24812 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/BOR07_07.1 [88 of 90]
+  Parsing ../batch_4_wgenome/BOR07_04.tags.tsv
+  Parsing ../batch_4_wgenome/BOR07_04.snps.tsv
+  Parsing ../batch_4_wgenome/BOR07_04.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24729 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/BOR07_04 [89 of 90]
+  Parsing ../batch_4_wgenome/BOR07_08.1.tags.tsv
+  Parsing ../batch_4_wgenome/BOR07_08.1.snps.tsv
+  Parsing ../batch_4_wgenome/BOR07_08.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24706 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Processing sample ../batch_4_wgenome/BOR07_08.1 [90 of 90]
+  Parsing ../batch_4_wgenome/BOR07_17.1.tags.tsv
+  Parsing ../batch_4_wgenome/BOR07_17.1.snps.tsv
+  Parsing ../batch_4_wgenome/BOR07_17.1.alleles.tsv
+Searching for matches by genomic location...
+Merging matches into catalog...
+  24341 loci were matched to a catalog locus.
+  0 loci were matched to a catalog locus using gapped alignments.
+  0 loci were newly added to the catalog.
+  0 loci matched more than one catalog locus and were excluded.
+  Updating catalog index...
+Writing catalog to '../batch_4_wgenome/... done.

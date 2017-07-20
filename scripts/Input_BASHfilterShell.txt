@@ -1,0 +1,8 @@
+##### Input File #####
+/mnt/hgfs/Pacific\ cod/DataAnalysis/scripts/shell	#absolute path to BASH shell
+/mnt/hgfs/Pacific\ cod/DataAnalysis/L1L2stacks_m10	#absolute path to stacks' populations output
+1	#batch number
+/mnt/hgfs/Pacific\ cod/DataAnalysis/scripts	#absolute path to python script: genBOWTIEfasta_fromGENEPOP.py
+/mnt/hgfs/Pacific\ cod/DataAnalysis/scripts	#absolute path to python script: parseBowtie_DD.py
+/mnt/hgfs/Pacific\ cod/DataAnalysis/scripts	#absolute path to python script: checkBlastResults_DD.py
+
