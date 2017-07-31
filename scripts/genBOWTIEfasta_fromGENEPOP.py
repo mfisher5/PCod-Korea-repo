@@ -4,6 +4,7 @@
 #ARG 1 - genepop file from `populations`. 
 #ARG 2 - the .catalog file output from `cstacks` (unzipped)
 
+### output will appear in the same folder as this script and will automatically be named "seqsforBOWTIE.fa"
 
 import sys
 
@@ -66,7 +67,7 @@ fasta = ""
 for line in catalog: 
 	linelist = line.strip().split()
 	if linelist[2] in UniqueLoci: 
-		newline = ">"+linelist[2]+"\n"+linelist[8]+"\n"
+		newline = ">"+linelist[2]+"\n"+linelist[9]+"\n"
 		fasta += newline
 catalog.close()
 
@@ -76,3 +77,5 @@ print "Writing new fasta file..."
 newfile = open("seqsforBOWTIE.fa", "w")
 newfile.write(fasta)
 newfile.close()
+
+print "Done."
