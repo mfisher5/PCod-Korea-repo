@@ -39,7 +39,9 @@ Sequencing completed 4/3/2017
 
 <br>
 <br>
-### Lane 4: 
+
+### Lane 4:
+ 
 **Sample 1041 (data files named "Undetermined")**
 
 Paired End, 150pb
@@ -50,7 +52,9 @@ Sequencing completed 3/29/2017
 
 <br>
 <br>
-### Lane 5: 
+
+### Lane 5:
+ 
 **Sample 1275**
 
 Single Read, 150bp
