@@ -5,7 +5,8 @@
 <br>
 
 ### Lane 1: 
-**Sample **
+
+**Sample 643**
 
 Paired End, 150bp
 
@@ -16,6 +17,7 @@ Sequencing completed 10/10/2016
 <br>
 <br>
 ### Lane 2: 
+
 **Sample 768**
 
 Single Read, 150bp
