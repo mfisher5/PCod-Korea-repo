@@ -29,9 +29,9 @@ newfile.write("cd /mnt/hgfs/Shared\ Drive\ D/Pacific\ cod/DataAnalysis/PCod-Kore
 #=== Lane5: make list of sample names
 samplelist = []
 myfile = open(sys.argv[1], "r")
-for line in myfile2: 			#for each line in the barcode file	
+for line in myfile: 			#for each line in the barcode file	
 	linelist=line.strip().split()	 	
-	samplelist.append(linelist[1] + "\n")
+	samplelist.append(linelist[1])
 myfile.close()
 	
 
@@ -40,13 +40,11 @@ myfile.close()
 newfile.write("\n"+"#ustacks"+"\n")
 
 ID_int = 265
-for line in samplefile: 			#for each line in the barcode file	
-	sampID = line.strip()	
-	ustacks_code = "ustacks -t fastq -f samplesT142/" + sampID + ".fq -r -d -o stacks_b4 -i " + str(ID_int) + " -m 5 -M 3 -p 6 --model_type bounded" + "\n"
+for sampID in samplelist: 			#for each sample in the list	
+	ustacks_code = "ustacks -t fastq -f samplesT142/" + sampID + ".fq -r -d -o stacks_b7 -i " + str(ID_int) + " -m 5 -M 3 -p 6 --model_type bounded" + "\n"
 								#create a line of code for ustacks that includes the new sample ID (with no leading 0s)
 	newfile.write(ustacks_code)	#append this new line of code to the output file
 	ID_int += 1
-samplefile.close()
 
 
 
@@ -55,23 +53,22 @@ samplefile.close()
 # count the number of reads per file
 newfile.write("\n#count total reads\n")
 newfile.write("cd /mnt/hgfs/Shared\ Drive\ D/Pacific\ cod/DataAnalysis/PCod-Korea-repo/samplesT142\n")
-samplefile = open("L1-4_sampleList.txt", "r")
-for line in samplefile:
-	sampID = line.strip()
+samplefile = open("../scripts/L5_sampleList.txt", "w")
+for sampID in samplelist:
 	newstr = "awk '((NR-2)%4==0){read=$1;total++;count[read]++}END;print total}' " + sampID + ".fq >> ../fastq_readcounts_temp.txt"
 	newfile.write(newstr + "\n")
-
+	samplefile.write(sampID+"\n")
 samplefile.close()
 
 
 # call file that organizes the fastq_readcounts.txt so that it includes sample names. 
 newfile.write("cd /mnt/hgfs/Shared\ Drive\ D/Pacific\ cod/DataAnalysis/PCod-Korea-repo\n")
-newfile.write("\n\npython scripts/addsampIDs_readcountsfile.py -s scripts/L1-4_sampleList.txt -i fastq_readcounts_temp.txt -o fastq_readcounts.txt\n\n")
+newfile.write("\n\npython scripts/addsampIDs_readcountsfile.py -s scripts/L5_sampleList.txt -i fastq_readcounts_temp.txt -o fastq_readcounts_Lane5.txt\n\n")
 
 
 # count the number of loci per ustacks file
 newfile.write("\n#count loci\n")
-newfile.write("python scripts/countloci_tagsfiles.py -s scripts/L1-4_sampleList.txt -d /mnt/hgfs/Shared\ Drive\ D/Pacific\ cod/DataAnalysis/PCod-Korea-repo/stacks_b4 -o tagcounts_ustacks.txt\n\n")
+newfile.write("python scripts/countloci_tagsfiles.py -s scripts/L5_sampleList.txt -d /mnt/hgfs/Shared\ Drive\ D/Pacific\ cod/DataAnalysis/PCod-Korea-repo/stacks_b7 -o tagcounts_ustacks_Lane5.txt\n\n")
 
 
 
