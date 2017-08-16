@@ -39,7 +39,7 @@ myfile.close()
 #ustacks 
 newfile.write("\n"+"#ustacks"+"\n")
 
-ID_int = 265
+ID_int = 280
 for sampID in samplelist: 			#for each sample in the list	
 	ustacks_code = "ustacks -t fastq -f samplesT142/" + sampID + ".fq -r -d -o stacks_b7 -i " + str(ID_int) + " -m 5 -M 3 -p 6 --model_type bounded" + "\n"
 								#create a line of code for ustacks that includes the new sample ID (with no leading 0s)

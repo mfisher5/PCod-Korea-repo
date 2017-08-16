@@ -1,13 +1,12 @@
 ### This script counts the number of loci in each ustacks tags file ###
-### Has also been used to count number of loci in each pstacks tags file ###
 
 
 import argparse 
 
 parser = argparse.ArgumentParser(description="count number of consensus seqs in .tags files")
 
-parser.add_argument("-s", "--samples", help="file with list of samples with local path")
-parser.add_argument("-d", "--directory", help="stacks directory with tags files")
+parser.add_argument("-s", "--samples", help="file with list of samples")
+parser.add_argument("-d", "--directory", help="stacks directory with tags files; can be local path, don't include final '/'")
 parser.add_argument("-o", "--output", help="output file name with local path")
 
 args = parser.parse_args()
