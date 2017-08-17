@@ -1,0 +1,21 @@
+Searching for matches by sequence identity...
+  Parsing ../stacks_b7/batch_7.catalog.tags.tsv
+  Parsing ../stacks_b7/batch_7.catalog.snps.tsv
+  Parsing ../stacks_b7/batch_7.catalog.alleles.tsv
+Processing sample '../stacks_b7/PO010715_02' [1 of 1]
+  Parsing ../stacks_b7/PO010715_02.tags.tsv
+  Parsing ../stacks_b7/PO010715_02.snps.tsv
+  Parsing ../stacks_b7/PO010715_02.alleles.tsv
+Searching for sequence matches...
+48851 stacks compared against the catalog containing 509812 loci.
+  48845 matching loci, 145 contained no verified haplotypes.
+  142 loci matched more than one catalog locus and were excluded.
+  3 loci contained SNPs unaccounted for in the catalog and were excluded.
+  58496 total haplotypes examined from matching loci, 58089 verified.
+Outputing to file ../stacks_b7/PO010715_02.matches.tsv
+Searching for matches by sequence identity...
+  Parsing ../stacks_b7/batch_7.catalog.tags.tsv
+  Parsing ../stacks_b7/batch_7.catalog.snps.tsv
+  Parsing ../stacks_b7/batch_7.catalog.alleles.tsv
+Processing sample '../stacks_b7/PO010715_02_rep' [1 of 1]
+  Parsing ../stacks_b7/PO010715_02_rep.tags.tsv
