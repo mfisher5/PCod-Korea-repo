@@ -65,10 +65,11 @@ print ""
 #extract the sequences from the catalog file
 fasta = ""
 for line in catalog: 
-	linelist = line.strip().split()
-	if linelist[2] in UniqueLoci: 
-		newline = ">"+linelist[2]+"\n"+linelist[9]+"\n"
-		fasta += newline
+	linelist = line.strip().split("\t")
+	if len(linelist) > 2:
+		if linelist[2] in UniqueLoci: 
+			newline = ">"+linelist[2]+"\n"+linelist[9]+"\n"
+			fasta += newline
 catalog.close()
 
 
