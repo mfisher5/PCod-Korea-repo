@@ -9,28 +9,26 @@ data_matrix = []
 for line in infile:
 	tmp_line = ''
 	tmp_line += line
-	data_matrix.append(tmp_line.split(' '))
+	data_matrix.append(tmp_line.strip().split(' '))
 infile.close()
 
-transposed = zip(*data_matrix)
-
 print 'writing loci into genepop file...'
-locilist = transposed[0]
+locilist = data_matrix[0]
 LociIndex = range(0, len(locilist))
 for i in LociIndex:
-	if transposed[0][i] != 'sample':
-		genepop.write(transposed[0][i] + '\r\n')
+	if data_matrix[0][i] != 'sample':
+		genepop.write(data_matrix[0][i] + '\r\n')
 
-Pohang15 = transposed[1:35]
-Geoje15 = transposed[35:72]
-Namhae15 = transposed[72:91]
-YellowSea16 = transposed[91:120]
-Jukbyeon07 = transposed[120:155]
-JinhaeBay07 = transposed[155:199]
-JinhaeBay08 = transposed[199:243]
-Boryeong07 = transposed[243:266]
-Geoje14 = transposed[266:299]
-last_line = list(transposed[299])
+Pohang15 = data_matrix[1:35]
+Geoje15 = data_matrix[35:72]
+Namhae15 = data_matrix[72:91]
+YellowSea16 = data_matrix[91:120]
+Jukbyeon07 = data_matrix[120:155]
+JinhaeBay07 = data_matrix[155:199]
+JinhaeBay08 = data_matrix[199:243]
+Boryeong07 = data_matrix[243:266]
+Geoje14 = data_matrix[266:299]
+last_line = list(data_matrix[299])
 seq = range(0, len(last_line))
 for i in seq:
 	last_line[i] = last_line[i].strip('\r\n')

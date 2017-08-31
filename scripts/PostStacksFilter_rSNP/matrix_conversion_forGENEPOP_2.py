@@ -3,7 +3,7 @@
 ## MF 8/28/2017
 
 ## Based on "genepop conversion for R" script MF 12/13/2016
-## Sample names should be column headers, Loci should be rows
+## Loci should be column headers, sample names should be rows
 
 
 #################################################################################
@@ -67,7 +67,7 @@ print ("creating script for part 2...")
 
 ################## This second part of the script writes a second script, which will be called with 'subprocess,' to write the genepop file ####################
 
-part2 = open("matrix_conversion_forGENEPOP_p2.py", "w")
+part2 = open("matrix_conversion_forGENEPOP_2_p2.py", "w")
 
 part2.write("### This is part two of the script that will convert a 2x2 matrix file into a genepop file. It is automatically generated with part 1 #####\n\n\n")
 part2.write("infile = open('" + args.path_stacks + "/" + args.input + "', 'r')\n")
@@ -80,16 +80,15 @@ part2.write("genepop.write('" + args.title + r"\r\n')" + "\n") #An "r" before th
 part2.write("print 'transposing genotypes matrix...'\n")
 # transpose the matrix file so that the loci are along the top row, and the individual names are in the first column
 part2.write("data_matrix = []\n")
-part2.write("for line in infile:\n\ttmp_line = ''\n\ttmp_line += line\n\tdata_matrix.append(tmp_line.split(' '))\n")
+part2.write("for line in infile:\n\ttmp_line = ''\n\ttmp_line += line\n\tdata_matrix.append(tmp_line.strip().split(' '))\n")
 part2.write("infile.close()\n\n")
-part2.write("transposed = zip(*data_matrix)\n\n")
 
 
 part2.write("print 'writing loci into genepop file...'\n")
 #create loci list and write it to the genepop file.
-part2.write("locilist = transposed[0]\n")
+part2.write("locilist = data_matrix[0]\n")
 part2.write("LociIndex = range(0, len(locilist))\n")
-part2.write("for i in LociIndex:\n\tif transposed[0][i] != 'sample':\n\t\tgenepop.write(transposed[0][i] + " + r"'\r\n')" + "\n\n")
+part2.write("for i in LociIndex:\n\tif data_matrix[0][i] != 'sample':\n\t\tgenepop.write(data_matrix[0][i] + " + r"'\r\n')" + "\n\n")
 
 
 # generate a string that splits by columns for each population and write to script
@@ -98,15 +97,15 @@ pop_count = 1
 for pop in PopList: 
 	if pop_count < n_pops:
 		cols = column_indices[pop]
-		newstr = pop + " = transposed[" + str(cols[0]) + ":" + str(cols[1]) + "]"
+		newstr = pop + " = data_matrix[" + str(cols[0]) + ":" + str(cols[1]) + "]"
 		part2.write(newstr + "\n")
 		pop_count += 1
 	elif pop_count == n_pops:
 		cols = column_indices[pop]
 		last_column = cols[1] - 1
-		newstr = pop + " = transposed[" + str(cols[0]) + ":" + str(last_column) + "]"
+		newstr = pop + " = data_matrix[" + str(cols[0]) + ":" + str(last_column) + "]"
 		part2.write(newstr + "\n")
-		part2.write("last_line = list(transposed[" + str(last_column) + "])\n")
+		part2.write("last_line = list(data_matrix[" + str(last_column) + "])\n")
 		part2.write("seq = range(0, len(last_line))\n")
 		part2.write("for i in seq:\n\tlast_line[i] = last_line[i].strip(" + r"'\r\n')" + "\n")
 part2.write("\n\n")
@@ -136,6 +135,6 @@ print "calling script for part 2..."
 
 import subprocess
 
-subprocess.call(['python', 'matrix_conversion_forGENEPOP_p2.py'])
+subprocess.call(['python', 'matrix_conversion_forGENEPOP_2_p2.py'])
 
 
