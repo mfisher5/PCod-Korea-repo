@@ -33,3 +33,6 @@ stacks_b5_wgenome.7z
 analyses/ml_relate_batch6/*
 stacks_b7/*
 stacks_b7_wgenome/*
+analyses/HWE/*
+analyses/PCA/*
+analyses/genepop/*

@@ -18,6 +18,7 @@ parser.add_argument("-m", "--popmap", help="population map file")
 parser.add_argument("-pm", "--path_popmap", help="path to population map file")
 parser.add_argument("-ps", "--path_stacks", help="path to stacks files, including input file")
 parser.add_argument("-t", "--title", help="title for your genepop file")
+parser.add_argument("-split", "--split_by", help="split contents of each line by... ['tab' / 'space']")
 
 
 args = parser.parse_args()
@@ -80,7 +81,12 @@ part2.write("genepop.write('" + args.title + r"\r\n')" + "\n") #An "r" before th
 part2.write("print 'transposing genotypes matrix...'\n")
 # transpose the matrix file so that the loci are along the top row, and the individual names are in the first column
 part2.write("data_matrix = []\n")
-part2.write("for line in infile:\n\ttmp_line = ''\n\ttmp_line += line\n\tdata_matrix.append(tmp_line.split(' '))\n")
+if args.split_by == "space":
+	part2.write("for line in infile:\n\ttmp_line = ''\n\ttmp_line += line\n\tdata_matrix.append(tmp_line.split(' '))\n")
+elif args.split_by == "tab":
+	part2.write("for line in infile:\n\ttmp_line = ''\n\ttmp_line += line\n\tdata_matrix.append(tmp_line.split" + r"('\t'))" + "\n")
+else:
+	print "ERROR: incorrect split argument"
 part2.write("infile.close()\n\n")
 part2.write("transposed = zip(*data_matrix)\n\n")
 

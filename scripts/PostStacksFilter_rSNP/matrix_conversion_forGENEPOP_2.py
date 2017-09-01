@@ -10,9 +10,9 @@
 
 import argparse 
 
-parser = argparse.ArgumentParser(description="convert matrix file (samples as column headers) to a genepop file.")
+parser = argparse.ArgumentParser(description="convert matrix file (loci as column headers) to a genepop file.")
 
-parser.add_argument("-f", "--input", help="2 x 2 matrix file with samples as column headers, one row per locus.")
+parser.add_argument("-f", "--input", help="2 x 2 matrix file with loci as column headers, one row per sample.")
 parser.add_argument("-o", "--output", help="output file in genepop format")
 parser.add_argument("-m", "--popmap", help="population map file")
 parser.add_argument("-pm", "--path_popmap", help="path to population map file")
