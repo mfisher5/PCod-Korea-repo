@@ -75,7 +75,7 @@ if args.list:
     list_file = open(args.list, 'r')
 
     for line in list_file:
-        sample_name = line.strip()
+        sample_name = line.strip().split()[0]
 
         # extract the list of genotypes for the individual from the genepop file
 

@@ -29,15 +29,15 @@ for mystring in genotypes_file:		# Read in each line in the file as a string
 		overall_percent_missingdata = []
 		stripped_string = mystring.strip('\n')
 		locus_name = stripped_string.split(',')[0]
-		Pohang15 = stripped_string.split(',')[1:32]
-		Geoje15 = stripped_string.split(',')[32:65]
-		Namhae15 = stripped_string.split(',')[65:81]
-		YellowSea16 = stripped_string.split(',')[81:105]
-		Jukbyeon07 = stripped_string.split(',')[105:130]
-		JinhaeBay07 = stripped_string.split(',')[130:159]
-		JinhaeBay08 = stripped_string.split(',')[159:195]
-		Boryeong07 = stripped_string.split(',')[195:217]
-		Geoje14 = stripped_string.split(',')[217:249]
+		Pohang15 = stripped_string.split(',')[1:35]
+		Geoje15 = stripped_string.split(',')[35:72]
+		Namhae15 = stripped_string.split(',')[72:91]
+		YellowSea16 = stripped_string.split(',')[91:121]
+		Jukbyeon07 = stripped_string.split(',')[121:158]
+		JinhaeBay07 = stripped_string.split(',')[158:211]
+		JinhaeBay08 = stripped_string.split(',')[211:267]
+		Boryeong07 = stripped_string.split(',')[267:291]
+		Geoje14 = stripped_string.split(',')[291:327]
 
 #per population counts
 #next pop
@@ -87,7 +87,7 @@ for mystring in genotypes_file:		# Read in each line in the file as a string
 		overall_percent_missingdata.append(Percent_MissingData_Geoje14)
 
 #write loci to appropriate file
-		if all(i < 0.50 for i in overall_percent_missingdata):
+		if all(i < 0.20 for i in overall_percent_missingdata):
 			clean_output_file.write(mystring)
 		else: 
 			blacklisted_output_file.write(mystring)
