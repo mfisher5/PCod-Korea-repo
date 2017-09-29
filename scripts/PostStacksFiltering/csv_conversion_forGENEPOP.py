@@ -70,7 +70,7 @@ print ("creating script for part 2...")
 
 part2 = open("csv_conversion_forGENEPOP_p2.py", "w")
 
-part2.write("### This is part two of the script that will convert a 2x2 matrix file into a genepop file. It is automatically generated with part 1 #####\n\n\n")
+part2.write("### This is part two of the script that will convert a 2x2 matrix file into a genepop file. It is automatically generated with part 1. ASSUMPTION: SAMPLES ARE COLUMN HEADERS #####\n\n\n")
 part2.write("infile = open('" + args.path_stacks + "/" + args.input + "', 'r')\n")
 part2.write("genepop = open('" + args.path_stacks +  "/" + args.output + "', 'w')\n")
 

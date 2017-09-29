@@ -1,6 +1,5 @@
 ### Input file for generating the bash shell script for final filtering ###
 	# Name for your BASH script, including the `.sh` file extension. 
-	# Absolute path to where the shell script will be located. *If there is a space in the file path, include a \*
 	# Absolute path to the stacks files *If there is a space in the file path, include a \* 
 	# batch
 	# Is the .catalog.snps.tsv file zipped? [yes / no]

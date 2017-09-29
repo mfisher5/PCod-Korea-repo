@@ -1,15 +1,15 @@
-### This is part two of the script that will convert a 2x2 matrix file into a genepop file. It is automatically generated with part 1. It assumes that loci are column headers #####
+### This is part two of the script that will convert a 2x2 matrix file into a genepop file. It is automatically generated with part 1. ASSUMPTION: SAMPLES ARE COLUMN HEADERS #####
 
 
-infile = open('../../stacks_b8_wgenome/batch_8.filteredMAF_filteredIndivids30_filteredLoci', 'r')
-genepop = open('../../stacks_b8_wgenome/batch_8_filteredMAF_filteredIndivids30_filteredLoci_genepop.txt', 'w')
-genepop.write('Korean Pacific cod filtered final genepop for HWE filtering, stacks b8, MF 9/29/2017\r\n')
+infile = open('stacks_b8_wgenome/batch_8.filteredMAF_filteredIndivids30_filteredLoci_filteredHWE.txt', 'r')
+genepop = open('stacks_b8_wgenome/batch_8_filteredMAF_filteredIndivids30_filteredLoci_filteredHWE.gen', 'w')
+genepop.write('Korean Pacific cod filtered final genepop, stacks batch 8 MF 9/29/2017\r\n')
 print 'transposing genotypes matrix...'
 data_matrix = []
 for line in infile:
 	tmp_line = ''
 	tmp_line += line
-	data_matrix.append(tmp_line.split(' '))
+	data_matrix.append(tmp_line.split('\t'))
 infile.close()
 
 transposed = zip(*data_matrix)

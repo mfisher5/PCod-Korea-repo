@@ -4,9 +4,9 @@
 #
 # calc_het.py - this is a script used to calculate heterozygosity, based off of Dan Drinan's hetVsReadDepth.py
 #
-# 2017-March-28
-# Daniel Drinan (ddrinan@uw.edu)
-# MF Edited 5/9/2017
+# MF 9/29/2017
+
+# Based ib 2017-March-28 script written by Daniel Drinan (ddrinan@uw.edu)
 
 ################################################################################
 
@@ -38,25 +38,21 @@ output_file = open(args.output, 'w')
 ########################
 
 # function to count the proportion of heterozygous loci in a sample
-def countHet(sample_name):
+def calcMissing(sample_name):
         individuals_genotypes = subprocess.Popen(["grep " + sample_name + " " + \
                                 args.file], stdout=subprocess.PIPE, shell=True)
         (genotypes_out, genotypes_err) = individuals_genotypes.communicate()
         genotypes_out = genotypes_out.split(',')[1] # removing everything except genotypes
         genotypes_out = genotypes_out.split()
 
-        tmp_het = 0.0 # number of heterozygotes
+        tmp_missing = 0.0 # number of genotypes missing
         tmp_total = 0.0000000000000001 # number of genotyped loci
 
         for item in genotypes_out:
-            if item.count('0') < len(item): # if true, a genotype exists
-                tmp_total += 1
-
-                # split the genotype in half and compare each allele
-                if item[0:len(item)/2] != item[len(item)/2:]: # if true, it is a het
-                    tmp_het += 1
-
-        return tmp_het/tmp_total
+            tmp_total += 1
+            if item.count('0') == len(item): # if true, a genotype does not exist
+                tmp_missing += 1
+        return float(tmp_missing)/float(tmp_total)
 
 
 
@@ -77,9 +73,9 @@ if args.list:
 
         # extract the list of genotypes for the individual from the genepop file
 
-        tmp_proportion_het = countHet(sample_name)
+        tmp_proportion_missing = calcMissing(sample_name)
 
-        tmp_output = sample_name + ' ' + str(tmp_proportion_het) + '\n'
+        tmp_output = sample_name + ' ' + str(tmp_proportion_missing) + '\n'
 
         output_file.write(tmp_output)
 

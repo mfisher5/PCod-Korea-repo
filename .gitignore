@@ -38,3 +38,4 @@ analyses/genepop/*
 analyses/batch6_v_batch7/*.tsv
 analyses/batch6_v_batch7/*.fa
 analyses/batch6_v_batch7/batch_7_catalog*
+stacks_b8_wgenome/*

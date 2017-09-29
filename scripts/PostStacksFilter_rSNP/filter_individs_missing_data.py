@@ -8,7 +8,7 @@
 
 import argparse 
 
-parser = argparse.ArgumentParser(description="filter individuals for missing data")
+parser = argparse.ArgumentParser(description="filter individuals for missing data. assumes individuals are *columns* and loci are rows")
 
 parser.add_argument("-f", "--input", help="genotype file in 2 x 2 matrix")
 parser.add_argument("-og", "--output_good", help="output file containing 'good' loci")

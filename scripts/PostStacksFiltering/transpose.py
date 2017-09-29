@@ -27,7 +27,7 @@ output_file = open(sys.argv[2], 'w')
 
 
 for line in transposed:
-    tmp_output = str(line).replace('[', '').replace('(', '').replace("'", '').replace(')', '').replace(',', '').replace(']', '') + '\n'
+    tmp_output = str(line).replace('[', '').replace('(', '').replace("'", '').replace(')', '').replace(',', '').replace(']', '').replace('\\n','') + '\n'
     output_file.write(tmp_output)
 
 output_file.close()
