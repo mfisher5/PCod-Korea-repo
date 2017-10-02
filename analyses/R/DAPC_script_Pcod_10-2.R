@@ -169,6 +169,7 @@ GEO020414_30_2
 20 
 
 
+
 ##################################################################################################################################
 
 
@@ -256,3 +257,20 @@ compoplot(dapc_south, subset = 80:119)
 
 # JB08
 
+## Get individual coordinates
+
+dapc_all$ind.coord
+dapc_all$grp.coord
+dapc_all$ind.coord[,1]
+dapc_all$ind.coord[213:224,]
+dapc_all$ind.coord[225:256,]
+dapc_all$ind.coord[257,]
+
+pop_labels <- c("Pohang '15", "Geoje '15", "Namhae '15", "YellowSea '16", "Jukbyeon '07", "Jin. Bay '07 Early", "Jin. Bay '07 Late", "Boryeong '07", "Geoje '14")
+
+migrant_indices = data.frame(6,16,51,67,72,76,102,125,131,249)
+
+temp <- which(apply(dapc_all$posterior,1, function(e) all(e<0.9)))
+temp
+
+compoplot(dapc_south, subset = temp, posi="bottomright", lab = "", txt.leg=paste(pop_labels), ncol = 1, xlab = "potential migrants", col = funky(9))
