@@ -117,9 +117,9 @@ sum(is.na(south$tab))
 X <- scaleGen(south, NA.method="mean")
 
 # To conduct the PCA
-pca1 <- dudi.pca(X,cent=FALSE,scale=FALSE,scannf=FALSE,nf=3)
-barplot(pca1$eig[1:50],main="PCA eigenvalues", col=heat.colors(50))
-summary(pca1)
+pca_south <- dudi.pca(X,cent=FALSE,scale=FALSE,scannf=FALSE,nf=3)
+barplot(pca_south$eig[1:50],main="PCA eigenvalues", col=heat.colors(50))
+summary(pca_south)
 
 s.label(pca1$li)
 ?dudi.pca
@@ -130,12 +130,12 @@ s.label(pca1$li)
 #col  <- brewer.pal(9, "Paired")
 
 
-col <- c("#999999","#CC79A7","#E69F00","#EECC16","#009E73","#56B4E9", "deepskyblue4", "#D55E00", "coral1")
+col <- c("#999999","#CC79A7","#E69F00","#56B4E9", "deepskyblue4", "coral1")
 
 
 par(cex.axis = 0.7, mar = c(5, 4, 4, 4), cex.lab = 0.8, xpd = TRUE)
 
-s.class(pca1$li, pop(data),
+s.class(pca_south$li, pop(south),
         xax=1,yax=2, 
         col=transp(col,.6), 
         clabel = 0, 
@@ -145,18 +145,29 @@ s.class(pca1$li, pop(data),
         grid=FALSE, 
         pch=c(19, 19, 19, 19, 19, 19)[as.numeric(pop(south))])
 
-
-legend (x = -35, y = 50, legend = c("Pohang '15", "Geoje '15", "Namhae '15", "YellowSea '16", "Jukbyeon '07", "Jin. Bay '07 Early", "Jin. Bay '07 Late", "Boryeong '07", "Geoje '14"), 
+legend ("right", legend = c("Pohang '15", "Geoje '15", "Namhae '15", "Jin. Bay '07 Early", "Jin. Bay '07 Late", "Geoje '14"), 
         fill = col, 
         border = FALSE, bty = "n", cex = 0.9, y.intersp = 1, 
         title = "Sampling Site")
-add.scatter.eig(pca1$eig[1:50],3,1,2, ratio=.3)
+add.scatter.eig(pca_south$eig[1:50],3,1,2, ratio=.3)
 
 
 s.class(pca1$li, fac=pop(data),
         col=col,
         axesel=FALSE, cstar=0, cpoint=3)
 add.scatter.eig(pca1$eig[1:50],3,1,2, ratio=.3)
+
+## -- Eigenvalues 
+#Total inertia: 10180
+
+#eigenvalues:
+ # Ax1     Ax2     Ax3     Ax4     Ax5 
+#224.6   158.9   132.4   129.2   125.8 
+
+## -- Eigenvalues as percentages of the total variation in the data
+eig.perc <- 100*pca_south$eig/sum(pca_south$eig)
+head(eig.perc)
+# [1] 2.206973 1.561822 1.301112 1.269651 1.236049 1.182854
 
 
 ###################### OTHER GRAPHS ###############################
