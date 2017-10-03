@@ -35,11 +35,11 @@ sum(is.na(data$tab))
 X <- scaleGen(data, NA.method="mean")
 
 # To conduct the PCA
-pca1 <- dudi.pca(X,cent=FALSE,scale=FALSE,scannf=FALSE,nf=3)
-barplot(pca1$eig[1:50],main="PCA eigenvalues", col=heat.colors(50))
-summary(pca1)
+pca_all <- dudi.pca(X,cent=FALSE,scale=FALSE,scannf=FALSE,nf=3)
+barplot(pca_all$eig[1:50],main="PCA eigenvalues", col=heat.colors(50))
+summary(pca_all)
 
-s.label(pca1$li)
+s.label(pca_all$li)
 ?dudi.pca
 #To graph the data
 
@@ -77,6 +77,27 @@ s.class(pca1$li, fac=pop(data),
 add.scatter.eig(pca1$eig[1:50],3,1,2, ratio=.3)
 
 
+## -- Eigenvalues 
+#Total inertia: 10770
+
+#eigenvalues:
+#  Ax1     Ax2     Ax3     Ax4     Ax5 
+#332.97  174.19   94.91   87.52   84.69 
+
+## -- Eigenvalues as percentages of the total variation in the data
+eig.perc <- 100*pca_all$eig/sum(pca_all$eig)
+head(eig.perc)
+# [1] 3.0922756 1.6176674 0.8814314 0.8128150 0.7865451 0.7835788
+
+
+## -- Which alleles are contributing the most to showing the diversity among pops?
+
+loadingplot(pca_all$c1^2)
+
+## -- what are the individual coordinates on the plot?
+cor(pca_all$li)
+pc <- prcomp(data, scale = TRUE)
+pca_all$ind.coord
 
 #################### SOUTHERN SAMPLING SITES ONLY #########################
 
@@ -136,3 +157,19 @@ s.class(pca1$li, fac=pop(data),
         col=col,
         axesel=FALSE, cstar=0, cpoint=3)
 add.scatter.eig(pca1$eig[1:50],3,1,2, ratio=.3)
+
+
+###################### OTHER GRAPHS ###############################
+
+# Sample Sizes
+barplot(table(pop(data)), col=funky(9), las=1,
+        xlab="Population", ylab="Sample size", 
+        names.arg = c("Poh.'15", "Geoje'15", "Nam.'15", "SB'16", "Juk.'07", "JB'07(E)", "JB'07(L)", "Bor.'07", "Geoje'14"))
+
+# Observed v. Expected heterozygosity
+temp <- summary(data)
+plot(temp$Hexp, temp$Hobs, pch=20, cex=3, xlim=c(0,.6), ylim=c(0,.6))
+abline(0,1,lty=2)
+
+
+################ PRINCIPAL COORDINATES ANALYSIS ##################
