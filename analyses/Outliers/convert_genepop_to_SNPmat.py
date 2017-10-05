@@ -66,7 +66,7 @@ for line in popmap:
 	pop_dict[line.strip().split()[0]] = line.strip().split()[1]
 popmap.close()
 	
-infile = open(sys.argv[1], "r")
+infile = open(args.input, "r")
 infile.readline() # header
 
 

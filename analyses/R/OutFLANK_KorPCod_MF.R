@@ -25,7 +25,7 @@ library(OutFLANK)
 # MakeDiploidFSTMat(SNPmat, locusNames, popNames)
 #       This will generate the input data frame from an array with rows - individuals, columns - loci. Alleles are coded as (0,1,2,9).
 
-# To convert a genepop file to the input SNPmat, see python script here:
+# To convert a genepop file to the input SNPmat, see python script here:https://github.com/mfisher5/PCod-Korea-repo/blob/master/analyses/Outliers/convert_genepop_to_SNPmat.py
 
 loci <- read.table("batch_8_SNPmat_locusnames.txt", header=F)
 pops <- read.table("batch_8_SNPmat_popnames.txt", header=F)
