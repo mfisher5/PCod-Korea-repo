@@ -204,10 +204,10 @@ FstDataFrame <- MakeDiploidFSTMat(SNPmat = data, locusNames = loci, popNames = p
 ####### Identify Outliers #######
 
 
-ewKOR <- OutFLANK(FstDataFrame, LeftTrimFraction=0.05, RightTrimFraction=0.05, Hmin=0.1, NumberOfSamples=9, qthreshold=0.05)
+swKOR <- OutFLANK(FstDataFrame, LeftTrimFraction=0.05, RightTrimFraction=0.05, Hmin=0.1, NumberOfSamples=9, qthreshold=0.05)
 
 # take a look at the output! 
 head(ewKOR)
 typeof(ewKOR) # spoiler: it's a list.
-dim(ewKOR$results[which(ewKOR$results$OutlierFlag==T),]) # how many outliers do you have? 1st #
+dim(swKOR$results[which(ewKOR$results$OutlierFlag==T),]) # how many outliers do you have? 1st #
 
