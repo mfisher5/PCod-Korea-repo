@@ -35,6 +35,10 @@ stacks_b7/*
 stacks_b7_wgenome/*
 analyses/HWE/*
 analyses/genepop/*
+analyses/Outliers/*BAYESCAN_output*
+analyses/Outliers/*popnames.txt
+analyses/Outliers/*locusnames.txt
+analyses/Outliers/*SNPmat.txt
 analyses/batch6_v_batch7/*.tsv
 analyses/batch6_v_batch7/*.fa
 analyses/batch6_v_batch7/batch_7_catalog*
