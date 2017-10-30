@@ -53,7 +53,7 @@ col <- c("#999999","#CC79A7","#E69F00","#EECC16","#009E73","#56B4E9", "deepskybl
 
 par(cex.axis = 0.7, mar = c(5, 4, 4, 4), cex.lab = 0.8, xpd = TRUE)
 
-s.class(pca1$li, pop(data),
+s.class(pca_all$li, pop(data),
         xax=1,yax=2, 
         col=transp(col,.6), 
         clabel = 0, 
@@ -68,13 +68,13 @@ legend (x = -35, y = 50, legend = c("Pohang '15", "Geoje '15", "Namhae '15", "Ye
         fill = col, 
         border = FALSE, bty = "n", cex = 0.9, y.intersp = 1, 
         title = "Sampling Site")
-add.scatter.eig(pca1$eig[1:50],3,1,2, ratio=.3)
+add.scatter.eig(pca_all$eig[1:50],3,1,2, ratio=.3)
 
 
-s.class(pca1$li, fac=pop(data),
+s.class(pca_all$li, fac=pop(data),
         col=col,
         axesel=FALSE, cstar=0, cpoint=3)
-add.scatter.eig(pca1$eig[1:50],3,1,2, ratio=.3)
+add.scatter.eig(pca_all$eig[1:50],3,1,2, ratio=.3)
 
 
 ## -- Eigenvalues 
@@ -96,8 +96,13 @@ loadingplot(pca_all$c1^2)
 
 ## -- what are the individual coordinates on the plot?
 cor(pca_all$li)
-pc <- prcomp(data, scale = TRUE)
-pca_all$ind.coord
+install.packages("devtools")
+library("devtools")
+install_github("kassambara/factoextra")
+library("factoextra")
+pca_all_coords <- get_pca_ind(pca_all)
+pca_all_coords$coord
+
 
 #################### SOUTHERN SAMPLING SITES ONLY #########################
 

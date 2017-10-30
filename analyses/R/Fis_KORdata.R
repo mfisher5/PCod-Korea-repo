@@ -19,7 +19,7 @@ setwd("D:/Pacific cod/DataAnalysis/PCod-Korea-repo/analyses")
 # Read in your data as a genepop file, with a ".gen" file extension
 # Need comma after each individual, can be space or tab delimited
 # Specify how many characters code each allele with ncode
-my_data <-read.genepop("batch_6.filteredMAF_filteredLoci_30filteredIndivids_filteredHWE_noreps.gen")
+my_data <-read.genepop("../stacks_b8_wgenome/batch_8_filteredMAF_filteredIndivids30_filteredLoci_filteredHWE_filteredRepsC.gen")
 
 # To retreive useful data summaries
 (summary(my_data))
