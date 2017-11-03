@@ -6,7 +6,7 @@
 #######################################################################################################################
 import argparse 
 
-parser = argparse.ArgumentParser(description="produce SNPmat file, and files containing loci / population lists for OutFLANK outlier analysis.")
+parser = argparse.ArgumentParser(description="Match bayescan outlier loci IDs to the actual stacks IDs (if PGD spider was used for file conversion).")
 
 parser.add_argument("-i", "--input", help="text file containing plot_bayescan() R consol output")
 parser.add_argument("-gen", "--genepop", help="the genepop file used in PGD spyder to create BAYESCAN input file")

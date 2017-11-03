@@ -51,10 +51,14 @@ analyses/Outliers/bedtools2/*
 analyses/Outliers/batch_8_BAYESCAN_outliers_bowtie2*
 analyses/Outliers/.Rhistory
 analyses/Outliers/batch_8_south_BAYESCAN*
+analyses/Outliers/bedtools*
+analyses/Outliers/*.xlsx
 analyses/Hierfstat_diveRsity/*.txt
 analyses/Hierfstat_diveRsity/batch4/*
 analyses/PCA/*
 analyses/DAPC/*
 analyses/Outliers/*.fa
+analyses/gsi_sim*
 stacks_b8_wgenome/*
 results/*
+analyses/Assignment/*
