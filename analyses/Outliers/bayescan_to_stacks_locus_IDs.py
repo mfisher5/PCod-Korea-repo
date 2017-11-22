@@ -22,6 +22,7 @@ genepop = open(args.genepop, "r")
 outfile = open(args.output, "w")
 
 
+
 ## get list of loci IDs from bayescan output
 print "reading BAYESCAN outliers.."
 line = infile.readline()
@@ -62,17 +63,20 @@ genepop.close()
 ## correlate bayescan loci IDs to stacks IDs
 
 stacks_outlier_loci = []
+bayescan_outlier_loci = []
 
 for i in pgdspyder_loci: 
 	 	stacks_outlier_loci.append(stacks_loci[int(i)-1])		# pgdspyder index numbers start from '1', python indices start from '0'
+		bayescan_outlier_loci.append(i)
 
 
 
 ## write to output file
 print "writing to output..."
 outfile.write(args.header + "\n")
-for i in stacks_outlier_loci:
-	outfile.write(i + "\n")
+outfile.write("BAYESCAN_ID\tStacks_ID\n")
+for i in range(0,len(stacks_outlier_loci)):
+	outfile.write(bayescan_outlier_loci[i] + "\t" + stacks_outlier_loci[i] + "\n")
 outfile.close()
 
 print "Done."

@@ -180,8 +180,7 @@ setwd("/mnt/hgfs/PCod-Korea-repo/analyses")
 all_9pops <- read.genepop("../stacks_b8_wgenome/batch_8_filteredMAF_filteredIndivids30_filteredLoci_filteredHWE_filteredRepsC.gen")
 summary(all_9pops)
 
-##-- load help file
-?assignment_ngs
+
 
 ##-- if you want to, you can identify population levels
 pop_groups <- c("POH15","GE15","NAM15","YS16","JUK","JBE","JBL","BOR07","GE14") # each pop is its own pop
@@ -224,8 +223,6 @@ setwd("/mnt/hgfs/PCod-Korea-repo/analyses")
 all_3region <- read.genepop("../stacks_b8_wgenome/batch_8_filteredMAF_filteredIndivids30_filteredLoci_filteredHWE_filteredRepsC_region.gen")
 summary(all_3region)
 
-##-- load help file
-?assignment_ngs
 
 ##-- if you want to, you can identify population levels
 pop_groups <- c("POH15","GE15","NAM15","YS16","JUK","JBE","JBL","BOR07","GE14") # each pop is its own pop
@@ -282,15 +279,18 @@ plot + facet_grid(~CURRENT)+
   labs(x=x_title)+
   labs(y=y_title)+
   guides(fill= FALSE, size= FALSE)+
+  coord_cartesian(ylim=c(0,100))+
   theme(panel.grid.major.x = element_blank(),
         panel.grid.minor.x = element_blank(),
         panel.grid.major.y = element_line(colour="black", linetype="dashed"),
-        axis.title.x=element_text(size=14, family="Helvetica",face="bold"),
-        axis.text.x=element_text(size=14,family="Helvetica",face="bold", angle=90, hjust=0, vjust=0.5),
-        axis.title.y=element_text(size=14, family="Helvetica",face="bold"),
-        axis.text.y=element_text(size=14,family="Helvetica",face="bold"))
+        axis.title.x=element_text(size=20, family="Helvetica",face="bold"),
+        axis.text.x=element_text(size=18,family="Helvetica",face="bold", angle=90, hjust=0, vjust=0.5),
+        axis.title.y=element_text(size=20, family="Helvetica",face="bold"),
+        axis.text.y=element_text(size=18,family="Helvetica",face="bold"))
 ggsave("Assignment_byregion_THL0-5_col.pdf",width=20,height=25,dpi=300,units="cm",useDingbats=F)
 dev.off()
+
+scale_y_discrete(limits=c("0","10","20", "30","40","50","60","70","80","90","100"))
 
 # plot overall
 regdata_overall=regdata[28:36,]
@@ -305,13 +305,14 @@ plot + labs(x=x_title)+
   labs(y=y_title)+
   labs(title="Overall Assignment")+
   guides(fill= FALSE, size= FALSE)+
+  coord_cartesian(ylim=c(0,100))+
   theme(panel.grid.major.x = element_blank(),
         panel.grid.minor.x = element_blank(),
         panel.grid.major.y = element_line(colour="black", linetype="dashed"),
         plot.title=element_text(family= "Helvetica", face = "bold", hjust=0.5, size=20),
-        axis.title.x=element_text(size=14, family="Helvetica",face="bold"),
-        axis.text.x=element_text(size=14,family="Helvetica",face="bold", angle=90, hjust=0, vjust=0.5),
-        axis.title.y=element_text(size=14, family="Helvetica",face="bold"),
-        axis.text.y=element_text(size=14,family="Helvetica",face="bold"))
+        axis.title.x=element_text(size=20, family="Helvetica",face="bold"),
+        axis.text.x=element_text(size=18,family="Helvetica",face="bold", angle=90, hjust=0, vjust=0.5),
+        axis.title.y=element_text(size=20, family="Helvetica",face="bold"),
+        axis.text.y=element_text(size=18,family="Helvetica",face="bold"))
 ggsave("Assignment_byregion_THL0-5_col_overall.pdf",width=20,height=25,dpi=300,units="cm",useDingbats=F)
 dev.off()
