@@ -38,17 +38,21 @@ Samples were taken across three spawning seasons (2007-2008, 2014-2015, 2015-201
 [**scripts**](https://github.com/mfisher5/PCod-Korea-repo/tree/master/scripts) : various python / BASH scripts used in the stacks pipeline and filtering, as well as barcode files and population maps. 
 <br>
 
-**Not Shown on Github:** folders with stacks output files from `ustacks` to `populations`, for runs without and with a *de novo* reference database of loci. 
+[**analyses**](https://github.com/mfisher5/PCod-Korea-repo/tree/master/analyses) : post-Stacks analyses. Includes anything in GENEPOP, Structure, assignment tests with GSIsim / Assigner, DAPC / PCA, etc.
+<br>
+
+**Not Shown on Github:** results folder (saved on google drive). folders with stacks output files from `ustacks` to `populations`, for runs without and with a *de novo* reference database of loci. various files from analyses that are too large to store. 
 
 <br>
 <br>
 
 ### Recent Progress: 
 
-Currently working in [this Jupyter notebook](https://github.com/mfisher5/PCod-Korea-repo/blob/master/notebooks/Stacks%20Batch%207%20-%20nb%201.ipynb)
+Completed the final run-through of stacks (batch 8). 
+
+Currently working on [Ne](https://github.com/mfisher5/PCod-Korea-repo/blob/master/notebooks/Batch%208%20Ne%20and%20Migration.ipynb) estimates, both short-term (NeEstimator v2) and long-term. Long-term estimates require [alignment to Atlantic cod genome](https://github.com/mfisher5/PCod-Korea-repo/blob/master/notebooks/Batch%208%20-%20Alignment%20to%20Atlantic%20cod%20Genome.ipynb) to produce PLINK files.
 <br>
 
 **Code Running**
 
-I recently received the sequencing data for the last lane of samples (n = 70) from the Oregon CORE facility. I am currently running `process_radtags` and `ustacks` on this lane. I will then begin batch 7 of stacks, which will include all of the samples from lanes 1 through 5.
-<br>
+I am still running several replicates of Structure to see if results match DAPC / PCA when the east/west and the southern sampling sites are run in two separate analyses.

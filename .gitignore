@@ -44,6 +44,7 @@ analyses/batch6_v_batch7/*.fa
 analyses/batch6_v_batch7/batch_7_catalog*
 analyses/gsi_sim/*
 analyses/Structure/Korea-PCod
+analyses/Structure/PCod-Korea*
 analyses/Structure/batch_8*
 analyses/Structure/*.xlsx
 analyses/Structure/*.Rhistory
