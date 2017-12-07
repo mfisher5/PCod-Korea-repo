@@ -3,13 +3,13 @@
 ## load in data ##
 
 library(readr)
-sdata_raw <- read_delim("D:/Pacific cod/DataAnalysis/PCod-Korea-repo/results/batch_8_structure_run1_arranged.txt", "\t", escape_double = FALSE, trim_ws = TRUE)
+sdata_raw <- read_delim("D:/Pacific cod/DataAnalysis/PCod-Korea-repo/results/Structure_3pops_50K100K_arr.txt", "\t", escape_double = FALSE, trim_ws = TRUE)
 View(sdata_raw)
 
 ## transform the data for ggplot ##
 
 # create list of sample names, each repeated 3x
-sampleIDs <- sdata_raw$SampleNum
+sampleIDs <- sdata_raw$ID
 sample_col = c()
 for(sample in sampleIDs){
   sample_col <- c(sample_col, rep(sample,3))
@@ -19,7 +19,7 @@ head(sample_col)
 # create list of clustering proportions, in order from cluster 1 --> 3 
 cluster_col <- c()
 for(i in seq(1,length(sampleIDs))){
-  new_clusters <- c(sdata_raw$Cluster1[i], sdata_raw$Cluster2[i], sdata_raw$Cluster3[i])
+  new_clusters <- c(sdata_raw$`Cluster 1`[i], sdata_raw$`Cluster 2`[i], sdata_raw$`Cluster 3`[i])
   cluster_col <- c(cluster_col, new_clusters)
 }
 head(cluster_col)
