@@ -40,7 +40,7 @@ barplot(pca_all$eig[1:50],main="PCA eigenvalues", col=heat.colors(50))
 summary(pca_all)
 
 # To conduct the PCA. IF YOU KNOW HOW MANY AXES TO RETAIN
-pca_all <- dudi.pca(X,cent=FALSE,scale=FALSE,scannf=FALSE,nf=3) #nf = number to retain
+pca_all <- dudi.pca(X,cent=FALSE,scale=FALSE,scannf=FALSE,nf=2) #nf = number to retain
 barplot(pca_all$eig[1:50],main="PCA eigenvalues", col=heat.colors(50))
 summary(pca_all)
 
@@ -51,6 +51,7 @@ summary(pca_all)
 col <- c("gray","mediumorchid1","aquamarine","firebrick4","chartreuse","deepskyblue", "deepskyblue4", "coral1", "mediumorchid4")
 col_gss <- c("gray","mediumorchid1","aquamarine","firebrick4","chartreuse","deepskyblue4", "deepskyblue4", "coral1", "mediumorchid1")
 col_leg_gss <- c("firebrick4","coral1","aquamarine","mediumorchid1","deepskyblue4", "gray","chartreuse")
+col_leg <- c("firebrick4","coral1","aquamarine","mediumorchid4", "mediumorchid1","deepskyblue", "deepskyblue4", "gray","chartreuse")
 points_leg <- c(17,17,16,16,16,16, 16, 16,15)
 
 #adjust graph area
@@ -70,7 +71,6 @@ s.class(pca_all$li, fac=pop(my_data_all),
 legend ("bottomleft", legend = c("YellowSea '16", "Boryeong '07", "Namhae '15", "Geoje '14-15", "Geoje '14", "Jin. Bay '07 Early", "Jin. Bay '07 Late", "Pohang '15", "Jukbyeon '07"), col = col_leg, border = FALSE, bty = "n", cex = 0.9, pt.cex=1.5, y.intersp = 1, title = "Population",pch=points_leg)
 add.scatter.eig(pca_all$eig[1:50],posi="top", 3,2,1,ratio=.2)
 add.scatter.eig(pca_all$eig[1:50],posi="bottom", 3,2,1,ratio=.2)
-
 
 #to graph without lines between samples, transparent points
 s.class(pca_all$li, fac=pop(my_data_all),
@@ -94,13 +94,13 @@ summary(pca_all)
 
 #eigenvalues:
 # Ax1     Ax2     Ax3     Ax4     Ax5 
-# 17.205   7.191   4.655   4.139   3.937 
+# 333.14  175.33   95.47   87.48   84.84
 
 
 ## -- Eigenvalues as percentages of the total variation in the data
 eig.perc <- 100*pca_all$eig/sum(pca_all$eig)
 head(eig.perc)
-# [1] 3.5163457 1.4696136 0.9513576 0.8459531 0.8046527 0.7691684
+# [1] 3.0940182 1.6283776 0.8867000 0.8124261 0.7879322 0.7854512
 
 
 ## -- Which alleles are contributing the most to showing the diversity among pops?
@@ -116,8 +116,9 @@ library("factoextra")
 pca_all_coords <- get_pca_ind(pca_all)
 pca_all_coords$coord
 
-
-
+# -- what are the x and y axis limits?
+par('xaxp') # 0,60
+par('yaxp') # 0,350
 
 
 
