@@ -68,3 +68,4 @@ analyses/Structure/Korea-PCod-2015/*
 analyses/Admixture/*
 analyses/*.ped
 analyses/*.sam
+.Rproj.user
