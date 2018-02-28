@@ -61,6 +61,10 @@ write.csv(odata_edge.mrel, file = "data/PCod_Korea_Microchem_edge_filtered_relat
 
 
 # Find optimal value of K for NMDS --------------------------------------------------------------------
+## create distance matrix
+edge.mrel_dist <- dist(odata_edge.mrel, method = "euclidean")
+View(odata_edge.mrel)
+
 ## how many unique site / year combos?
 unique(odata_combo$SiteYear)
 ks <- c(1,2,3,4,5,6,7)
@@ -68,7 +72,7 @@ ks <- c(1,2,3,4,5,6,7)
 ## run nmds for k = 1 through 7 and save stress values
 stresses <- c()
 for(k in ks){
-  odata_edge.nmds <- metaMDS(comm = odata_edge.mrel, autotransform = FALSE,
+  odata_edge.nmds <- metaMDS(comm = edge.mrel_dist, autotransform = FALSE,
                                   distance = "euc", engine = "monoMDS", k = k, weakties = TRUE,
                                   model = "global", maxit = 400, try = 40, trymax = 200,
                                   wascores = TRUE)
@@ -80,22 +84,178 @@ plot(ks,stresses, xlab="K", ylab="stress", main="Value of K v. Stress of NMDS")
 
 
 # NMDS with K = 7 --------------------------------------------------------- WARNING MESSAGE
-odata_edge.nmds7 <- metaMDS(comm = odata_edge.mrel, autotransform = FALSE,
+odata_edge.nmds7 <- metaMDS(comm = edge.mrel_dist, autotransform = FALSE,
                                 distance = "euc", engine = "monoMDS", k = 7, weakties = TRUE,
                                 model = "global", maxit = 400, try = 40, trymax = 200,
                                 wascores = TRUE)
 
 odata_edge.nmds7
-#Warning message:
-#  In metaMDS(comm = odata_edge.mrel, autotransform = FALSE, distance = "euc",  :
-#               'comm' has negative data: 'autotransform', 'noshare' and 'wascores' set to FALSE
 
 
-# Plot NMDS color-coded --------------------------------------------------- ERROR MESSAGE
+# Evaluate Fit NMDS K=7 ---------------------------------------------------
+stressplot(object=odata_edge.nmds7, lwd=2)
 
-## plot result of ordinations for sites only
-edge.nmds.gg <- fortify(odata_edge.nmds7)
-# Error in rep("sites", nrow(df)) : invalid 'times' argument
-edge.nmds.sites <- scores(odata_edge.nmds7)
-edge.nmds.gg
+
+# Plot basic NMDS ---------------------------------------------------
+## base plot function
+plot(odata_edge.nmds7)
+## Warning message:
+## In ordiplot(x, choices = choices, type = type, display = display,  :
+              ## Species scores not available
+
+## ggplot
+nmds_points <- data.frame(scores(odata_edge.nmds7)); nmds_points #because of warning above, had to convert data
+
+ggplot(nmds_points, aes(x=NMDS1, y=NMDS2)) +
+  geom_point()
+
+
+
+## color coding based on population, using combined data frame
+##-- note that the combined data frame and response data frame must have same ORDER of samples!
+View(odata_combo)
+View(odata)
+
+`Sampling Site` <- odata_combo$SiteYear
+
+ggplot(nmds_points, aes(x=NMDS1, y=NMDS2)) +
+  geom_point(aes(col=`Sampling Site`), size = 3) +
+  theme(axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        axis.title = element_blank())
+
+install.packages("devtools")
+devtools::install_github("jfq3/ggordiplots")
+library(ggordiplots)
+
+gg_ordiplot(odata_edge.nmds7, groups = `Sampling Site`) +
+  theme(axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        axis.title = element_blank())
+  
+
+# Base Plot NMDS color-coded -------------------------------------
+plot(odata_edge.nmds7, xaxt = "n", yaxt = "n", xlab = "", ylab = "", main = "NMDS\nMicrochemistry from Otolith Edge")
+## set colors for points based on sampling site
+points(odata_edge.nmds7$points[odata_combo$SiteYear == "Pohang_2015",], 
+       pch = 19, col = "#b3de69", cex = 1.2)
+points(odata_edge.nmds7$points[odata_combo$SiteYear == "Geoje_2015",], 
+       pch = 19, col = "gold2", cex = 1.2)
+points(odata_edge.nmds7$points[odata_combo$SiteYear == "Namhae_2015",], 
+       pch = 19, col = "#bebada", cex = 1.2)
+points(odata_edge.nmds7$points[odata_combo$SiteYear == "YSBlock_2016",], 
+       pch = 19, col = "#fb8072", cex = 1.2)
+points(odata_edge.nmds7$points[odata_combo$SiteYear == "JinhaeBay_2007",], 
+       pch = 19, col = "#8dd3c7", cex = 1.2)
+points(odata_edge.nmds7$points[odata_combo$SiteYear == "JinhaeBay_2008",], 
+       pch = 19, col = "#80b1d3", cex = 1.2)
+points(odata_edge.nmds7$points[odata_combo$SiteYear == "Geoje_2014",], 
+       pch = 19, col = "darkorange", cex = 1.2)
+## add legend
+legend(x="topright", pch = 19, bty="n", cex = 1, pt.cex = 1.2,
+       col = c("#fb8072", "#bebada", "darkorange", "gold2", "#8dd3c7", "#80b1d3", "#b3de69"), 
+       legend = c("YSBlock '16", "Namhae '15", "Geoje '14", "Geoje '15", "JinhaeBay '07e", "JinhaeBay '07l", "Pohang '15"), title = "Sampling Site")
+
+
+
+# Add ellipses etc. -------------------------------------------------------
+ordiellipse(odata_edge.nmds7, odata_combo$SiteYear, col=c("darkorange", "gold2", "#8dd3c7", "#80b1d3", "#bebada", "#b3de69", "#fb8072"), kind = "sd", lty = 2, lwd = 1.5)
+
+
+
+# Add Element Vectors -----------------------------------------------------
+## fit elements to nmds
+elements.fit <- envfit(odata_edge.nmds7 ~ B11.e + Ba138.e + Li7.e + Mg24.e + Mn55.e + Pb208.e + Sr88.e + Zn66.e, data = odata_combo)
+
+## plot element vectors
+plot(elements.fit, col = "black")
+
+
+
+
+
+################################ RUN NMDS WITHOUT JINHAE BAY ##############################################
+
+
+# subset data -------------------------------------------------------------
+## subset response + explanatory variables
+combo_nojb <- subset(odata_combo, Sampling.Site != "JinhaeBay")
+
+## subset just response matrix
+edge_elements <- colnames(odata_edge)
+edge_nojb <- select(combo_nojb, edge_elements); View(edge_nojb)
+dim(edge_nojb)
+
+
+
+# relativize data ---------------------------------------------------------
+edge_nojb.mrel <- decostand(edge_nojb, method="max")
+
+
+
+# NMDS k = 1 through 5 ----------------------------------------------------
+## create distance matrix
+edge_nojb_dist <- dist(edge_nojb.mrel, method = "euclidean")
+
+## how many unique site / year combos?
+unique(combo_nojb$SiteYear)
+ks <- c(1,2,3,4,5)
+
+## run nmds for k = 1 through 7 and save stress values
+stresses <- c()
+for(k in ks){
+  odata_edge.nmds <- metaMDS(comm = edge_nojb_dist, autotransform = FALSE,
+                             distance = "euc", engine = "monoMDS", k = k, weakties = TRUE,
+                             model = "global", maxit = 400, try = 40, trymax = 200,
+                             wascores = TRUE)
+  stresses[k] <- odata_edge.nmds$stress
+}
+
+## plot k v. stress
+plot(ks,stresses, xlab="K", ylab="stress", main="Value of K v. Stress of NMDS")
+
+# NMDS with K = 7 --------------------------------------------------------- WARNING MESSAGE
+odata_edge_nojb.nmds5 <- metaMDS(comm = edge_nojb_dist, autotransform = FALSE,
+                            distance = "euc", engine = "monoMDS", k = 5, weakties = TRUE,
+                            model = "global", maxit = 400, try = 40, trymax = 200,
+                            wascores = TRUE)
+
+odata_edge_nojb.nmds5
+
+
+# Evaluate Fit NMDS K=7 ---------------------------------------------------
+stressplot(object=odata_edge_nojb.nmds5, lwd=2)
+
+
+# Base Plot NMDS color-coded -------------------------------------
+plot(odata_edge_nojb.nmds5, xaxt = "n", yaxt = "n", xlab = "", ylab = "", main = "NMDS without Jinhae Bay\nMicrochemistry from Otolith Edge")
+## set colors for points based on sampling site
+points(odata_edge_nojb.nmds5$points[combo_nojb$SiteYear == "Pohang_2015",], 
+       pch = 19, col = "#b3de69", cex = 1.2)
+points(odata_edge_nojb.nmds5$points[combo_nojb$SiteYear == "Geoje_2015",], 
+       pch = 19, col = "gold2", cex = 1.2)
+points(odata_edge_nojb.nmds5$points[combo_nojb$SiteYear == "Namhae_2015",], 
+       pch = 19, col = "#bebada", cex = 1.2)
+points(odata_edge_nojb.nmds5$points[combo_nojb$SiteYear == "YSBlock_2016",], 
+       pch = 19, col = "#fb8072", cex = 1.2)
+points(odata_edge_nojb.nmds5$points[combo_nojb$SiteYear == "Geoje_2014",], 
+       pch = 19, col = "darkorange", cex = 1.2)
+## add legend
+legend(x="topleft", pch = 19, bty="n", cex = 1, pt.cex = 1.2,
+       col = c("#fb8072", "#bebada", "darkorange", "gold2", "#b3de69"), 
+       legend = c("YSBlock '16", "Namhae '15", "Geoje '14", "Geoje '15", "Pohang '15"), title = "Sampling Site")
+
+
+# Add ellipses etc. -------------------------------------------------------
+ordiellipse(odata_edge_nojb.nmds5, combo_nojb$SiteYear, col=c("darkorange", "gold2", "#bebada", "#b3de69", "#fb8072"), kind = "sd", lty = 2, lwd = 1.5)
+
+
+
+# Add Element Vectors -----------------------------------------------------
+## fit elements to nmds
+elements.fit <- envfit(odata_edge_nojb.nmds5 ~ B11.e + Ba138.e + Li7.e + Mg24.e + Mn55.e + Pb208.e + Sr88.e + Zn66.e, data = combo)
+
+## plot element vectors
+plot(elements.fit, col = "black")
+
 
