@@ -22,51 +22,27 @@ library(vegan)
 
 # Read in data ------------------------------------------------------------
 ## load data
-PCod_Korea_Microchem_filtered <- read_delim("~/SEFS_502/data/PCod_Korea_Microchem_filtered_bypop.txt","\t", escape_double = FALSE, trim_ws = TRUE)
-odata <- PCod_Korea_Microchem_filtered
+odata <- read_delim("data/PCod_Korea_Microchem_filtered_edit.txt","\t", escape_double = FALSE, trim_ws = TRUE)
 dim(odata)
 View(odata)
 
 ## create new dataframe without sample IDs (just measurements)
 odata_el <- odata[,2:17]
 colnames(odata_el)
+odata_core <- odata_el[1:8]
+odata_edge <- odata_el[9:16]
 
 
 
-# Multivariate tests for normality, skewness ------------------------------
+# Multivariate & Univariate tests for normality, skewness ------------------------------
 
 ## MARDIA'S SKEWNESS AND KURTOSIS COEFFICIENTS
 ## requires MVN package
-mardiaTest(odata_el, qqplot = TRUE)
-
+mvn(odata_el, mvnTest="mardia", univariateTest="SW",multivariatePlot = "qq", univariatePlot = "histogram")
 
 
 
 # Univariate plots and tests ----------------------------------------------
-
-## SHAPIRO WILKES: TEST FOR NORMALITY BY VARIABLE
-shapiro_pvals_core <- c(shapiro.test(odata_el$B11.c)$p.value,
-                   shapiro.test(odata_el$B11.c)$p.value,
-                   shapiro.test(odata_el$Li7.c)$p.value,
-                   shapiro.test(odata_el$Mg24.c)$p.value,
-                   shapiro.test(odata_el$Mn55.c)$p.value,
-                   shapiro.test(odata_el$Pb208.c)$p.value,
-                   shapiro.test(odata_el$Sr88.c)$p.value,
-                   shapiro.test(odata_el$Zn66.c)$p.value)
-qplot(shapiro_pvals_core, geom="histogram")
-
-
-shapiro_pvals_edge <- c(shapiro.test(odata_el$B11.e)$p.value,
-                        shapiro.test(odata_el$B11.e)$p.value,
-                        shapiro.test(odata_el$Li7.e)$p.value,
-                        shapiro.test(odata_el$Mg24.e)$p.value,
-                        shapiro.test(odata_el$Mn55.e)$p.value,
-                        shapiro.test(odata_el$Pb208.e)$p.value,
-                        shapiro.test(odata_el$Sr88.e)$p.value,
-                        shapiro.test(odata_el$Zn66.e)$p.value)
-qplot(shapiro_pvals_edge, geom="histogram")
-
-
 
 ## QQ-PLOTS: VISUALIZE NORMALITY BY VARIABLE
 par(mfrow=c(2,4))
@@ -100,15 +76,31 @@ par(mfrow=c(1,1))
 
 
 
-
+View(odata_edge)
 
 
 # Data Transformations for Normality --------------------------------------
 
-## Log transform data?
-odata_log <- decostand(x = odata_el, method = "log", MARGIN = "2")
-mardiaTest(odata_log)
-mardiaTest(odata_el)
+## Ln transform data?
+odata_el_mat <- as.matrix(odata_el)
+odata_ln <- apply(odata_el_mat, 2, "log")
+View(odata_ln)
+mvn(odata_ln, mvnTest="mardia", univariateTest="SW",multivariatePlot = "qq", univariatePlot = "histogram")
 
-plot(odata_log$B11.c, odata_el$B11.c)
-qqnorm(odata_log$B11.c); qqline(odata_log$B11.c)
+## Log transform data?
+odata_log <- apply(odata_el_mat, 2, "log10")
+mvn(odata_log, mvnTest="mardia", univariateTest="SW",multivariatePlot = "qq", univariatePlot = "histogram")
+
+
+## Square root transform data?
+odata_sr <- apply(odata_el_mat, 2, "sqrt")
+mvn(odata_sr, mvnTest="mardia", univariateTest="SW",multivariatePlot = "qq", univariatePlot = "histogram")
+
+
+## Cube root transform data?
+cuberoot <- function(x){x^(1/3)}
+odata_cr <- apply(odata_el_mat, 2, "cuberoot")
+mvn(odata_cr, mvnTest="mardia", univariateTest="SW",multivariatePlot = "qq", univariatePlot = "histogram")
+
+
+

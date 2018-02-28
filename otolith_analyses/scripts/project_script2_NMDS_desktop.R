@@ -37,33 +37,37 @@ library(dplyr)
 odata_combo <- full_join(x=odata,y=odata_ex,by="Sample") 
 odata_combo <- mutate(odata_combo, SiteYear=paste(Sampling.Site,Year,sep="_")) # add column with site & year
 head(odata_combo)
-
-## make data frame of only edge concentrations
-odata_edge <- odata[,10:17]
-head(odata_edge)
+odata_el <- odata_combo[,2:17]
+head(odata_el)
 
 
 # Relativize by maximum ---------------------------------------------------
-odata_edge.mrel <- decostand(odata_edge, method="max")
-head(odata_edge.mrel)
+odata_el.mrel <- decostand(odata_el, method="max")
+head(odata_el.mrel)
 par(mfrow=c(2,4))
-boxplot(odata_edge.mrel$B11.e, main = "B11.e")
-boxplot(odata_edge.mrel$Ba138.e, main = "Ba138.e")
-boxplot(odata_edge.mrel$Li7.e, main = "Li7.e")
-boxplot(odata_edge.mrel$Mg24.e, main = "Mg24.e")
-boxplot(odata_edge.mrel$Mn55.e, main = "Mn55.e")
-boxplot(odata_edge.mrel$Pb208.e, main = "Pb208.e")
-boxplot(odata_edge.mrel$Sr88.e, main = "Sr88.e")
-boxplot(odata_edge.mrel$Zn66.e, main = "Zn66.e")
+boxplot(odata_el.mrel$B11.e, main = "B11.e")
+boxplot(odata_el.mrel$Ba138.e, main = "Ba138.e")
+boxplot(odata_el.mrel$Li7.e, main = "Li7.e")
+boxplot(odata_el.mrel$Mg24.e, main = "Mg24.e")
+boxplot(odata_el.mrel$Mn55.e, main = "Mn55.e")
+boxplot(odata_el.mrel$Pb208.e, main = "Pb208.e")
+boxplot(odata_el.mrel$Sr88.e, main = "Sr88.e")
+boxplot(odata_el.mrel$Zn66.e, main = "Zn66.e")
 write.csv(odata_edge.mrel, file = "data/PCod_Korea_Microchem_edge_filtered_relativized.csv", row.names=FALSE)
 
+
+## make data frame of only edge concentrations
+odata_edge.mrel <- odata_el.mrel[,9:16]
+head(odata_edge)
+odata_core.mrel <- odata_el.mrel[,1:8]
+head(odata_core)
 
 
 
 # Find optimal value of K for NMDS --------------------------------------------------------------------
 ## create distance matrix
 edge.mrel_dist <- dist(odata_edge.mrel, method = "euclidean")
-View(odata_edge.mrel)
+head(odata_edge.mrel)
 
 ## how many unique site / year combos?
 unique(odata_combo$SiteYear)
@@ -253,9 +257,9 @@ ordiellipse(odata_edge_nojb.nmds5, combo_nojb$SiteYear, col=c("darkorange", "gol
 
 # Add Element Vectors -----------------------------------------------------
 ## fit elements to nmds
-elements.fit <- envfit(odata_edge_nojb.nmds5 ~ B11.e + Ba138.e + Li7.e + Mg24.e + Mn55.e + Pb208.e + Sr88.e + Zn66.e, data = combo)
+elements.fit.k5 <- envfit(odata_edge_nojb.nmds5 ~ B11.e + Ba138.e + Li7.e + Mg24.e + Mn55.e + Pb208.e + Sr88.e + Zn66.e, data = combo_nojb)
 
 ## plot element vectors
-plot(elements.fit, col = "black")
+plot(elements.fit.k5, col = "black")
 
 

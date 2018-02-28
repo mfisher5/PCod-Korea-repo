@@ -33,22 +33,24 @@ library(dplyr)
 odata_combo <- full_join(x=odata,y=odata_ex,by="Sample") 
 odata_combo <- mutate(odata_combo, SiteYear=paste(Sampling.Site,Year,sep="_")) # add column with site & year
 head(odata_combo)
-
-## make data frame of only edge concentrations
-odata_edge <- odata[,10:17]
-head(odata_edge)
-
-## make data frame of only core concentrations
-odata_core <- odata[2:10]
-head(odata_core)
+odata_el <- odata_combo[,2:17]
+head(odata_el)
 
 
 # Relativize by maximum ---------------------------------------------------
-odata_edge.mrel <- decostand(odata_edge, method="max")
-head(odata_edge.mrel)
+odata_el.mrel <- decostand(odata_el, method="max")
+head(odata_el.mrel)
 
-odata_core.mrel <- decostand(odata_core,method="max")
-head(odata_core.mrel)
+
+
+
+# Make edge / core data frames --------------------------------------------
+odata_edge.mrel <- odata_el.mrel[,9:16]
+head(odata_edge)
+odata_core.mrel <- odata_el.mrel[,1:8]
+head(odata_core)
+
+
 
 
 # Mantel Test: edge v. core -----------------------------------------------
@@ -63,8 +65,11 @@ odata_mantel <- mantel(xdis = edge.mrel_dist, ydis = core.mrel_dist,
                        method = "pearson", permutations = 99999)
 odata_mantel
 
-#Mantel r = 0.5028
-#signficance = 1e-5; Tells us that 1 / 100,000 permutations had an r statistic greater than 0.5028
+#Mantel r = 0.3372 
+#signficance = 1e-5; Tells us that 1 / 100,000 permutations had an r statistic greater than 0.3372
+#Upper quantiles of permutations (null model):
+#  90%    95%  97.5%    99% 
+#  0.0629 0.0830 0.1007 0.1217 
 
 str(odata_mantel)
 

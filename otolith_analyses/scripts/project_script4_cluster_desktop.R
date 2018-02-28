@@ -9,6 +9,9 @@
 ## set working directory
 setwd("D:/Pacific cod/DataAnalysis/PCod-Korea-repo/otolith_analyses")
 
+## install packages
+install.packages("dplyr")
+
 
 # Load data ---------------------------------------------------------------
 odata <- read.csv("data/PCod_Korea_Microchem_filtered.txt", header=TRUE, sep="\t")
@@ -23,23 +26,27 @@ dim(odata_ex)
 odata_combo <- full_join(x=odata,y=odata_ex,by="Sample") 
 odata_combo <- mutate(odata_combo, SiteYear=paste(Sampling.Site,Year,sep="_")) # add column with site & year
 head(odata_combo)
+odata_el <- odata_combo[,2:17]
+head(odata_el)
 
-## make data frame of only edge concentrations
-odata_edge <- odata_combo[,10:17]
+
+# Relativize by maximum ---------------------------------------------------
+odata_el.mrel <- decostand(odata_el, method="max")
+head(odata_el.mrel)
+
+
+
+
+# Make edge / core data frames --------------------------------------------
+odata_edge.mrel <- odata_el.mrel[,9:16]
 head(odata_edge)
-
-## make data frame of only core concentrations
-odata_core <- odata_combo[,2:9]
+odata_core.mrel <- odata_el.mrel[,1:8]
 head(odata_core)
 
 
 
 
-# Relativize edge and core data by maximum, calculate distance matrix ----------------------------------
-odata_edge.mrel <- decostand(odata_edge, method="max")
-odata_core.mrel <- decostand(odata_core, method="max")
-
-## convert data to distance matrix using bray-curtis (default)
+# Euclidean Distance Matrix -----------------------------------------------
 edge.mrel_dist <- dist(odata_edge.mrel, method = "euclidean")
 core.mrel_dist <- dist(odata_core.mrel, method = "euclidean")
 
@@ -117,14 +124,34 @@ edge.hclust <- hclust(d = edge.mrel_dist, method = "ward.D2")
 core.hclust <- hclust(d = core.mrel_dist, method = "ward.D2")
 rect.hclust(edge.hclust, k=7)
 rect.hclust(core.hclust, k=7)
+
 ##-- gap statistic
 install.packages("NbClust")
 require(NbClust)
 NbClust(data = odata_edge, diss = edge.mrel_dist, distance=NULL, method="ward.D2", index="gap")
 ## ERROR: cannot allocate vector of size 144092.9
 
+##--pvclust package: https://cran.r-project.org/web/packages/pvclust/pvclust.pdf
+install.packages("pvclust")
+library(pvclust)
+edge_mrel_transposed <- t(odata_edge.mrel)
+dim(edge_mrel_transposed)
+colnames(edge_mrel_transposed) <- odata_combo$Sample
+edge.wd2 <- pvclust(edge_mrel_transposed, method.hclust="ward.D2", r=seq(0.5,1,by=0.1),
+        method.dist="euclidean", nboot = 100)
+plot(edge.wd2)
+pvrect(edge.wd2, alpha = 0.95, pv="au")
 
-##--pvclust package
+core_mrel_transposed <- t(odata_core.mrel)
+dim(core_mrel_transposed)
+colnames(core_mrel_transposed) <- odata_combo$Sample
+core.wd2 <- pvclust(core_mrel_transposed, method.hclust="ward.D2", r=seq(0.5,1,by=0.1), method.dist="euclidean", nboot = 100)
+plot(core.wd2)
+pvrect(core.wd2, alpha = 0.95, pv="au")
+
+
+
+
 
 
 
