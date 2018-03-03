@@ -74,18 +74,16 @@ edge.hclust <- hclust(d = edge.mrel_dist, method = "ward.D2")
 
 
 
-
 # Create Dendrogram -------------------------------------------------------
 # plot dendrogram, color coded and labeled
 dend_edge <- as.dendrogram(edge.hclust)
 dend_edge <- color_branches(dend_edge, k=2)
 dend_edge
 plot(dend_edge)
-colors <- rainbow_hcl(7)[sort_levels_values(as.numeric(as.factor(odata_combo$SiteYear))[order.dendrogram(dend_edge)])]
-labels_colors(dend_edge) <- colors
 
+labels_colors(dend_edge) <- rainbow_hcl(5)[sort_levels_values(as.numeric(odata_combo$Sampling.Site)[order.dendrogram(dend_edge)])]
 
-labels(dend_edge) <- paste(as.character(as.factor(odata_combo$SiteYear))[order.dendrogram(dend_edge)],
+labels(dend_edge) <- paste(as.character(odata_combo$Sampling.Site)[order.dendrogram(dend_edge)],
                            "(",labels(dend_edge),")", 
                            sep = "")
 dend_edge <- set(dend_edge, "labels_cex", 0.5)
@@ -96,9 +94,9 @@ plot(dend_edge,
      main = "Clustered Edge Microchemistry by Site
      (k=2)", 
      horiz =  TRUE,  nodePar = list(cex = .007))
-legend("topleft", legend = siteyears, fill = unique(colors))
+legend("topleft", legend = unique(odata_combo$Sampling.Site), fill = rainbow_hcl(5))
 
-
+str(dend_edge)
 
 ## plot heatmap
 library(gplots)

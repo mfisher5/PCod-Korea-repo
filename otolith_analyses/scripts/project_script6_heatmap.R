@@ -39,6 +39,19 @@ library(circlize)
 circlize_dendrogram(dend_edge)
 
 
+# comparing dendrograms
+odata_dendlist <- dendlist(as.dendrogram(edge.hclust), as.dendrogram(core.hclust))
+names(odata_dendlist) <- c("edge", "core")
+
+odata_dendlist %>% dendlist(which = c(1,2)) %>% ladderize %>% 
+  set("branches_k_color", k=3) %>% 
+  # untangle(method = "step1side", k_seq = 3:20) %>%
+  # set("clear_branches") %>% #otherwise the single lines are not black, since they retain the previous color from the branches_k_color.
+  tanglegram(faster = TRUE) # (common_subtrees_color_branches = TRUE)
+
+## color middle lines by edge tree 
+g3 <- cutree(edge.hclust, k=3)
+color_vec <- c(rep("pink"))
 
 
 # plot dendrogram with heat map
