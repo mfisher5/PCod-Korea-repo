@@ -40,9 +40,9 @@ head(odata_el.mrel)
 
 # Make edge / core data frames --------------------------------------------
 odata_edge.mrel <- odata_el.mrel[,9:16] # only edge measurements
-head(odata_edge)
+head(odata_edge.mrel)
 odata_core.mrel <- odata_el.mrel[,1:8] # only core measurements
-head(odata_core)
+head(odata_core.mrel)
 
 
 
@@ -148,3 +148,20 @@ NbClust(data = odata_edge.mrel, diss = edge.mrel_dist,
         distance=NULL, method="complete", index="gap")
 NbClust(data=odata_core.mrel, diss=core.mrel_dist, 
         distance=NULL, method="complete", index="gap")
+
+
+
+
+############################################ NO JINHAE BAY ###################################
+## ward.d2
+edge.hclust <- hclust(d = edge_nojb_dist, method = "ward.D2") # create object outside function
+head(core_nojb)
+core.hclust <- hclust(d = core_nojb_dist, method = "ward.D2") # create object outside function
+##-- gap statistic
+NbClust(data = odata_edge.mrel, diss = edge.mrel_dist, distance=NULL, method="ward.D2", index="gap")
+NbClust(data=odata_core.mrel, diss=core.mrel_dist, distance=NULL, method="ward.D2", index="gap")
+plot(core.hclust, hang = -1, main = "Core Microchemistry\nCluster Dendrogram",
+     ylab = "Dissimilarity", xlab = "Coded by Site",
+     sub = paste("Euclidean dissimilarity;", method="ward.D2", sep=" "),
+     labels = odata_combo$SiteYear)
+rect.hclust(core.hclust, k=2)

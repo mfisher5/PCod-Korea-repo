@@ -69,7 +69,6 @@ edge_bysite <- cbind(odata_edge, SiteYear = odata_combo$SiteYear)
 head(edge_bysite)
 
 ## B11
-aov(B11.e ~ SiteYear, data = edge_bysite)
 
 ## Ba
 Ba.ln <- log(edge_bysite$Ba138.e)

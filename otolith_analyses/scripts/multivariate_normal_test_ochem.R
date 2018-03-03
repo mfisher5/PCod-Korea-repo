@@ -40,7 +40,7 @@ odata_edge <- odata_el[9:16]
 ## requires MVN package
 mvn(odata_el, mvnTest="mardia", univariateTest="SW",multivariatePlot = "qq", univariatePlot = "histogram")
 
-
+mvn(odata_el.mrel, mvnTest="mardia", univariateTest="SW",multivariatePlot = "qq", univariatePlot = "histogram")
 
 # Univariate plots and tests ----------------------------------------------
 

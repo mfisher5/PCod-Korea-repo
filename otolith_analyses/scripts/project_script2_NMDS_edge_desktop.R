@@ -71,7 +71,7 @@ head(odata_edge.mrel)
 
 ## how many unique site / year combos?
 unique(odata_combo$SiteYear)
-ks <- c(1,2,3,4,5,6,7)
+ks <- c(1,2,3,4,5,6,7,8,9,10)
 
 ## run nmds for k = 1 through 7 and save stress values
 stresses <- c()
