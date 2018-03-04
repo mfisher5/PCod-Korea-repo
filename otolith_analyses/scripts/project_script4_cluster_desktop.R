@@ -106,6 +106,11 @@ plot(core.hclust, hang = -1, main = "Core Microchemistry\nCluster Dendrogram",
      sub = paste("Euclidean dissimilarity;", method="ward.D2", sep=" "),
      labels = odata_combo$SiteYear)
 rect.hclust(core.hclust, k=2)
+##-- save groupings 
+edge2 <- rect.hclust(edge.hclust, k=2)
+edge3 <- rect.hclust(edge.hclust, k=3)
+core2 <- rect.hclust(core.hclust, k=2)
+core3 <- rect.hclust(core.hclust, k=3)
 ##--pvclust package: https://cran.r-project.org/web/packages/pvclust/pvclust.pdf
 edge_mrel_transposed <- t(odata_edge.mrel) #transpose data frame so clustering samples, not elements
 dim(edge_mrel_transposed)
@@ -154,7 +159,7 @@ NbClust(data=odata_core.mrel, diss=core.mrel_dist,
 
 ############################################ NO JINHAE BAY ###################################
 ## ward.d2
-edge.hclust <- hclust(d = edge_nojb_dist, method = "ward.D2") # create object outside function
+edge_nojb.hclust <- hclust(d = edge_nojb_dist, method = "ward.D2") # create object outside function
 head(core_nojb)
 core.hclust <- hclust(d = core_nojb_dist, method = "ward.D2") # create object outside function
 ##-- gap statistic
