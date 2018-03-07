@@ -86,12 +86,77 @@ odata_dendlist %>% dendlist(which = c(1,2)) %>% ladderize %>%
   set("branches_k_color", k=3) %>% 
   tanglegram(faster = TRUE)
 
-## with color on inner lines
-g3 <- cutree(edge.hclust, k=3)
-color_vec <- c(rep("pink",length(g3 == 1)), rep("green",length(g3 == 2)), rep("blue",length(g3 == 3)))
-odata_dendlist %>% dendlist(which = c(1,2)) %>% ladderize %>% 
-  set("branches_k_color", k=3) %>%
+## with color on inner lines, all
+sites_ordered <- as.character(as.factor(odata_combo$Sampling.Site))[order.dendrogram(dend_edge)]
+color_vec <- c()
+for(i in sites_ordered){
+  if( i == "Pohang"){
+    color_vec <- c(color_vec, "#b3de69")
+  } else if ( i == "Geoje"){
+    color_vec <- c(color_vec, "gold2")
+  } else if ( i == "Namhae"){
+    color_vec <- c(color_vec, "#bebada")
+  } else if ( i == "YSBlock"){
+    color_vec <- c(color_vec, "#fb8072")
+  } else if ( i == "JinhaeBay"){
+    color_vec <- c(color_vec, "#8dd3c7")
+  } 
+}
+color_vec
+odata_dendlist %>% dendlist(which = c(1,2)) %>% ladderize %>%
   tanglegram(faster = TRUE, color_lines=color_vec) # (common_subtrees_color_branches = TRUE)
 
+## with color on inner lines, Jinhae Bay
+sites_ordered <- as.character(as.factor(odata_combo$Sampling.Site))[order.dendrogram(dend_edge)]
+color_vec_jb <- c()
+for(i in sites_ordered){
+  if( i == "JinhaeBay"){
+    color_vec_jb <- c(color_vec_jb, "#8dd3c7")
+  } else {
+    color_vec_jb <- c(color_vec_jb, "lightgrey")
+  } 
+}
+color_vec_jb
+odata_dendlist %>% dendlist(which = c(1,2)) %>% ladderize %>%
+  tanglegram(faster = TRUE, color_lines=color_vec_jb) # (common_subtrees_color_branches = TRUE)
+
+## with color on inner lines, Yellow Sea
+sites_ordered <- as.character(as.factor(odata_combo$Sampling.Site))[order.dendrogram(dend_edge)]
+color_vec_ys <- c()
+for(i in sites_ordered){
+  if( i == "YSBlock"){
+    color_vec_ys <- c(color_vec_ys, "#fb8072")
+  } else {
+    color_vec_ys <- c(color_vec_ys, "lightgrey")
+  } 
+}
+odata_dendlist %>% dendlist(which = c(1,2)) %>% ladderize %>%
+  tanglegram(faster = TRUE, color_lines=color_vec_ys) # (common_subtrees_color_branches = TRUE)
 
 
+## with color on inner lines, Pohang
+sites_ordered <- as.character(as.factor(odata_combo$Sampling.Site))[order.dendrogram(dend_edge)]
+color_vec_po <- c()
+for(i in sites_ordered){
+  if( i == "Pohang"){
+    color_vec_po <- c(color_vec_po, "#b3de69")
+  } else {
+    color_vec_po <- c(color_vec_po, "lightgrey")
+  } 
+}
+odata_dendlist %>% dendlist(which = c(1,2)) %>% ladderize %>%
+  tanglegram(faster = TRUE, color_lines=color_vec_po) # (common_subtrees_color_branches = TRUE)
+
+
+## with color on inner lines, Geoje
+sites_ordered <- as.character(as.factor(odata_combo$Sampling.Site))[order.dendrogram(dend_edge)]
+color_vec_ge <- c()
+for(i in sites_ordered){
+  if( i == "Geoje"){
+    color_vec_ge <- c(color_vec_ge, "gold2")
+  } else {
+    color_vec_ge <- c(color_vec_ge, "lightgrey")
+  } 
+}
+odata_dendlist %>% dendlist(which = c(1,2)) %>% ladderize %>%
+  tanglegram(faster = TRUE, color_lines=color_vec_ge) # (common_subtrees_color_branches = TRUE)
