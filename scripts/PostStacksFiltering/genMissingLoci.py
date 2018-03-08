@@ -28,7 +28,7 @@ script.write("# Open your files for reading and writing\ngenotypes_file = open(s
 import collections
 PopDict = collections.OrderedDict()
 PopList = []
-for line in popmap: 
+for line in popmap:
 	linelist = line.strip().split()
 	newpop = linelist[1]
 	if newpop not in PopDict: 

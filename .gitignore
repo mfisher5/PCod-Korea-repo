@@ -33,6 +33,11 @@ stacks_b5_wgenome.7z
 analyses/ml_relate_batch6/*
 stacks_b7/*
 stacks_b7_wgenome/*
+stacks_b8_verif/batch_7*
+stacks_b8_verif/batch_8.filteredMAF
+stacks_b8_verif/batch_8.filteredMAF_filteredIndivids30
+stacks_b8_verif/batch_8.filteredMAF_filteredIndivids30.txt
+stacks_b8_verif/batch_8.filteredMAF_filteredIndivids30_TRANSPOSED.txt
 analyses/HWE/*
 analyses/genepop/*
 analyses/Outliers/*BAYESCAN_output*
@@ -69,3 +74,5 @@ analyses/Admixture/*
 analyses/*.ped
 analyses/*.sam
 .Rproj.user
+analyses/rep_het_filtering/batch_8_verif/*xlsx
+

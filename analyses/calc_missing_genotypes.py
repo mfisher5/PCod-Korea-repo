@@ -2,7 +2,7 @@
 
 ################################################################################
 #
-# calc_het.py - this is a script used to calculate heterozygosity, based off of Dan Drinan's hetVsReadDepth.py
+# calc_het.py - this is a script used to calculate missing genotypes, based off of Dan Drinan's hetVsReadDepth.py
 #
 # MF 9/29/2017
 
@@ -62,7 +62,7 @@ def calcMissing(sample_name):
 ##
 
 #############################
-output_file.write('sample prop_het\n')
+output_file.write('sample prop_missing\n')
 
 if args.list:
 

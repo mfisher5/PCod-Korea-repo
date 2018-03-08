@@ -1,9 +1,9 @@
-### This is part two of the script that will convert a 2x2 matrix file into a genepop file. It is automatically generated with part 1. It assumes that loci are column headers #####
+### This is part two of the script that will convert a 2x2 matrix file into a genepop file. It is automatically generated with part 1. ASSUMPTION: SAMPLES ARE COLUMN HEADERS #####
 
 
-infile = open('../../stacks_b8_wgenome/batch_8.filteredMAF_filteredIndivids30_filteredLoci', 'r')
-genepop = open('../../stacks_b8_wgenome/batch_8_filteredMAF_filteredIndivids30_filteredLoci_genepop.txt', 'w')
-genepop.write('Korean Pacific cod filtered final genepop for HWE filtering, stacks b8, MF 9/29/2017\r\n')
+infile = open('../../stacks_b8_verif/batch_8.filteredMAF_filteredIndivids30_filteredLoci.txt', 'r')
+genepop = open('../../stacks_b8_verif/batch_8_filteredMAF_filteredIndivids30_filteredLoci_genepop.txt', 'w')
+genepop.write('Korean Pacific cod filtered final genepop for HWE filtering, stacks b8, MF 3/6/2018\r\n')
 print 'transposing genotypes matrix...'
 data_matrix = []
 for line in infile:
@@ -25,12 +25,12 @@ Pohang15 = transposed[1:35]
 Geoje15 = transposed[35:72]
 Namhae15 = transposed[72:91]
 YellowSea16 = transposed[91:121]
-Jukbyeon07 = transposed[121:158]
-JinhaeBay07 = transposed[158:202]
-JinhaeBay08 = transposed[202:248]
-Boryeong07 = transposed[248:272]
-Geoje14 = transposed[272:306]
-last_line = list(transposed[306])
+Jukbyeon07 = transposed[121:157]
+JinhaeBay07 = transposed[157:196]
+JinhaeBay08 = transposed[196:240]
+Boryeong07 = transposed[240:264]
+Geoje14 = transposed[264:298]
+last_line = list(transposed[298])
 seq = range(0, len(last_line))
 for i in seq:
 	last_line[i] = last_line[i].strip('\r\n')

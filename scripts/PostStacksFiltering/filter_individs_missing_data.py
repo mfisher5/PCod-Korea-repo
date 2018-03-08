@@ -8,7 +8,7 @@
 
 import argparse 
 
-parser = argparse.ArgumentParser(description="filter individuals for missing data. for use after Eleni's MAF filtering. assumes individuals are *columns* and loci are rows")
+parser = argparse.ArgumentParser(description="filter individuals for missing data. assumes input file has individuals as column headers")
 
 parser.add_argument("-f", "--input", help="genotype file in 2 x 2 matrix")
 parser.add_argument("-og", "--output_good", help="output file containing 'good' loci")
@@ -37,7 +37,7 @@ for line in infile:
 
     tmp_line += line
 
-    matrix_of_data.append(tmp_line.split(","))
+    matrix_of_data.append(tmp_line.split())
 
 infile.close()
         

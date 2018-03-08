@@ -1,0 +1,1489 @@
+Fst kernel smoothing: off
+Bootstrap resampling: off
+Percent samples limit per population: 0.8
+Locus Population limit: 4
+Minimum stack depth: 10
+Log liklihood filtering: off; threshold: 0
+Minor allele frequency cutoff: 0
+Maximum observed heterozygosity cutoff: 1
+Applying Fst correction: none.
+Parsing population map...
+Error: Failed to open or parse population map file 'PopMap_L1-5.txt'.
+Fst kernel smoothing: off
+Bootstrap resampling: off
+Percent samples limit per population: 0.8
+Locus Population limit: 4
+Minimum stack depth: 10
+Log liklihood filtering: off; threshold: 0
+Minor allele frequency cutoff: 0
+Maximum observed heterozygosity cutoff: 1
+Applying Fst correction: none.
+Parsing population map...
+The population map contained 326 samples, 9 population(s), 1 group(s).
+Reading the catalog...
+  Parsing stacks_b8_wgenome/batch_7.catalog.tags.tsv
+  Parsing stacks_b8_wgenome/batch_7.catalog.snps.tsv
+  Parsing stacks_b8_wgenome/batch_7.catalog.alleles.tsv
+Reading matches to the catalog...
+  Parsing stacks_b8_wgenome/PO010715_02.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_02_rep.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_04.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_06.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_07.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_07_rep.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_11.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_12.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_17.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_19.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_26.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_26_2.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_27.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_28.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_29.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_01.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_03.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_05.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_06.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_14.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_15.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_16.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_17.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO031715_03.matches.tsv
+  Parsing stacks_b8_wgenome/PO031715_04.matches.tsv
+  Parsing stacks_b8_wgenome/PO031715_13.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO031715_20.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO031715_23.matches.tsv
+  Parsing stacks_b8_wgenome/PO031715_24.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_01.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_07.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_11.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_11_rep.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_14.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_15.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_16.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_18.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_19.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_20.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_21.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_22.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_24.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_28.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_29.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_30.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_01.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_03.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_04.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_05.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_06.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_09_2.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_11.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_11_2.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_17.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_20.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_22.1.matches.tsv
+  Parsing stacks_b8_wgenome/GEO012315_02.matches.tsv
+  Parsing stacks_b8_wgenome/GEO012315_12.matches.tsv
+  Parsing stacks_b8_wgenome/GEO012315_18.matches.tsv
+  Parsing stacks_b8_wgenome/GEO012315_21.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_02.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_03.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_06.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_06_2.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_09_2.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_10_2.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_13.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_14.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_16.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_17.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_21.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_22.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_23.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_25.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_26.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_30.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_12.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_12_300.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_14.1.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_14_2.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_15.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_16.matches.tsv
+  Parsing stacks_b8_wgenome/YS121316_30.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_01.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_03.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_04.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_05.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_07.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_13.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_17.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_18.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_19.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_20.1.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_20_2.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_21.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_21_2.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_22.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_23.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_24.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_25.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_26.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_27.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_28.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_29.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_01.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_02.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_02_rep.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_03.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_04.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_06.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_06_2.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_08.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_09_rep.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_10.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_11.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_12.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_13.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_14.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_15.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_16.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_16_rep.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_17.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_18.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_19.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_20.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_21.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_22.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_23.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_25.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_26.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_27.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_28.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_29.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_30.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_31.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_32.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_33.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_34.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_36.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_37.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_01.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_03.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_03_rep.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_04.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_05.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_05_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_06.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_07.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_08.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_08_rep.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_10_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_11.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_12.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_13_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_14.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_16.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_16_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_18.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_19.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_20.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_21.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_22_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_23.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_23_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_24.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_25.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_26_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_27.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_27_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_28.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_29.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_30.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_30_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_31.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_32.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_33.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_34.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_35.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_35_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_36_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_37.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_38.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_39.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_41.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_42.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_43.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_44.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_45.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_46.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_47.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_47_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_48.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_01.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_02.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_04.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_05.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_05_rep.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_06.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_07.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_11.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_11_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_11_rep.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_12.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_13.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_14.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_14_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_16.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_17.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_19.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_20.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_21_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_22.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_23.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_24_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_25.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_25_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_26.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_27_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_28.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_28_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_29.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_30.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_31.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_31_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_32.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_33.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_33_rep.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_34.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_35.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_35_rep.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_36.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_36_rep.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_37.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_37_rep.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_38.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_39.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_40.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_40_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_41.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_44.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_45.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_46.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_46_rep.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_47.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_48.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_01.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_01_2.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_02.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_03.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_04.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_05.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_06.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_07.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_09.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_11.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_12.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_13.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_14.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_15.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_16.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_17.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_18.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_19.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_20.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_21.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_21_2.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_22.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_10.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_10_2.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_11.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_11_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_13.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_13_2.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_13_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_14.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_14_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_15.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_15_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_16.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_16_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_17.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_17_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_2.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_23.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_23_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_24.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_24_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_25.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_25_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_26.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_27.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_29.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_3.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_30.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_30_2.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_4.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_5.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_6.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_7.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_8.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_8_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_9.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_9_300.matches.tsv
+Working on 326 samples.
+Working on 9 population(s):
+    Pohang15: PO010715_02, PO010715_02_rep, PO010715_04, PO010715_06.1, PO010715_07, PO010715_07_rep, PO010715_08.1, PO010715_10.1, PO010715_11.1, PO010715_12, PO010715_17.1, PO010715_19.1, PO010715_26, PO010715_26_2, PO010715_27.1, PO010715_28.1, PO010715_29.1, PO020515_01, PO020515_03.1, PO020515_05.1, PO020515_06, PO020515_08.1, PO020515_09.1, PO020515_10.1, PO020515_14.1, PO020515_15.1, PO020515_16.1, PO020515_17.1, PO031715_03, PO031715_04, PO031715_13.1, PO031715_20.1, PO031715_23, PO031715_24
+    Geoje15: GE011215_01.1, GE011215_07.1, GE011215_08.1, GE011215_09.1, GE011215_10.1, GE011215_11, GE011215_11_rep, GE011215_14.1, GE011215_15.1, GE011215_16.1, GE011215_18, GE011215_19, GE011215_20.1, GE011215_21.1, GE011215_22, GE011215_24.1, GE011215_28, GE011215_29.1, GE011215_30.1, GE012315_01.1, GE012315_03.1, GE012315_04.1, GE012315_05.1, GE012315_06.1, GE012315_08.1, GE012315_09.1, GE012315_09_2, GE012315_10.1, GE012315_11.1, GE012315_11_2, GE012315_17.1, GE012315_20.1, GE012315_22.1, GEO012315_02, GEO012315_12, GEO012315_18, GEO012315_21
+    Namhae15: NA021015_02.1, NA021015_03.1, NA021015_06.1, NA021015_06_2, NA021015_08.1, NA021015_09.1, NA021015_09_2, NA021015_10.1, NA021015_10_2, NA021015_13.1, NA021015_14.1, NA021015_16.1, NA021015_17.1, NA021015_21.1, NA021015_22.1, NA021015_23, NA021015_25, NA021015_26, NA021015_30
+    YellowSea16: YS121315_08.1, YS121315_10.1, YS121315_12, YS121315_12_300, YS121315_14.1, YS121315_14_2, YS121315_15, YS121315_16, YS121316_30, YS_121316_01, YS_121316_03, YS_121316_04, YS_121316_05, YS_121316_07, YS_121316_13, YS_121316_17, YS_121316_18, YS_121316_19, YS_121316_20.1, YS_121316_20_2, YS_121316_21, YS_121316_21_2, YS_121316_22, YS_121316_23, YS_121316_24, YS_121316_25, YS_121316_26, YS_121316_27, YS_121316_28, YS_121316_29
+    Jukbyeon07: JUK07_01, JUK07_02.1, JUK07_02_rep.1, JUK07_03, JUK07_04, JUK07_06.1, JUK07_06_2, JUK07_08, JUK07_09.1, JUK07_09_rep.1, JUK07_10, JUK07_11, JUK07_12, JUK07_13, JUK07_14, JUK07_15, JUK07_16.1, JUK07_16_rep.1, JUK07_17, JUK07_18, JUK07_19, JUK07_20, JUK07_21, JUK07_22, JUK07_23, JUK07_25, JUK07_26, JUK07_27, JUK07_28, JUK07_29.1, JUK07_30, JUK07_31, JUK07_32, JUK07_33, JUK07_34, JUK07_36.1, JUK07_37.1
+    JinhaeBay07: JB121807_01, JB121807_03.1, JB121807_03_rep, JB121807_04.1, JB121807_05, JB121807_05_2, JB121807_06.1, JB121807_07.1, JB121807_08, JB121807_08_rep, JB121807_09.1, JB121807_10_c, JB121807_11.1, JB121807_12.1, JB121807_13_c, JB121807_14.1, JB121807_16.1, JB121807_16_2, JB121807_18, JB121807_19.1, JB121807_20.1, JB121807_21.1, JB121807_22_c, JB121807_23, JB121807_23_2, JB121807_24.1, JB121807_25, JB121807_26_c, JB121807_27, JB121807_27_2, JB121807_28.1, JB121807_29, JB121807_30, JB121807_30_2, JB121807_31.1, JB121807_32.1, JB121807_33.1, JB121807_34.1, JB121807_35, JB121807_35_2, JB121807_36_c, JB121807_37, JB121807_38.1, JB121807_39, JB121807_41.1, JB121807_42, JB121807_43, JB121807_44, JB121807_45.1, JB121807_46, JB121807_47, JB121807_47_2, JB121807_48.1
+    JinhaeBay08: JB021108_01.1, JB021108_02.1, JB021108_04.1, JB021108_05, JB021108_05_rep, JB021108_06, JB021108_07.1, JB021108_08.1, JB021108_09.1, JB021108_10.1, JB021108_11, JB021108_11_2, JB021108_11_rep, JB021108_12.1, JB021108_13.1, JB021108_14, JB021108_14_2, JB021108_16, JB021108_17.1, JB021108_19.1, JB021108_20, JB021108_21_c, JB021108_22.1, JB021108_23, JB021108_24_c, JB021108_25.1, JB021108_25_2, JB021108_26.1, JB021108_27_c, JB021108_28, JB021108_28_2, JB021108_29, JB021108_30, JB021108_31.1, JB021108_31_2, JB021108_32, JB021108_33, JB021108_33_rep, JB021108_34, JB021108_35, JB021108_35_rep, JB021108_36.1, JB021108_36_rep.1, JB021108_37.1, JB021108_37_rep.1, JB021108_38.1, JB021108_39, JB021108_40, JB021108_40_2, JB021108_41.1, JB021108_44.1, JB021108_45, JB021108_46.1, JB021108_46_rep.1, JB021108_47.1, JB021108_48.1
+    Boryeong07: BOR07_01, BOR07_01_2, BOR07_02.1, BOR07_03, BOR07_04, BOR07_05.1, BOR07_06.1, BOR07_07.1, BOR07_08.1, BOR07_09, BOR07_10.1, BOR07_11.1, BOR07_12.1, BOR07_13.1, BOR07_14, BOR07_15, BOR07_16, BOR07_17.1, BOR07_18, BOR07_19.1, BOR07_20.1, BOR07_21.1, BOR07_21_2, BOR07_22
+    Geoje14: GEO020414_10, GEO020414_10_2, GEO020414_11, GEO020414_11_300, GEO020414_13, GEO020414_13_2, GEO020414_13_300, GEO020414_14, GEO020414_14_300, GEO020414_15, GEO020414_15_300, GEO020414_16, GEO020414_16_300, GEO020414_17, GEO020414_17_300, GEO020414_2, GEO020414_23, GEO020414_23_300, GEO020414_24, GEO020414_24_300, GEO020414_25, GEO020414_25_300, GEO020414_26, GEO020414_27, GEO020414_29, GEO020414_3, GEO020414_30, GEO020414_30_2, GEO020414_4, GEO020414_5, GEO020414_6, GEO020414_7, GEO020414_8, GEO020414_8_300, GEO020414_9, GEO020414_9_300
+Working on 1 group(s) of populations:
+    defaultgrp: Pohang15, Geoje15, Namhae15, YellowSea16, Jukbyeon07, JinhaeBay07, JinhaeBay08, Boryeong07, Geoje14
+Populating observed haplotypes for 326 samples, 25224 loci.
+Removed 236905 samples from loci that are below the minimum stack depth of 10x
+Removing 1929 loci that did not pass sample/population constraints... retained 23295 loci.
+Loading model outputs for 326 samples, 23295 loci.
+  Parsing stacks_b8_wgenome/PO010715_02.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_02_rep.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_04.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_06.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_07.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_07_rep.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_08.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_10.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_11.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_12.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_17.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_19.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_26.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_26_2.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_27.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_28.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_29.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_01.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_03.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_05.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_06.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_08.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_09.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_10.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_14.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_15.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_16.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_17.1.models.tsv
+  Parsing stacks_b8_wgenome/PO031715_03.models.tsv
+  Parsing stacks_b8_wgenome/PO031715_04.models.tsv
+  Parsing stacks_b8_wgenome/PO031715_13.1.models.tsv
+  Parsing stacks_b8_wgenome/PO031715_20.1.models.tsv
+  Parsing stacks_b8_wgenome/PO031715_23.models.tsv
+  Parsing stacks_b8_wgenome/PO031715_24.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_01.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_07.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_08.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_09.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_10.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_11.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_11_rep.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_14.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_15.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_16.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_18.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_19.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_20.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_21.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_22.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_24.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_28.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_29.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_30.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_01.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_03.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_04.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_05.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_06.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_08.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_09.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_09_2.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_10.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_11.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_11_2.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_17.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_20.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_22.1.models.tsv
+  Parsing stacks_b8_wgenome/GEO012315_02.models.tsv
+  Parsing stacks_b8_wgenome/GEO012315_12.models.tsv
+  Parsing stacks_b8_wgenome/GEO012315_18.models.tsv
+  Parsing stacks_b8_wgenome/GEO012315_21.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_02.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_03.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_06.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_06_2.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_08.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_09.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_09_2.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_10.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_10_2.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_13.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_14.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_16.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_17.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_21.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_22.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_23.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_25.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_26.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_30.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_08.1.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_10.1.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_12.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_12_300.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_14.1.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_14_2.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_15.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_16.models.tsv
+  Parsing stacks_b8_wgenome/YS121316_30.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_01.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_03.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_04.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_05.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_07.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_13.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_17.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_18.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_19.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_20.1.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_20_2.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_21.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_21_2.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_22.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_23.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_24.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_25.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_26.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_27.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_28.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_29.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_01.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_02.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_02_rep.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_03.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_04.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_06.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_06_2.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_08.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_09.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_09_rep.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_10.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_11.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_12.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_13.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_14.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_15.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_16.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_16_rep.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_17.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_18.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_19.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_20.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_21.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_22.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_23.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_25.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_26.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_27.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_28.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_29.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_30.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_31.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_32.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_33.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_34.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_36.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_37.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_01.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_03.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_03_rep.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_04.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_05.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_05_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_06.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_07.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_08.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_08_rep.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_09.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_10_c.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_11.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_12.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_13_c.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_14.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_16.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_16_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_18.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_19.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_20.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_21.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_22_c.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_23.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_23_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_24.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_25.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_26_c.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_27.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_27_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_28.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_29.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_30.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_30_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_31.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_32.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_33.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_34.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_35.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_35_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_36_c.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_37.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_38.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_39.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_41.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_42.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_43.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_44.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_45.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_46.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_47.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_47_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_48.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_01.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_02.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_04.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_05.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_05_rep.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_06.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_07.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_08.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_09.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_10.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_11.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_11_2.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_11_rep.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_12.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_13.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_14.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_14_2.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_16.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_17.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_19.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_20.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_21_c.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_22.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_23.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_24_c.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_25.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_25_2.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_26.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_27_c.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_28.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_28_2.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_29.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_30.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_31.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_31_2.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_32.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_33.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_33_rep.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_34.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_35.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_35_rep.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_36.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_36_rep.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_37.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_37_rep.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_38.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_39.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_40.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_40_2.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_41.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_44.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_45.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_46.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_46_rep.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_47.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_48.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_01.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_01_2.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_02.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_03.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_04.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_05.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_06.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_07.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_08.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_09.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_10.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_11.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_12.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_13.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_14.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_15.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_16.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_17.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_18.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_19.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_20.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_21.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_21_2.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_22.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_10.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_10_2.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_11.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_11_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_13.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_13_2.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_13_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_14.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_14_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_15.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_15_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_16.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_16_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_17.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_17_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_2.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_23.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_23_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_24.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_24_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_25.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_25_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_26.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_27.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_29.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_3.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_30.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_30_2.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_4.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_5.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_6.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_7.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_8.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_8_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_9.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_9_300.models.tsv
+Generating nucleotide-level summary statistics for population 'Pohang15'
+Population 'Pohang15' contained 80 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Geoje15'
+Population 'Geoje15' contained 90 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Namhae15'
+Population 'Namhae15' contained 71 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'YellowSea16'
+Population 'YellowSea16' contained 93 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Jukbyeon07'
+Population 'Jukbyeon07' contained 130 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'JinhaeBay07'
+Population 'JinhaeBay07' contained 45 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'JinhaeBay08'
+Population 'JinhaeBay08' contained 48 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Boryeong07'
+Population 'Boryeong07' contained 75 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Geoje14'
+Population 'Geoje14' contained 89 incompatible loci -- more than two alleles present.
+Tallying loci across populations...done.
+Pruned 582 variant sites due to filter constraints (more with --verbose).
+Removing 488 additional loci for which all variant sites were filtered... retained 22807 loci.
+Regenerating nucleotide-level summary statistics for population 'Pohang15'
+Population 'Pohang15' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Geoje15'
+Population 'Geoje15' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Namhae15'
+Population 'Namhae15' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'YellowSea16'
+Population 'YellowSea16' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Jukbyeon07'
+Population 'Jukbyeon07' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'JinhaeBay07'
+Population 'JinhaeBay07' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'JinhaeBay08'
+Population 'JinhaeBay08' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Boryeong07'
+Population 'Boryeong07' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Geoje14'
+Population 'Geoje14' contained 0 incompatible loci -- more than two alleles present.
+Re-tallying loci across populations...done.
+Generating haplotype-level summary statistics for population 'Pohang15'
+Generating haplotype-level summary statistics for population 'Geoje15'
+Generating haplotype-level summary statistics for population 'Namhae15'
+Generating haplotype-level summary statistics for population 'YellowSea16'
+Generating haplotype-level summary statistics for population 'Jukbyeon07'
+Generating haplotype-level summary statistics for population 'JinhaeBay07'
+Generating haplotype-level summary statistics for population 'JinhaeBay08'
+Generating haplotype-level summary statistics for population 'Boryeong07'
+Generating haplotype-level summary statistics for population 'Geoje14'
+Writing 22807 loci to summary statistics file, 'stacks_b8_wgenome/batch_7.sumstats.tsv'
+Writing 22807 loci to observed haplotype file, 'stacks_b8_wgenome/batch_7.haplotypes.tsv'
+Writing population alleles to FASTA file 'stacks_b8_wgenome/batch_7.fa'
+Writing population data to GenePop file 'stacks_b8_wgenome/batch_7.genepop'
+Populations is done.
+Fst kernel smoothing: off
+Bootstrap resampling: off
+Percent samples limit per population: 0.8
+Locus Population limit: 4
+Minimum stack depth: 10
+Log liklihood filtering: off; threshold: 0
+Minor allele frequency cutoff: 0
+Maximum observed heterozygosity cutoff: 1
+Applying Fst correction: none.
+Parsing population map...
+The population map contained 326 samples, 9 population(s), 1 group(s).
+Reading the catalog...
+  Parsing stacks_b8_wgenome/batch_7.catalog.tags.tsv
+  Parsing stacks_b8_wgenome/batch_7.catalog.snps.tsv
+  Parsing stacks_b8_wgenome/batch_7.catalog.alleles.tsv
+Reading matches to the catalog...
+  Parsing stacks_b8_wgenome/PO010715_02.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_02_rep.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_04.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_06.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_07.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_07_rep.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_11.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_12.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_17.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_19.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_26.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_26_2.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_27.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_28.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO010715_29.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_01.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_03.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_05.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_06.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_14.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_15.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_16.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO020515_17.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO031715_03.matches.tsv
+  Parsing stacks_b8_wgenome/PO031715_04.matches.tsv
+  Parsing stacks_b8_wgenome/PO031715_13.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO031715_20.1.matches.tsv
+  Parsing stacks_b8_wgenome/PO031715_23.matches.tsv
+  Parsing stacks_b8_wgenome/PO031715_24.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_01.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_07.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_11.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_11_rep.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_14.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_15.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_16.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_18.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_19.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_20.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_21.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_22.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_24.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_28.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_29.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE011215_30.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_01.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_03.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_04.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_05.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_06.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_09_2.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_11.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_11_2.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_17.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_20.1.matches.tsv
+  Parsing stacks_b8_wgenome/GE012315_22.1.matches.tsv
+  Parsing stacks_b8_wgenome/GEO012315_02.matches.tsv
+  Parsing stacks_b8_wgenome/GEO012315_12.matches.tsv
+  Parsing stacks_b8_wgenome/GEO012315_18.matches.tsv
+  Parsing stacks_b8_wgenome/GEO012315_21.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_02.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_03.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_06.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_06_2.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_09_2.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_10_2.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_13.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_14.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_16.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_17.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_21.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_22.1.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_23.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_25.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_26.matches.tsv
+  Parsing stacks_b8_wgenome/NA021015_30.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_12.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_12_300.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_14.1.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_14_2.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_15.matches.tsv
+  Parsing stacks_b8_wgenome/YS121315_16.matches.tsv
+  Parsing stacks_b8_wgenome/YS121316_30.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_01.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_03.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_04.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_05.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_07.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_13.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_17.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_18.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_19.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_20.1.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_20_2.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_21.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_21_2.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_22.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_23.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_24.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_25.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_26.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_27.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_28.matches.tsv
+  Parsing stacks_b8_wgenome/YS_121316_29.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_01.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_02.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_02_rep.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_03.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_04.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_06.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_06_2.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_08.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_09_rep.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_10.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_11.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_12.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_13.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_14.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_15.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_16.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_16_rep.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_17.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_18.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_19.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_20.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_21.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_22.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_23.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_25.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_26.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_27.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_28.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_29.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_30.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_31.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_32.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_33.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_34.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_36.1.matches.tsv
+  Parsing stacks_b8_wgenome/JUK07_37.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_01.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_03.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_03_rep.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_04.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_05.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_05_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_06.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_07.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_08.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_08_rep.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_10_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_11.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_12.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_13_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_14.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_16.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_16_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_18.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_19.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_20.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_21.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_22_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_23.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_23_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_24.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_25.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_26_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_27.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_27_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_28.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_29.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_30.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_30_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_31.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_32.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_33.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_34.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_35.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_35_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_36_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_37.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_38.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_39.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_41.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_42.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_43.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_44.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_45.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_46.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_47.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_47_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB121807_48.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_01.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_02.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_04.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_05.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_05_rep.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_06.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_07.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_09.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_11.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_11_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_11_rep.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_12.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_13.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_14.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_14_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_16.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_17.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_19.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_20.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_21_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_22.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_23.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_24_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_25.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_25_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_26.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_27_c.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_28.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_28_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_29.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_30.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_31.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_31_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_32.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_33.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_33_rep.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_34.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_35.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_35_rep.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_36.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_36_rep.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_37.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_37_rep.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_38.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_39.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_40.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_40_2.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_41.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_44.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_45.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_46.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_46_rep.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_47.1.matches.tsv
+  Parsing stacks_b8_wgenome/JB021108_48.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_01.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_01_2.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_02.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_03.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_04.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_05.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_06.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_07.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_08.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_09.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_10.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_11.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_12.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_13.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_14.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_15.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_16.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_17.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_18.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_19.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_20.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_21.1.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_21_2.matches.tsv
+  Parsing stacks_b8_wgenome/BOR07_22.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_10.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_10_2.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_11.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_11_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_13.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_13_2.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_13_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_14.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_14_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_15.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_15_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_16.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_16_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_17.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_17_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_2.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_23.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_23_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_24.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_24_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_25.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_25_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_26.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_27.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_29.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_3.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_30.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_30_2.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_4.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_5.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_6.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_7.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_8.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_8_300.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_9.matches.tsv
+  Parsing stacks_b8_wgenome/GEO020414_9_300.matches.tsv
+Working on 326 samples.
+Working on 9 population(s):
+    Pohang15: PO010715_02, PO010715_02_rep, PO010715_04, PO010715_06.1, PO010715_07, PO010715_07_rep, PO010715_08.1, PO010715_10.1, PO010715_11.1, PO010715_12, PO010715_17.1, PO010715_19.1, PO010715_26, PO010715_26_2, PO010715_27.1, PO010715_28.1, PO010715_29.1, PO020515_01, PO020515_03.1, PO020515_05.1, PO020515_06, PO020515_08.1, PO020515_09.1, PO020515_10.1, PO020515_14.1, PO020515_15.1, PO020515_16.1, PO020515_17.1, PO031715_03, PO031715_04, PO031715_13.1, PO031715_20.1, PO031715_23, PO031715_24
+    Geoje15: GE011215_01.1, GE011215_07.1, GE011215_08.1, GE011215_09.1, GE011215_10.1, GE011215_11, GE011215_11_rep, GE011215_14.1, GE011215_15.1, GE011215_16.1, GE011215_18, GE011215_19, GE011215_20.1, GE011215_21.1, GE011215_22, GE011215_24.1, GE011215_28, GE011215_29.1, GE011215_30.1, GE012315_01.1, GE012315_03.1, GE012315_04.1, GE012315_05.1, GE012315_06.1, GE012315_08.1, GE012315_09.1, GE012315_09_2, GE012315_10.1, GE012315_11.1, GE012315_11_2, GE012315_17.1, GE012315_20.1, GE012315_22.1, GEO012315_02, GEO012315_12, GEO012315_18, GEO012315_21
+    Namhae15: NA021015_02.1, NA021015_03.1, NA021015_06.1, NA021015_06_2, NA021015_08.1, NA021015_09.1, NA021015_09_2, NA021015_10.1, NA021015_10_2, NA021015_13.1, NA021015_14.1, NA021015_16.1, NA021015_17.1, NA021015_21.1, NA021015_22.1, NA021015_23, NA021015_25, NA021015_26, NA021015_30
+    YellowSea16: YS121315_08.1, YS121315_10.1, YS121315_12, YS121315_12_300, YS121315_14.1, YS121315_14_2, YS121315_15, YS121315_16, YS121316_30, YS_121316_01, YS_121316_03, YS_121316_04, YS_121316_05, YS_121316_07, YS_121316_13, YS_121316_17, YS_121316_18, YS_121316_19, YS_121316_20.1, YS_121316_20_2, YS_121316_21, YS_121316_21_2, YS_121316_22, YS_121316_23, YS_121316_24, YS_121316_25, YS_121316_26, YS_121316_27, YS_121316_28, YS_121316_29
+    Jukbyeon07: JUK07_01, JUK07_02.1, JUK07_02_rep.1, JUK07_03, JUK07_04, JUK07_06.1, JUK07_06_2, JUK07_08, JUK07_09.1, JUK07_09_rep.1, JUK07_10, JUK07_11, JUK07_12, JUK07_13, JUK07_14, JUK07_15, JUK07_16.1, JUK07_16_rep.1, JUK07_17, JUK07_18, JUK07_19, JUK07_20, JUK07_21, JUK07_22, JUK07_23, JUK07_25, JUK07_26, JUK07_27, JUK07_28, JUK07_29.1, JUK07_30, JUK07_31, JUK07_32, JUK07_33, JUK07_34, JUK07_36.1, JUK07_37.1
+    JinhaeBay07: JB121807_01, JB121807_03.1, JB121807_03_rep, JB121807_04.1, JB121807_05, JB121807_05_2, JB121807_06.1, JB121807_07.1, JB121807_08, JB121807_08_rep, JB121807_09.1, JB121807_10_c, JB121807_11.1, JB121807_12.1, JB121807_13_c, JB121807_14.1, JB121807_16.1, JB121807_16_2, JB121807_18, JB121807_19.1, JB121807_20.1, JB121807_21.1, JB121807_22_c, JB121807_23, JB121807_23_2, JB121807_24.1, JB121807_25, JB121807_26_c, JB121807_27, JB121807_27_2, JB121807_28.1, JB121807_29, JB121807_30, JB121807_30_2, JB121807_31.1, JB121807_32.1, JB121807_33.1, JB121807_34.1, JB121807_35, JB121807_35_2, JB121807_36_c, JB121807_37, JB121807_38.1, JB121807_39, JB121807_41.1, JB121807_42, JB121807_43, JB121807_44, JB121807_45.1, JB121807_46, JB121807_47, JB121807_47_2, JB121807_48.1
+    JinhaeBay08: JB021108_01.1, JB021108_02.1, JB021108_04.1, JB021108_05, JB021108_05_rep, JB021108_06, JB021108_07.1, JB021108_08.1, JB021108_09.1, JB021108_10.1, JB021108_11, JB021108_11_2, JB021108_11_rep, JB021108_12.1, JB021108_13.1, JB021108_14, JB021108_14_2, JB021108_16, JB021108_17.1, JB021108_19.1, JB021108_20, JB021108_21_c, JB021108_22.1, JB021108_23, JB021108_24_c, JB021108_25.1, JB021108_25_2, JB021108_26.1, JB021108_27_c, JB021108_28, JB021108_28_2, JB021108_29, JB021108_30, JB021108_31.1, JB021108_31_2, JB021108_32, JB021108_33, JB021108_33_rep, JB021108_34, JB021108_35, JB021108_35_rep, JB021108_36.1, JB021108_36_rep.1, JB021108_37.1, JB021108_37_rep.1, JB021108_38.1, JB021108_39, JB021108_40, JB021108_40_2, JB021108_41.1, JB021108_44.1, JB021108_45, JB021108_46.1, JB021108_46_rep.1, JB021108_47.1, JB021108_48.1
+    Boryeong07: BOR07_01, BOR07_01_2, BOR07_02.1, BOR07_03, BOR07_04, BOR07_05.1, BOR07_06.1, BOR07_07.1, BOR07_08.1, BOR07_09, BOR07_10.1, BOR07_11.1, BOR07_12.1, BOR07_13.1, BOR07_14, BOR07_15, BOR07_16, BOR07_17.1, BOR07_18, BOR07_19.1, BOR07_20.1, BOR07_21.1, BOR07_21_2, BOR07_22
+    Geoje14: GEO020414_10, GEO020414_10_2, GEO020414_11, GEO020414_11_300, GEO020414_13, GEO020414_13_2, GEO020414_13_300, GEO020414_14, GEO020414_14_300, GEO020414_15, GEO020414_15_300, GEO020414_16, GEO020414_16_300, GEO020414_17, GEO020414_17_300, GEO020414_2, GEO020414_23, GEO020414_23_300, GEO020414_24, GEO020414_24_300, GEO020414_25, GEO020414_25_300, GEO020414_26, GEO020414_27, GEO020414_29, GEO020414_3, GEO020414_30, GEO020414_30_2, GEO020414_4, GEO020414_5, GEO020414_6, GEO020414_7, GEO020414_8, GEO020414_8_300, GEO020414_9, GEO020414_9_300
+Working on 1 group(s) of populations:
+    defaultgrp: Pohang15, Geoje15, Namhae15, YellowSea16, Jukbyeon07, JinhaeBay07, JinhaeBay08, Boryeong07, Geoje14
+Populating observed haplotypes for 326 samples, 25224 loci.
+Removed 236905 samples from loci that are below the minimum stack depth of 10x
+Removing 1929 loci that did not pass sample/population constraints... retained 23295 loci.
+Loading model outputs for 326 samples, 23295 loci.
+  Parsing stacks_b8_wgenome/PO010715_02.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_02_rep.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_04.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_06.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_07.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_07_rep.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_08.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_10.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_11.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_12.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_17.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_19.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_26.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_26_2.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_27.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_28.1.models.tsv
+  Parsing stacks_b8_wgenome/PO010715_29.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_01.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_03.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_05.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_06.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_08.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_09.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_10.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_14.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_15.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_16.1.models.tsv
+  Parsing stacks_b8_wgenome/PO020515_17.1.models.tsv
+  Parsing stacks_b8_wgenome/PO031715_03.models.tsv
+  Parsing stacks_b8_wgenome/PO031715_04.models.tsv
+  Parsing stacks_b8_wgenome/PO031715_13.1.models.tsv
+  Parsing stacks_b8_wgenome/PO031715_20.1.models.tsv
+  Parsing stacks_b8_wgenome/PO031715_23.models.tsv
+  Parsing stacks_b8_wgenome/PO031715_24.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_01.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_07.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_08.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_09.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_10.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_11.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_11_rep.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_14.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_15.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_16.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_18.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_19.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_20.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_21.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_22.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_24.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_28.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_29.1.models.tsv
+  Parsing stacks_b8_wgenome/GE011215_30.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_01.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_03.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_04.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_05.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_06.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_08.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_09.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_09_2.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_10.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_11.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_11_2.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_17.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_20.1.models.tsv
+  Parsing stacks_b8_wgenome/GE012315_22.1.models.tsv
+  Parsing stacks_b8_wgenome/GEO012315_02.models.tsv
+  Parsing stacks_b8_wgenome/GEO012315_12.models.tsv
+  Parsing stacks_b8_wgenome/GEO012315_18.models.tsv
+  Parsing stacks_b8_wgenome/GEO012315_21.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_02.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_03.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_06.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_06_2.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_08.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_09.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_09_2.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_10.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_10_2.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_13.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_14.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_16.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_17.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_21.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_22.1.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_23.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_25.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_26.models.tsv
+  Parsing stacks_b8_wgenome/NA021015_30.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_08.1.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_10.1.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_12.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_12_300.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_14.1.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_14_2.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_15.models.tsv
+  Parsing stacks_b8_wgenome/YS121315_16.models.tsv
+  Parsing stacks_b8_wgenome/YS121316_30.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_01.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_03.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_04.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_05.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_07.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_13.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_17.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_18.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_19.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_20.1.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_20_2.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_21.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_21_2.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_22.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_23.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_24.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_25.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_26.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_27.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_28.models.tsv
+  Parsing stacks_b8_wgenome/YS_121316_29.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_01.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_02.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_02_rep.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_03.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_04.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_06.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_06_2.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_08.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_09.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_09_rep.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_10.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_11.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_12.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_13.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_14.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_15.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_16.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_16_rep.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_17.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_18.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_19.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_20.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_21.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_22.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_23.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_25.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_26.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_27.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_28.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_29.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_30.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_31.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_32.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_33.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_34.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_36.1.models.tsv
+  Parsing stacks_b8_wgenome/JUK07_37.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_01.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_03.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_03_rep.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_04.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_05.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_05_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_06.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_07.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_08.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_08_rep.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_09.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_10_c.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_11.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_12.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_13_c.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_14.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_16.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_16_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_18.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_19.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_20.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_21.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_22_c.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_23.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_23_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_24.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_25.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_26_c.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_27.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_27_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_28.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_29.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_30.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_30_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_31.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_32.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_33.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_34.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_35.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_35_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_36_c.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_37.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_38.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_39.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_41.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_42.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_43.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_44.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_45.1.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_46.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_47.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_47_2.models.tsv
+  Parsing stacks_b8_wgenome/JB121807_48.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_01.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_02.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_04.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_05.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_05_rep.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_06.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_07.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_08.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_09.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_10.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_11.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_11_2.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_11_rep.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_12.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_13.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_14.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_14_2.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_16.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_17.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_19.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_20.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_21_c.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_22.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_23.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_24_c.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_25.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_25_2.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_26.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_27_c.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_28.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_28_2.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_29.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_30.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_31.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_31_2.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_32.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_33.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_33_rep.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_34.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_35.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_35_rep.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_36.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_36_rep.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_37.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_37_rep.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_38.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_39.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_40.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_40_2.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_41.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_44.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_45.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_46.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_46_rep.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_47.1.models.tsv
+  Parsing stacks_b8_wgenome/JB021108_48.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_01.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_01_2.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_02.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_03.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_04.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_05.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_06.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_07.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_08.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_09.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_10.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_11.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_12.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_13.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_14.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_15.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_16.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_17.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_18.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_19.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_20.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_21.1.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_21_2.models.tsv
+  Parsing stacks_b8_wgenome/BOR07_22.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_10.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_10_2.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_11.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_11_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_13.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_13_2.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_13_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_14.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_14_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_15.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_15_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_16.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_16_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_17.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_17_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_2.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_23.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_23_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_24.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_24_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_25.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_25_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_26.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_27.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_29.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_3.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_30.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_30_2.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_4.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_5.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_6.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_7.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_8.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_8_300.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_9.models.tsv
+  Parsing stacks_b8_wgenome/GEO020414_9_300.models.tsv
+Generating nucleotide-level summary statistics for population 'Pohang15'
+Population 'Pohang15' contained 80 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Geoje15'
+Population 'Geoje15' contained 90 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Namhae15'
+Population 'Namhae15' contained 71 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'YellowSea16'
+Population 'YellowSea16' contained 93 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Jukbyeon07'
+Population 'Jukbyeon07' contained 130 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'JinhaeBay07'
+Population 'JinhaeBay07' contained 45 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'JinhaeBay08'
+Population 'JinhaeBay08' contained 48 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Boryeong07'
+Population 'Boryeong07' contained 75 incompatible loci -- more than two alleles present.
+Generating nucleotide-level summary statistics for population 'Geoje14'
+Population 'Geoje14' contained 89 incompatible loci -- more than two alleles present.
+Tallying loci across populations...done.
+Pruned 582 variant sites due to filter constraints (more with --verbose).
+Removing 488 additional loci for which all variant sites were filtered... retained 22807 loci.
+Regenerating nucleotide-level summary statistics for population 'Pohang15'
+Population 'Pohang15' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Geoje15'
+Population 'Geoje15' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Namhae15'
+Population 'Namhae15' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'YellowSea16'
+Population 'YellowSea16' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Jukbyeon07'
+Population 'Jukbyeon07' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'JinhaeBay07'
+Population 'JinhaeBay07' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'JinhaeBay08'
+Population 'JinhaeBay08' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Boryeong07'
+Population 'Boryeong07' contained 0 incompatible loci -- more than two alleles present.
+Regenerating nucleotide-level summary statistics for population 'Geoje14'
+Population 'Geoje14' contained 0 incompatible loci -- more than two alleles present.
+Re-tallying loci across populations...done.
+Generating haplotype-level summary statistics for population 'Pohang15'
+Generating haplotype-level summary statistics for population 'Geoje15'
+Generating haplotype-level summary statistics for population 'Namhae15'
+Generating haplotype-level summary statistics for population 'YellowSea16'
+Generating haplotype-level summary statistics for population 'Jukbyeon07'
+Generating haplotype-level summary statistics for population 'JinhaeBay07'
+Generating haplotype-level summary statistics for population 'JinhaeBay08'
+Generating haplotype-level summary statistics for population 'Boryeong07'
+Generating haplotype-level summary statistics for population 'Geoje14'
+Writing 22807 loci to summary statistics file, 'stacks_b8_wgenome/batch_7.sumstats.tsv'
+Writing 22807 loci to observed haplotype file, 'stacks_b8_wgenome/batch_7.haplotypes.tsv'
+Writing population alleles to FASTA file 'stacks_b8_wgenome/batch_7.fa'
+Writing population data to GenePop file 'stacks_b8_wgenome/batch_7.genepop'
+Populations is done.
