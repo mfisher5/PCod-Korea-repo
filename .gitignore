@@ -75,4 +75,5 @@ analyses/*.ped
 analyses/*.sam
 .Rproj.user
 analyses/rep_het_filtering/batch_8_verif/*xlsx
+analyses/genepop/batch8_verif/*.INF
 
