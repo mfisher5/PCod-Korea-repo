@@ -77,5 +77,6 @@ analyses/*.sam
 analyses/rep_het_filtering/batch_8_verif/*xlsx
 analyses/genepop/batch8_verif/*.INF
 analyses/Outliers/batch8/*.sel
+analyses/Outliers/batch8_verif/*.sel
 analyses/Structure/verif/*
 analyses/Outliers/batch_8_BAYESCAN_output_Verif.txt

@@ -348,44 +348,41 @@ OutFLANKResultsPlotter(geKOR)
 
 # plots Fst against expected Heterozygosity
 plot(geKOR$results$FST, geKOR$results$He, xlab = "Per Locus FST", ylab = "Per Locus He")
-#
-#
-#
-#
-#
-#
-#
-###########################################################################
 
-loci <- read.table("batch_8_SNPmat_south_locusnames.txt", header=F)
-pops <- read.table("batch_8_SNPmat_south_popnames.txt", header=F)
-data = read.csv("batch_8_final_filtered_south_SNPmat.txt", header = FALSE, sep = "\t")
-View(data)
+
+
+
+
+
+# Outflank, South v. East -----------------------------------------------------
+
+
+# Load input file #
+
+loci <- read.table("batch_8_verif_SNPmat_ge_locusnames.txt", header=F)
+pops <- read.table("batch_8_verif_SNPmat_ge_popnames.txt", header=F)
+data = read.csv("batch_8_verif_final_filtered_ge_SNPmat.txt", header = FALSE, sep = "\t")
+
 datamat = as.matrix(data)
 
-FstDataFrame <- MakeDiploidFSTMat(SNPmat = data, locusNames = loci, popNames = PopNames)
+FstDataFrame <- MakeDiploidFSTMat(SNPmat = data, locusNames = loci, popNames = pops)
 
 
 
+# Identify Outliers #
 
 
-####### Identify Outliers #######
+geKOR <- OutFLANK(FstDataFrame, LeftTrimFraction=0.05, RightTrimFraction=0.05, Hmin=0.1, NumberOfSamples=2, qthreshold=0.05)
 
-
-southKOR <- OutFLANK(FstDataFrame, LeftTrimFraction=0.05, RightTrimFraction=0.05, Hmin=0.1, NumberOfSamples=9, qthreshold=0.05)
 
 # take a look at the output! 
-head(southKOR)
-typeof(southKOR) # spoiler: it's a list.
-dim(southKOR$results[which(southKOR$results$OutlierFlag==T),]) # how many outliers do you have? 1st #
+dim(geKOR$results[which(geKOR$results$OutlierFlag==T),]) # how many outliers do you have? 1st num
 
 
+# Write output to a text file #
 
-
-###### Write output to a text file ########
-
-head(southKOR$results)
-outlier_indices <- which(southKOR$results$OutlierFlag == "TRUE")
+head(geKOR$results)
+outlier_indices <- which(geKOR$results$OutlierFlag == "TRUE")
 
 locus <- c()
 he <- c()
@@ -397,79 +394,25 @@ outlier <- c()
 
 
 for(i in outlier_indices){
-  locus <- c(locus, southKOR$results$LocusName[i])
-  he <- c(he, southKOR$results$He[i])
-  fst <- c(fst, southKOR$results$FST[i])
-  meanAlleleFreq <- c(meanAlleleFreq, southKOR$results$meanAlleleFreq[i])
-  qvals <- c(qvals, southKOR$results$qvalues[i])
-  pv <- c(pv, southKOR$results$pvalues[i])
-  outlier <- c(outlier, southKOR$results$OutlierFlag[i])
+  locus <- c(locus, geKOR$results$LocusName[i])
+  he <- c(he, geKOR$results$He[i])
+  fst <- c(fst, geKOR$results$FST[i])
+  meanAlleleFreq <- c(meanAlleleFreq, geKOR$results$meanAlleleFreq[i])
+  qvals <- c(qvals, geKOR$results$qvalues[i])
+  pv <- c(pv, geKOR$results$pvalues[i])
+  outlier <- c(outlier, geKOR$results$OutlierFlag[i])
 }
 
 #it's not great, but it works
 dataframe <- cbind(locus, he, fst, meanAlleleFreq, qvals, pv, outlier)
-write.csv(dataframe, file="southKOR_b8_outflank_outliers.txt")
+write.csv(dataframe, file="geKOR_b8_verif_outflank_outliers_s2.csv", quote=FALSE,  row.names=FALSE)
 
 
 
-
-###### Plotting results #########
+# Plotting results #
 
 # plots the actual (yellow) and theoretical (smoothed blue curve) distribution of Fst
-OutFLANKResultsPlotter(southKOR)
+OutFLANKResultsPlotter(geKOR)
 
 # plots Fst against expected Heterozygosity
-plot(southKOR$results$FST, southKOR$results$He, xlab = "Per Locus FST", ylab = "Per Locus He")
-
-
-
-###########################################################################
-
-loci <- read.table("batch_8_SNPmat_EW_locusnames.txt", header=F)
-pops <- read.table("batch_8_SNPmat_EW_popnames.txt", header=F)
-data = read.csv("batch_8_final_filtered_EW_SNPmat.txt", header = FALSE, sep = "\t")
-View(data)
-datamat = as.matrix(data)
-
-FstDataFrame <- MakeDiploidFSTMat(SNPmat = data, locusNames = loci, popNames = pops)
-
-
-
-
-
-####### Identify Outliers #######
-
-
-ewKOR <- OutFLANK(FstDataFrame, LeftTrimFraction=0.05, RightTrimFraction=0.05, Hmin=0.1, NumberOfSamples=9, qthreshold=0.05)
-
-# take a look at the output! 
-head(ewKOR)
-typeof(ewKOR) # spoiler: it's a list.
-dim(ewKOR$results[which(ewKOR$results$OutlierFlag==T),]) # how many outliers do you have? 1st #
-
-
-
-###########################################################################
-
-loci <- read.table("batch_8_SNPmat_SW_locusnames.txt", header=F)
-pops <- read.table("batch_8_SNPmat_SW_popnames.txt", header=F)
-data = read.csv("batch_8_final_filtered_SW_SNPmat.txt", header = FALSE, sep = "\t")
-View(data)
-datamat = as.matrix(data)
-
-FstDataFrame <- MakeDiploidFSTMat(SNPmat = data, locusNames = loci, popNames = pops)
-
-
-
-
-
-####### Identify Outliers #######
-
-
-swKOR <- OutFLANK(FstDataFrame, LeftTrimFraction=0.05, RightTrimFraction=0.05, Hmin=0.1, NumberOfSamples=9, qthreshold=0.05)
-
-# take a look at the output! 
-head(ewKOR)
-typeof(ewKOR) # spoiler: it's a list.
-dim(swKOR$results[which(ewKOR$results$OutlierFlag==T),]) # how many outliers do you have? 1st #
-
+plot(geKOR$results$FST, geKOR$results$He, xlab = "Per Locus FST", ylab = "Per Locus He")
