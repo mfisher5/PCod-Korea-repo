@@ -171,7 +171,7 @@ FstDataFrame <- MakeDiploidFSTMat(SNPmat = data, locusNames = loci, popNames = p
 
 
 
-####### Identify Outliers #######
+# Identify Outliers #
 
 
 southKOR <- OutFLANK(FstDataFrame, LeftTrimFraction=0.05, RightTrimFraction=0.05, Hmin=0.1, NumberOfSamples=6, qthreshold=0.05)
@@ -179,8 +179,7 @@ southKOR <- OutFLANK(FstDataFrame, LeftTrimFraction=0.05, RightTrimFraction=0.05
 # take a look at the output! 
 dim(southKOR$results[which(southKOR$results$OutlierFlag==T),]) # how many outliers do you have? 1st num
 
-
-###### Write output to a text file ########
+# Write output to a text file #
 
 head(southKOR$results)
 outlier_indices <- which(southKOR$results$OutlierFlag == "TRUE")
@@ -210,7 +209,7 @@ write.csv(dataframe, file="southKOR_b8_verif_outflank_outliers.csv", quote=FALSE
 
 
 
-###### Plotting results #########
+# Plotting results #
 
 # plots the actual (yellow) and theoretical (smoothed blue curve) distribution of Fst
 OutFLANKResultsPlotter(southKOR)
@@ -359,9 +358,9 @@ plot(geKOR$results$FST, geKOR$results$He, xlab = "Per Locus FST", ylab = "Per Lo
 
 # Load input file #
 
-loci <- read.table("batch_8_verif_SNPmat_ge_locusnames.txt", header=F)
-pops <- read.table("batch_8_verif_SNPmat_ge_popnames.txt", header=F)
-data = read.csv("batch_8_verif_final_filtered_ge_SNPmat.txt", header = FALSE, sep = "\t")
+loci <- read.table("batch_8_verif_SNPmat_se_locusnames.txt", header=F)
+pops <- read.table("batch_8_verif_SNPmat_se_popnames.txt", header=F)
+data = read.csv("batch_8_verif_final_filtered_se_SNPmat.txt", header = FALSE, sep = "\t")
 
 datamat = as.matrix(data)
 
@@ -372,17 +371,17 @@ FstDataFrame <- MakeDiploidFSTMat(SNPmat = data, locusNames = loci, popNames = p
 # Identify Outliers #
 
 
-geKOR <- OutFLANK(FstDataFrame, LeftTrimFraction=0.05, RightTrimFraction=0.05, Hmin=0.1, NumberOfSamples=2, qthreshold=0.05)
+seKOR <- OutFLANK(FstDataFrame, LeftTrimFraction=0.05, RightTrimFraction=0.05, Hmin=0.1, NumberOfSamples=7, qthreshold=0.05)
 
 
 # take a look at the output! 
-dim(geKOR$results[which(geKOR$results$OutlierFlag==T),]) # how many outliers do you have? 1st num
+dim(seKOR$results[which(seKOR$results$OutlierFlag==T),]) # how many outliers do you have? 1st num
 
 
 # Write output to a text file #
 
-head(geKOR$results)
-outlier_indices <- which(geKOR$results$OutlierFlag == "TRUE")
+head(seKOR$results)
+outlier_indices <- which(seKOR$results$OutlierFlag == "TRUE")
 
 locus <- c()
 he <- c()
@@ -394,25 +393,166 @@ outlier <- c()
 
 
 for(i in outlier_indices){
-  locus <- c(locus, geKOR$results$LocusName[i])
-  he <- c(he, geKOR$results$He[i])
-  fst <- c(fst, geKOR$results$FST[i])
-  meanAlleleFreq <- c(meanAlleleFreq, geKOR$results$meanAlleleFreq[i])
-  qvals <- c(qvals, geKOR$results$qvalues[i])
-  pv <- c(pv, geKOR$results$pvalues[i])
-  outlier <- c(outlier, geKOR$results$OutlierFlag[i])
+  locus <- c(locus, seKOR$results$LocusName[i])
+  he <- c(he, seKOR$results$He[i])
+  fst <- c(fst, seKOR$results$FST[i])
+  meanAlleleFreq <- c(meanAlleleFreq, seKOR$results$meanAlleleFreq[i])
+  qvals <- c(qvals, seKOR$results$qvalues[i])
+  pv <- c(pv, seKOR$results$pvalues[i])
+  outlier <- c(outlier, seKOR$results$OutlierFlag[i])
 }
 
 #it's not great, but it works
 dataframe <- cbind(locus, he, fst, meanAlleleFreq, qvals, pv, outlier)
-write.csv(dataframe, file="geKOR_b8_verif_outflank_outliers_s2.csv", quote=FALSE,  row.names=FALSE)
+write.csv(dataframe, file="seKOR_b8_verif_outflank_outliers_bypop_s7.csv", quote=FALSE,  row.names=FALSE)
 
 
 
 # Plotting results #
 
 # plots the actual (yellow) and theoretical (smoothed blue curve) distribution of Fst
-OutFLANKResultsPlotter(geKOR)
+OutFLANKResultsPlotter(seKOR)
 
 # plots Fst against expected Heterozygosity
-plot(geKOR$results$FST, geKOR$results$He, xlab = "Per Locus FST", ylab = "Per Locus He")
+plot(seKOR$results$FST, seKOR$results$He, xlab = "Per Locus FST", ylab = "Per Locus He")
+
+
+
+
+
+
+# Outflank, South v. West -----------------------------------------------------
+
+
+# Load input file #
+
+loci <- read.table("batch_8_verif_SNPmat_sw_locusnames.txt", header=F)
+pops <- read.table("batch_8_verif_SNPmat_sw_popnames.txt", header=F)
+data = read.csv("batch_8_verif_final_filtered_sw_SNPmat.txt", header = FALSE, sep = "\t")
+
+datamat = as.matrix(data)
+
+FstDataFrame <- MakeDiploidFSTMat(SNPmat = data, locusNames = loci, popNames = pops)
+
+
+
+# Identify Outliers #
+
+
+swKOR <- OutFLANK(FstDataFrame, LeftTrimFraction=0.05, RightTrimFraction=0.05, Hmin=0.1, NumberOfSamples=8, qthreshold=0.05)
+
+
+# take a look at the output! 
+dim(swKOR$results[which(swKOR$results$OutlierFlag==T),]) # how many outliers do you have? 1st num
+
+
+# Write output to a text file #
+
+head(swKOR$results)
+outlier_indices <- which(swKOR$results$OutlierFlag == "TRUE")
+
+locus <- c()
+he <- c()
+fst <-c ()
+meanAlleleFreq <- c()
+qvals <- c()
+pv <- c()
+outlier <- c()
+
+
+for(i in outlier_indices){
+  locus <- c(locus, swKOR$results$LocusName[i])
+  he <- c(he, swKOR$results$He[i])
+  fst <- c(fst, swKOR$results$FST[i])
+  meanAlleleFreq <- c(meanAlleleFreq, swKOR$results$meanAlleleFreq[i])
+  qvals <- c(qvals, swKOR$results$qvalues[i])
+  pv <- c(pv, swKOR$results$pvalues[i])
+  outlier <- c(outlier, swKOR$results$OutlierFlag[i])
+}
+
+#it's not great, but it works
+dataframe <- cbind(locus, he, fst, meanAlleleFreq, qvals, pv, outlier)
+write.csv(dataframe, file="swKOR_b8_verif_outflank_outliers.csv", quote=FALSE,  row.names=FALSE)
+
+
+
+# Plotting results #
+
+# plots the actual (yellow) and theoretical (smoothed blue curve) distribution of Fst
+OutFLANKResultsPlotter(swKOR)
+
+# plots Fst against expected Heterozygosity
+plot(swKOR$results$FST, swKOR$results$He, xlab = "Per Locus FST", ylab = "Per Locus He")
+
+
+
+
+
+
+# Outflank, East v. West -----------------------------------------------------
+
+
+# Load input file #
+
+loci <- read.table("batch_8_verif_SNPmat_ew_locusnames.txt", header=F)
+pops <- read.table("batch_8_verif_SNPmat_ew_popnames.txt", header=F)
+data = read.csv("batch_8_verif_final_filtered_ew_SNPmat.txt", header = FALSE, sep = "\t")
+
+datamat = as.matrix(data)
+
+FstDataFrame <- MakeDiploidFSTMat(SNPmat = data, locusNames = loci, popNames = pops)
+
+
+
+# Identify Outliers #
+
+
+ewKOR <- OutFLANK(FstDataFrame, LeftTrimFraction=0.05, RightTrimFraction=0.05, Hmin=0.1, NumberOfSamples=3, qthreshold=0.05)
+
+
+# take a look at the output! 
+dim(ewKOR$results[which(ewKOR$results$OutlierFlag==T),]) # how many outliers do you have? 1st num
+
+
+# Write output to a text file #
+
+head(swKOR$results)
+outlier_indices <- which(swKOR$results$OutlierFlag == "TRUE")
+
+locus <- c()
+he <- c()
+fst <-c ()
+meanAlleleFreq <- c()
+qvals <- c()
+pv <- c()
+outlier <- c()
+
+
+for(i in outlier_indices){
+  locus <- c(locus, swKOR$results$LocusName[i])
+  he <- c(he, swKOR$results$He[i])
+  fst <- c(fst, swKOR$results$FST[i])
+  meanAlleleFreq <- c(meanAlleleFreq, swKOR$results$meanAlleleFreq[i])
+  qvals <- c(qvals, swKOR$results$qvalues[i])
+  pv <- c(pv, swKOR$results$pvalues[i])
+  outlier <- c(outlier, swKOR$results$OutlierFlag[i])
+}
+
+#it's not great, but it works
+dataframe <- cbind(locus, he, fst, meanAlleleFreq, qvals, pv, outlier)
+write.csv(dataframe, file="swKOR_b8_verif_outflank_outliers.csv", quote=FALSE,  row.names=FALSE)
+
+
+
+# Plotting results #
+
+# plots the actual (yellow) and theoretical (smoothed blue curve) distribution of Fst
+OutFLANKResultsPlotter(ewKOR)
+
+# plots Fst against expected Heterozygosity
+plot(swKOR$results$FST, swKOR$results$He, xlab = "Per Locus FST", ylab = "Per Locus He")
+
+
+
+
+
