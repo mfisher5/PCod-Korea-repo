@@ -8,10 +8,11 @@ import argparse
 
 parser = argparse.ArgumentParser(description="Match bayescan outlier loci IDs to the actual stacks IDs (if PGD spider was used for file conversion).")
 
-parser.add_argument("-i", "--input", help="fst text file output from bayescan")
+parser.add_argument("-i", "--input", help="text file containing plot_bayescan() R consol output")
 parser.add_argument("-gen", "--genepop", help="the genepop file used in PGD spyder to create BAYESCAN input file")
+parser.add_argument("-sep", "--separator", help="are the loci in your genepop file separated by a 'comma' or a 'newline'?")
 parser.add_argument("-o", "--output", help="output text file")
-parser.add_argument("-s", "--separator", help="separator used in genepop file [comma/newline]")
+parser.add_argument("-head", "--header", help="header for output text file. should start with #")
 
 
 args = parser.parse_args()
@@ -19,6 +20,25 @@ args = parser.parse_args()
 infile = open(args.input, "r")
 genepop = open(args.genepop, "r")
 outfile = open(args.output, "w")
+
+
+
+## get list of loci IDs from bayescan output
+print "reading BAYESCAN outliers.."
+line = infile.readline()
+while not line.startswith("$outliers"):
+    line = infile.readline()
+
+pgdspyder_loci = []
+
+for line in infile:
+    linelist = line.strip().split()
+    if len(linelist) > 1:
+		for locus in linelist[1:]:
+			pgdspyder_loci.append(locus)
+
+infile.close()
+print "You have ", len(pgdspyder_loci), " outlier loci."
 
 
 ## put stacks loci in a list so indices will correspond to bayescan locus IDs 
@@ -39,30 +59,24 @@ else:
 	print "ERROR: unacceptable separator argument."
 genepop.close()
 
-print "You have ", len(stacks_loci), " loci."
+
+## correlate bayescan loci IDs to stacks IDs
+
+stacks_outlier_loci = []
+bayescan_outlier_loci = []
+
+for i in pgdspyder_loci: 
+	 	stacks_outlier_loci.append(stacks_loci[int(i)-1])		# pgdspyder index numbers start from '1', python indices start from '0'
+		bayescan_outlier_loci.append(i)
 
 
-## create header of output file with bayescan header 
-### will get rid of the weird spacing in bayescan and have first column listed as "locus"
-headerlist = infile.readline().strip().split()
-header = "locus " + " ".join(headerlist) + "\n"
-outfile.write(header)
 
-
-## read over lines from bayescan with locus names from stacks
-print "copying over BAYESCAN output.."
-
-line = infile.readline()
-count = 0
-while line:
-	linelist = line.strip().split()[1:]
-	locus = stacks_loci[count]
-	newline = locus + " " + " ".join(linelist) + "\n"
-	outfile.write(newline)
-	line = infile.readline()
-	count += 1
-
-print "Copied over ", count, " loci."
- 
-infile.close()
+## write to output file
+print "writing to output..."
+outfile.write(args.header + "\n")
+outfile.write("BAYESCAN_ID\tStacks_ID\n")
+for i in range(0,len(stacks_outlier_loci)):
+	outfile.write(bayescan_outlier_loci[i] + "\t" + stacks_outlier_loci[i] + "\n")
 outfile.close()
+
+print "Done."
