@@ -39,25 +39,43 @@ edge.hclust <- hclust(d = edge.mrel_dist, method = "ward.D2")
 
 
 # Create Dendrogram -------------------------------------------------------
+# prepare colors for leaves
+labs <- as.character(odata_combo$SiteYear)[order.dendrogram(dend_edge)]
+colors <- c()
+for(i in labs){
+  if(i == "Pohang_2015"){
+    colors <-c(colors, "#b3de69")
+  } else if(i == "Geoje_2015"){
+    colors <-c(colors, "gold2")
+  } else if(i == "Namhae_2015"){
+    colors <-c(colors, "#bebada")
+  } else if(i == "YSBlock_2016"){
+    colors <-c(colors, "#fb8072")
+  } else if(i == "JinhaeBay_2007"){
+    colors <-c(colors, "#8dd3c7")
+  } else if(i == "JinhaeBay_2008"){
+    colors <-c(colors, "#80b1d3")
+  } else if(i == "Geoje_2014"){
+    colors <-c(colors, "darkorange")
+  }
+}
+
+
 # plot dendrogram, color coded and labeled
 dend_edge <- as.dendrogram(edge.hclust)
 plot(dend_edge)
-colors <- c()
 
-labels_colors(dend_edge) <- rainbow_hcl(5)[sort_levels_values(as.numeric(odata_combo$Sampling.Site)[order.dendrogram(dend_edge)])]
+labels_colors(dend_edge) <- colors
 
-labels(dend_edge) <- paste(as.character(odata_combo$Sampling.Site)[order.dendrogram(dend_edge)],
-                           "(",labels(dend_edge),")", 
-                           sep = "")
+labels(dend_edge) <- labs
 dend_edge <- set(dend_edge, "labels_cex", 0.5)
 dend_edge <- hang.dendrogram(dend_edge,hang_height=0.1)
 par(mar = c(3,3,3,7))
 siteyears = unique(odata_combo$SiteYear)
 plot(dend_edge, 
-     main = "Clustered Edge Microchemistry by Site
-     (k=2)", 
+     main = "Clustered Edge Microchemistry by Site", 
      horiz =  TRUE,  nodePar = list(cex = .007))
-legend("topleft", legend = unique(odata_combo$Sampling.Site), fill = rainbow_hcl(5))
+legend("topleft", legend = c("YSBlock '16", "Namhae '15", "Geoje '14", "Geoje '15", "JinhaeBay '07e", "JinhaeBay '07l", "Pohang '15"), fill = c("#fb8072", "#bebada", "darkorange", "gold2", "#8dd3c7", "#80b1d3", "#b3de69"))
 
 
 ## plot heatmap
@@ -74,7 +92,7 @@ gplots::heatmap.2(as.matrix(gendata),
                   key.xlab = "Genetic Assignment",
                   denscol = "grey",
                   density.info = "density",
-                  RowSideColors = rev(labels_colors(dend_edge)), # to add nice colored strips        
+                  RowSideColors = colors, # to add nice colored strips  
                   col = some_col_func
 )
 

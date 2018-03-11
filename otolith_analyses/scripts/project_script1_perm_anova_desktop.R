@@ -5,50 +5,12 @@
 # 
 ##############################################################
 
-## set working directory
-setwd("D:/Pacific cod/DataAnalysis/PCod-Korea-repo/otolith_analyses")
 
-
-# Load data ---------------------------------------------------------------
-odata <- read.csv("data/PCod_Korea_Microchem_filtered.txt", header=TRUE, sep="\t")
-odata_ex <- read.csv("data/PCod_Korea_ExpData_filtered.txt", header=TRUE, sep="\t")
-
-dim(odata)
-dim(odata_ex)
-
-
-# Load packages -----------------------------------------------------------
-install.packages("vegan"); library(vegan)
-install.packages("dplyr"); library(dplyr)
-
-
-
-# Manipulate data frames --------------------------------------------------
-## need to make sure the order of the explanatory variables are the same as the element concentrations
-odata_combo <- full_join(x=odata,y=odata_ex,by="Sample") 
-odata_combo <- mutate(odata_combo, SiteYear = paste(Sampling.Site, Year, sep=""))
-head(odata_combo)
-odata_el <- odata_combo[,2:17]
-head(odata_el)
-
-
-
-# Relativize by maximum ---------------------------------------------------
-
-## determine effect of relativization
-CV <- function(x){100*sd(x) / mean(x)}
-CV(colSums(odata_el)) #CV = 264.4698
-
-## relative by column maxima
-odata_el.mrel <- decostand(odata_el, method="max")
-## make sure relativization worked
-head(odata_el.mrel)
-
-## make data frame of only edge concentrations
-odata_edge <- odata_el.mrel[,9:16]
-head(odata_edge)
-odata_core <- odata_el.mrel[,1:8]
-head(odata_core)
+# Install Packages --------------------------------------------------------
+install.packages("vegan")
+install.packages("dplyr")
+library(vegan)
+library(dplyr)
 
 
 
