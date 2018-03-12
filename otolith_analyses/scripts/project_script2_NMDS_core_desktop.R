@@ -59,7 +59,7 @@ stressplot(object=odata_core.nmds7, lwd=2)
 stressplot(object=odata_core.nmds3, lwd=2)
 
 
-# Plot NMDS color-coded K = 7 -------------------------------------
+# Plot NMDS color-coded K = 3 -------------------------------------
 plot(odata_core.nmds3, xaxt = "n", yaxt = "n", xlab = "", ylab = "", main = "NMDS\nMicrochemistry from Otolith Core")
 ## set colors for points based on sampling site
 points(odata_core.nmds3$points[odata_combo$SiteYear == "Pohang_2015",], 

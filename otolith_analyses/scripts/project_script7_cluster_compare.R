@@ -56,7 +56,7 @@ for(i in sites_ordered){
   } 
 }
 color_vec
-odata_dendlist %>% dendlist(which = c(1,2)) %>% ladderize %>%
+odata_dendlist %>% dendlist(which = c(1,2)) %>%
   tanglegram(faster = TRUE, color_lines=color_vec) # (common_subtrees_color_branches = TRUE)
 
 ## with color on inner lines, Jinhae Bay
@@ -68,11 +68,11 @@ for(i in siteyear_ordered){
   } else if ( i == "JinhaeBay_2008"){
     color_vec_jb <- c(color_vec_jb, "#80b1d3")
   }  else {
-    color_vec_jb <- c(color_vec_jb, "lightgrey")
+    color_vec_jb <- c(color_vec_jb, "gray95")
   } 
 }
 color_vec_jb
-odata_dendlist %>% dendlist(which = c(1,2)) %>% ladderize %>%
+odata_dendlist %>% dendlist(which = c(1,2)) %>%
   tanglegram(faster = TRUE, color_lines=color_vec_jb) # (common_subtrees_color_branches = TRUE)
 
 ## with color on inner lines, Yellow Sea
@@ -82,7 +82,7 @@ for(i in sites_ordered){
   if( i == "YSBlock"){
     color_vec_ys <- c(color_vec_ys, "#fb8072")
   } else {
-    color_vec_ys <- c(color_vec_ys, "lightgrey")
+    color_vec_ys <- c(color_vec_ys, "gray94")
   } 
 }
 odata_dendlist %>% dendlist(which = c(1,2)) %>% ladderize %>%
@@ -96,10 +96,10 @@ for(i in sites_ordered){
   if( i == "Pohang"){
     color_vec_po <- c(color_vec_po, "#b3de69")
   } else {
-    color_vec_po <- c(color_vec_po, "lightgrey")
+    color_vec_po <- c(color_vec_po, "gray94")
   } 
 }
-odata_dendlist %>% dendlist(which = c(1,2)) %>% ladderize %>%
+odata_dendlist %>% dendlist(which = c(1,2)) %>%
   tanglegram(faster = TRUE, color_lines=color_vec_po) # (common_subtrees_color_branches = TRUE)
 
 
@@ -112,7 +112,7 @@ for(i in siteyear_ordered){
   } else if ( i == "Geoje_2015"){
     color_vec_ge <- c(color_vec_ge, "gold2")
   }  else {
-    color_vec_ge <- c(color_vec_ge, "lightgrey")
+    color_vec_ge <- c(color_vec_ge, "gray94")
   } 
 }
 odata_dendlist %>% dendlist(which = c(1,2)) %>% ladderize %>%

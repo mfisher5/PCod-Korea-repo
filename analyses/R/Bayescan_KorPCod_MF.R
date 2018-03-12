@@ -31,22 +31,22 @@ bscan_direct <- "D:/Pacific cod/DataAnalysis/PCod-Korea-repo/analyses/R"
 workingdirect <- "D:/Pacific cod/DataAnalysis/PCod-Korea-repo/analyses/Outliers/batch8_verif"
 
 #fst file (Bayescan script)
-fst_file <- "batch_8_verif_p1K_output_fst.txt"
+fst_file <- "batch_8_verif_south_bayescan_p1K_output_fst.txt"
 
 #.sel file (Bayescan script)
-sel_file <- "batch_8_verif_p1K_output.sel"
+sel_file <- "batch_8_verif_south_bayescan_p1K_output.sel"
 
 # output file (both)
-outfile <- "batch_8_verif_BAYESCAN_p1000_fdr05_outliers.csv"
+outfile <- "batch_8_verif_BAYESCAN_SOUTH_p1K_fdr05_outliers.csv"
 
 #set false discovery rate cutoff (both)
 fdr <- 0.05
 
 #fst file edited to include stacks locus IDs (alt. function)
-fst_edit <- "batch_8_verif_p1000_output_fst_stacksIDs.txt"
+fst_edit <- "batch_8_verif_SOUTH_p1K_output_fst_stacksIDs.txt"
 
 #plot title (alt. function)
-plt.title = "Bayescan Outliers - All Data (Prior1000)"
+plt.title = "Bayescan Outliers - Southern Sites (Prior1000)"
 
 
 

@@ -17,14 +17,27 @@ install.packages("vegan"); library(vegan)
 install.packages("dplyr"); library(dplyr)
 
 
+# Read in data ------------------------------------------------------------
+## response matrix
+library(readr)
+odata <- read_delim("data/PCod_Korea_Microchem_filtered.txt","\t", escape_double = FALSE, trim_ws = TRUE)
+dim(odata)
+
+## explanatory data frame
+odata_ex <- read_delim("data/PCod_Korea_ExpData_filtered.txt","\t", escape_double = FALSE, trim_ws = TRUE)
+dim(odata_ex)
+
+
 
 # Manipulate data frames --------------------------------------------------
 ## need to make sure the order of the explanatory variables are the same as the element concentrations
 odata_combo <- full_join(x=odata,y=odata_ex,by="Sample") 
-odata_combo <- mutate(odata_combo, SiteYear = paste(Sampling.Site, Year, sep=""))
-head(odata_combo)
 odata_el <- odata_combo[,2:17]
-head(odata_el)
+View(odata_el)
+
+## add extra column that combines "Site" and "Year" variables
+odata_combo <- mutate(odata_combo, SiteYear = paste(Sampling.Site, Year, sep="_"))
+View(odata_combo)
 
 
 
@@ -47,7 +60,7 @@ boxplot(odata_el.mrel$Mn55.e, main = "Mn55.e")
 boxplot(odata_el.mrel$Pb208.e, main = "Pb208.e")
 boxplot(odata_el.mrel$Sr88.e, main = "Sr88.e")
 boxplot(odata_el.mrel$Zn66.e, main = "Zn66.e")
-write.csv(odata_edge.mrel, file = "data/PCod_Korea_Microchem_edge_filtered_relativized.csv", row.names=FALSE)
+write.csv(odata_el.mrel, file = "data/PCod_Korea_Microchem_edge_filtered_relativized.csv", row.names=FALSE)
 par(mfrow=c(1,1))
 
 
