@@ -70,7 +70,7 @@ colnames(sumsquares) <- c("Sampling Site", "Temporal-Year", "Temporal-Month")
 sumsquares
 
 barplot(height = sumsquares, legend.text=TRUE, 
-        col=c("cyan", "darkgrey"),
+        col=c("cornflowerblue", "darkgrey"),
         ylab="PERMANOVA Sum of Squares")
 
 

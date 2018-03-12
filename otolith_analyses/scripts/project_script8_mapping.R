@@ -31,8 +31,10 @@ library(dplyr)
 
 # Get the world polygon and extract USA and Canada
 SK <- map_data("world") %>% 
-  filter(region=="Korea")
-
+  filter(region=="South Korea")
+NK <- map_data("world") %>% 
+  filter(region=="North Korea")
+View(map_data("world"))
 
 
 # Create data frame with just lat / long
@@ -40,7 +42,8 @@ location_data <- odata_combo %>%
   select(Sampling.Site, Approx.Lat, Approx.Long) %>%
   distinct(Sampling.Site, Approx.Lat, Approx.Long)
 
-colnames(location_data) <- c("site", "latitude", "longitude")
+colnames(location_data) <- c("Site", "latitude", "longitude")
+location_data
 
 # source mapping functions
 source("scripts/mapping_functions.r")
@@ -51,27 +54,32 @@ mybreaks=c(0, 30, 60, 90, 120, 150, 180)
 
 
 # Make the first map
+color_vec <- c("darkorange", "#8dd3c7", "#bebada", "#b3de69", "#fb8072")
 ggplot() +
-  geom_polygon(data = SK, aes(x=long, y = lat, group = group), fill=" grey37", alpha=0.3) +
-  geom_point(data=location_data, aes(x=longitude, y=latitude, color= site), size = 5, alpha = 0.7) +
-  theme(panel.background = element_rect(fill = "aliceblue"), 
-        panel.grid.major = element_line(colour = NA))
-
-
-
-
-
-
-  scale_color_viridis(option="plasma", 
-                      name="Date of sampling\n(Julian day)\n", 
-                      breaks = mybreaks) + 
-  coord_map(xlim= c(-119, -139),  ylim = c(46,60)) +
+  geom_polygon(data = SK, aes(x=long, y = lat, group = group), fill="forestgreen", alpha=0.3) +
+  geom_polygon(data = NK, aes(x=long, y = lat, group = group), fill=" grey37", alpha=0.3) +
+  geom_point(data=location_data, aes(x=longitude, y=latitude, color=Site), size = 7, alpha = 1) +
+  scale_color_manual(values=color_vec) +
+  theme(panel.background = element_rect(fill = "lightcyan"), 
+        panel.grid.major = element_line(colour = NA),
+        legend.text=element_text(size=12),
+        legend.title=element_text(size=12)) +
   labs(x = "Longitude", y = "Latitude") +
-  geom_text_repel( data= location_data, aes(x=longitude, y=latitude, label=site), size=4) +
-  scale_bar(lon = -136, lat = 47.3, 
-            distance_lon = 100, distance_lat = 15, distance_legend = 40, 
-            dist_unit = "km", orientation = FALSE)
+  coord_map(ylim = c(33,39))
 
+
+  
+
+
+  
+####### extra ggplot code ########
+# order legend geographically
+leg_labels <- c("Yellow Sea", "Namhae", "Geoje", "JinhaeBay", "Pohang")
+color_vec_ordered <- c("#fb8072", "#bebada", "darkorange", "#8dd3c7", "#b3de69")
+scale_fill_discrete(values = color_vec_ordered, name="Sampling Site", breaks=c("YSBlock", "Namhae", "Geoje", "JinhaeBay", "Pohang"), labels = leg_labels)
+
+  
+####### leaflet map #########
 install.packages("leaflet")
 library(leaflet)
 
