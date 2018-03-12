@@ -4,6 +4,7 @@
 
 <br>
 ### R Scripts used for Final Analysis
+
 `multivariate_normal_test_ochem_linux`: exploratory analysis of raw otolith microchemistry data, to explore multivariate normality of the data set. 
 <br>
 `project_script0_relativize_dist`: code for loading and relativizing data, and generating Euclidean distance matrices. Must be run before all other scripts to conduct analysis. 
@@ -34,6 +35,7 @@
 <br>
 <br>
 ### Extra code of interest
+
 `project_script6_heatmap_gen`: Plot dendrogram of otolith core data with heatmap of genetic assignment. Note that colors corresponding to dendrogram branches could not be coerced to match sampling site legend. 
 <br>
 `project_script4_kmeans_desktop`: Conduct Kmeans clustering on otolith core and edge microchemistry data. Was used to see if kmeans clustering produced more intuitive clusters (based on NMDS). Not used for final paper, as clusters identified were similar to hierarchical cluster analysis. 
