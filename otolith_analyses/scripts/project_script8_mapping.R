@@ -56,11 +56,11 @@ mybreaks=c(0, 30, 60, 90, 120, 150, 180)
 # Make the first map
 color_vec <- c("darkorange", "#8dd3c7", "#bebada", "#b3de69", "#fb8072")
 ggplot() +
-  geom_polygon(data = SK, aes(x=long, y = lat, group = group), fill="forestgreen", alpha=0.3) +
+  geom_polygon(data = SK, aes(x=long, y = lat, group = group), fill="springgreen4", alpha=0.7) +
   geom_polygon(data = NK, aes(x=long, y = lat, group = group), fill=" grey37", alpha=0.3) +
   geom_point(data=location_data, aes(x=longitude, y=latitude, color=Site), size = 7, alpha = 1) +
   scale_color_manual(values=color_vec) +
-  theme(panel.background = element_rect(fill = "lightcyan"), 
+  theme(panel.background = element_rect(fill = "slategray1"), 
         panel.grid.major = element_line(colour = NA),
         legend.text=element_text(size=12),
         legend.title=element_text(size=12)) +

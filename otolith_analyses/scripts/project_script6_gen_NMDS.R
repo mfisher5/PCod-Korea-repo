@@ -97,36 +97,33 @@ odata_core.nmds3 <- metaMDS(comm = core.mrel_dist, autotransform = FALSE,
 plot(odata_core.nmds3, xaxt = "n", yaxt = "n", xlab = "", ylab = "", type="n",
      main = "NMDS of Core\nwith Genetic Assignment")
 
-## add ordihull for genetic clusters
-ordispider(odata_core.nmds3, gendata$Assign, col=c("#8dd3c7","gold2"), draw = "polygon")
-
 
 points(odata_core.nmds3$points[odata_combo$SiteYear == "Pohang_2015" & gendata$Assign==1,], 
        pch = 17, col = "#b3de69", cex = 1.2)
 points(odata_core.nmds3$points[odata_combo$SiteYear == "Pohang_2015" & gendata$Assign==2,], 
-       pch = 1, col = "#b3de69", cex = 1.2)
+       pch = 1, col = "#b3de69", cex = 1.2, lwd = 2)
 points(odata_core.nmds3$points[odata_combo$SiteYear == "Geoje_2015"& gendata$Assign==1,], 
        pch = 17, col = "gold2", cex = 1.2)
 points(odata_core.nmds3$points[odata_combo$SiteYear == "Geoje_2015"& gendata$Assign==2,], 
-       pch = 1, col = "gold2", cex = 1.2)
+       pch = 1, col = "gold2", cex = 1.2, lwd = 2)
 points(odata_core.nmds3$points[odata_combo$SiteYear == "Namhae_2015" & gendata$Assign==1,], 
        pch = 17, col = "#bebada", cex = 1.2)
 points(odata_core.nmds3$points[odata_combo$SiteYear == "Namhae_2015" & gendata$Assign==2,], 
-       pch = 1, col = "#bebada", cex = 1.2)
+       pch = 1, col = "#bebada", cex = 1.2, lwd = 2)
 points(odata_core.nmds3$points[odata_combo$SiteYear == "YSBlock_2016" & gendata$Assign==1,], 
        pch = 17, col = "#fb8072", cex = 1.2)
 points(odata_core.nmds3$points[odata_combo$SiteYear == "JinhaeBay_2007" & gendata$Assign==2,], 
-       pch = 1, col = "#8dd3c7", cex = 1.2)
+       pch = 1, col = "#8dd3c7", cex = 1.2, lwd = 2)
 points(odata_core.nmds3$points[odata_combo$SiteYear == "JinhaeBay_2008" & gendata$Assign==1,], 
        pch = 17, col = "#80b1d3", cex = 1.2)
 points(odata_core.nmds3$points[odata_combo$SiteYear == "JinhaeBay_2008" & gendata$Assign==2,], 
-       pch = 1, col = "#80b1d3", cex = 1.2)
+       pch = 1, col = "#80b1d3", cex = 1.2, lwd = 2)
 points(odata_core.nmds3$points[odata_combo$SiteYear == "Geoje_2014" & gendata$Assign==1,], 
        pch = 17, col = "darkorange", cex = 1.2)
 points(odata_core.nmds3$points[odata_combo$SiteYear == "Geoje_2014" & gendata$Assign==2,], 
-       pch = 1, col = "darkorange", cex = 1.2)
+       pch = 1, col = "darkorange", cex = 1.2, lwd = 2)
 ## add legend
-legend(x="topleft", pch = c(19,19,19,19,19,19,19,17,1), cex = 1, pt.cex = 1.2,
+legend(x="bottomleft", pch = c(19,19,19,19,19,19,19,17,1), cex = 1, pt.cex = 1.2,
        col = c("#fb8072", "#bebada", "darkorange", "gold2", "#8dd3c7", "#80b1d3", "#b3de69", "darkgrey", "darkgrey"), 
        legend = c("YSBlock '16", "Namhae '15", "Geoje '14", "Geoje '15", "JinhaeBay '07e", "JinhaeBay '07l", "Pohang '15","West", "South"), 
        title = "Sampling Site")
