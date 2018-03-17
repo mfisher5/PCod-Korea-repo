@@ -32,10 +32,9 @@ source("https://raw.githubusercontent.com/whitlock/OutFLANK/master/R/Fst%20Diplo
 
 # To convert a genepop file to the input SNPmat, see python script here:https://github.com/mfisher5/PCod-Korea-repo/blob/master/analyses/Outliers/convert_genepop_to_SNPmat.py
 
-loci <- read.table("batch_8_verif_SNPmat_locusnames.txt", header=F)
-pops <- read.table("batch_8_verif_SNPmat_popnames.txt", header=F)
-data = read.csv("batch_8_verif_final_filtered_SNPmat.txt", header = FALSE, sep = "\t")
-View(data)
+loci <- read.table("batch_8_verif_south_noGE15_SNPmat_locusnames.txt", header=F)
+pops <- read.table("batch_8_verif_south_noGE15_SNPmat_popnames.txt", header=F)
+data = read.csv("batch_8_verif_south_noGE15_SNPmat.txt", header = FALSE, sep = "\t")
 datamat = as.matrix(data)
 
 FstDataFrame <- MakeDiploidFSTMat(SNPmat = data, locusNames = loci, popNames = pops)
@@ -83,7 +82,7 @@ for(i in outlier_indices){
 
 #it's not great, but it works
 dataframe <- cbind(locus, he, fst, meanAlleleFreq, qvals, pv, outlier)
-write.csv(dataframe, file="allKOR_b8_verif_outflank_outliers.csv", quote=FALSE,  row.names=FALSE)
+write.csv(dataframe, file="south_noGE15_b8_verif_outflank_outliers.csv", quote=FALSE,  row.names=FALSE)
 
 
 
