@@ -24,7 +24,7 @@ library(gplots)
 
 ## Set your working directory to the folder with your data files 
 getwd()
-setwd("D:/Pacific cod/DataAnalysis/PCod-Korea-repo/analyses")
+setwd("D:/Pacific cod/DataAnalysis/PCod-Korea-repo/analyses/PCA")
 
 
 ## Import your data set
@@ -105,7 +105,7 @@ popnames <- c("YellowSeaBlock_2016",
 #-- colors for points in plot. each sampling site has a different point color (match order to name vector above). these colors match my PCA plot
 pt_colors <- c("firebrick4",
          "coral1",
-         "aquamarine",
+         "aquamarine2",
          "mediumorchid1",
          "mediumorchid4",
          "deepskyblue",

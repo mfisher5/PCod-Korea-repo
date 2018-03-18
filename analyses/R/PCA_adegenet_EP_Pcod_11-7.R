@@ -12,17 +12,16 @@ library (gplots)
 #library(RColorBrewer)
 #display.brewer.all()
 #display.rich.colors()
-install.packages("gplots")
 
 getwd()
-setwd("D:/Pacific cod/DataAnalysis/PCod-Korea-repo/analyses")
+setwd("D:/Pacific cod/DataAnalysis/PCod-Korea-repo/analyses/PCA")
 
 
 #################### RETAINED INDIVIDUALS #############
 # First, read in your data as a genepop file.The file
 # can be delimited by tabs or spaces but there must abe a comma after each individual. 
 # Specify how many characters code each allele with ncode. 
-my_data_all <-read.genepop("../stacks_b8_wgenome/batch_8_filteredMAF_filteredIndivids30_filteredLoci_filteredHWE_filteredRepsC.gen")
+my_data_all <-read.genepop("../../stacks_b8_verif/batch_8_filteredMAF_filteredIndivids30_filteredLoci_filteredHWE_filteredCR.gen")
 
 # To retreive useful data summaries
 (summary(my_data_all))

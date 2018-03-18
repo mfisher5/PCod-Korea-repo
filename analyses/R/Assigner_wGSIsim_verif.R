@@ -110,7 +110,7 @@ summary(all)
 ?assignment_ngs
 
 ##-- if you want to, you can identify population levels
-#pop_groups <- c("POH15","GE15","NAM15","YS16","JUK","JBE","JBL","BOR07","GE14") # each pop is its own pop
+pop_groups <- c("POH15","GE15","NAM15","YS16","JUK","JBE","JBL","BOR07","GE14") # each pop is its own pop
 pop_groups <- c("SOUTH","SOUTH","SOUTH","WEST","EAST","SOUTH","SOUTH","WEST","SOUTH") # each pop is part of a region
 
 ##-- run assigner: ngs
