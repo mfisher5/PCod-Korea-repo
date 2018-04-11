@@ -41,7 +41,7 @@ install.packages("NMF")
 # install.packages("igraph") <- latest version (1.1.1) didn't work. 
 #    manually downloaded the latest "stable" version 1.0.1 from https://cloud.r-project.org/ src/contrib/Archive/igraph
 #    also see: https://github.com/igraph/rigraph/issues/191
-install_github("thierrygosselin/assigner") # to install
+install_github("thierrygosselin/assigner", force=TRUE) # to install
 library(assigner) # to load
 
 
@@ -54,7 +54,7 @@ install_gsi_sim(fromSource = TRUE)
 #$ cd /home/mfisher5/R/x86_64-pc-linux-gnu-library/3.4/assigner        #navigate to assigner in R folders
 #$ cp bin/gsi_sim ./gsi_sim        #copy the gsi_sim folder into the assigner folder
 #$ rm bin/gsi_sim                  #remove the gsi_sim folder from the assigner *bin* directory
-#$ cp gsi_sim/gsi_sim-Linux bin/gsi_sim          #copy the gsi_sim-Linux executable into the assigner *bin* directory
+#$ cp gsi_sim/gsi_sim-Linux bin/gsi_sim          #copy the gsi_sim-Linux executable into the assigner *bin* directory as gsi_sim
 #$ rm gsi_sim                      #remove the gsi_sim folder from assigner directory
 
 

@@ -53,6 +53,7 @@ analyses/Structure/PCod-Korea*
 analyses/Structure/batch_8*
 analyses/Structure/*.xlsx
 analyses/Structure/*.Rhistory
+analyses/Structure/verif_rerun/*
 analyses/Outliers/bedtools2/*
 analyses/Outliers/batch_8_BAYESCAN_outliers_bowtie2*
 analyses/Outliers/.Rhistory

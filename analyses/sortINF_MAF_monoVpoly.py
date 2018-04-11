@@ -1,5 +1,5 @@
 
-infile = open("genepop/batch8/batch_8_filteredMAF_filteredIndivids30_filteredLoci_filteredHWE_filteredRepsC_INF.txt", "r")
+infile = open("../stacks_b8_wgenome_r05/batch_8_final_filtered_aligned_genepop.txt.INF", "r")
 outfile = open("batch_8_maf_by_monoVpoly.txt", "w")
 
 loci_list = []

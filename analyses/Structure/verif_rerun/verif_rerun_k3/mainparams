@@ -1,4 +1,4 @@
-#define OUTFILE D:\Pacific cod\DataAnalysis\PCod-Korea-repo\analyses\Structure\verif_rerun\verif_rerun_k3\Results\verif_rerun_k3_run_1
+#define OUTFILE D:\Pacific cod\DataAnalysis\PCod-Korea-repo\analyses\Structure\verif_rerun\verif_rerun_k3\Results\verif_rerun_k3_run_3
 #define INFILE D:\Pacific cod\DataAnalysis\PCod-Korea-repo\analyses\Structure\verif_rerun\project_data
 #define NUMINDS 243
 #define NUMLOCI 5804
