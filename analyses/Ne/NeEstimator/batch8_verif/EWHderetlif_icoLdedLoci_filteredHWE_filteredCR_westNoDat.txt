@@ -1,4 +1,4 @@
-Missing data from input file batch_8_filtbatch_8_verif_filtered_filteredCR_west_TempNe.
+Missing data from input file batch_8_filtbatch_8_verif_west_Ne_temporal.
 
 Possible four types of missing data at a locus:
 	1. Genotype contains only zeros or partially scored.
