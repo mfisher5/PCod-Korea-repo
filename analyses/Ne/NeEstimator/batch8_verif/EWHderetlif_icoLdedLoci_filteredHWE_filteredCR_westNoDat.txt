@@ -1,0 +1,78 @@
+Missing data from input file batch_8_filtbatch_8_verif_filtered_filteredCR_west_TempNe.
+
+Possible four types of missing data at a locus:
+	1. Genotype contains only zeros or partially scored.
+	2. Genotype has less digits than normal one.
+	3. Genotype has more digits than normal one.
+	4. Genotype contains non-digit character.
+Types 3 and 4 stop the program.
+
+In the table, each row is for an individual with missing data
+(a) If column 'Locus' has only one number, then it is the first
+    locus with missing data and also of highest missing data type.
+(b) If column 'Locus' has 2 numbers, then the first number is
+    the first locus with data missing, and the second number is
+    the first locus that has highest missing data type.
+(c) Genotype column contains the genotype of the locus in case (a)
+    or the second locus in case (b).
+
+Population 1 [YS_121316_01]
+-----------------------------------------------------------
+Individual       Locus         Genotype     Number of Loci
+                                          with missing data
+       1           91             0000            25
+       2          191             0000            81
+       3           41             0000           184
+       4          525             0000            36
+       5           98             0000            31
+       6           88             0000           298
+       7          169             0000            22
+       8           91             0000            35
+       9           84             0000            57
+      10           92             0000            24
+      11            6             0000            64
+      12           45             0000            47
+      13           38             0000           521
+      14           26             0000           612
+      15           10             0000           822
+      16            6             0000            95
+      17            9             0000           456
+      18           62             0000           180
+      19           96             0000            62
+      20           52             0000            34
+      21           69             0000            66
+      22           18             0000           600
+      23            2             0000          1193
+      24          563             0000            40
+      25           18             0000            54
+-----------------------------------------------------------
+Total missing data for population    1:         5639
+
+Population 2 [BOR07_02.1]
+-----------------------------------------------------------
+Individual       Locus         Genotype     Number of Loci
+                                          with missing data
+       1           51             0000            40
+       2            9             0000           274
+       3         1169             0000            32
+       4           27             0000            58
+       5          178             0000            62
+       6          104             0000            25
+       7          220             0000            21
+       8            6             0000            50
+       9          154             0000            33
+      10           98             0000            33
+      11           40             0000            46
+      12          812             0000            30
+      13           52             0000            42
+      14           78             0000            67
+      15           88             0000            46
+      16           55             0000           119
+      17            5             0000           187
+      18           27             0000            53
+      19           73             0000            38
+      20           91             0000            91
+      21          210             0000           107
+-----------------------------------------------------------
+Total missing data for population    2:         1454
+

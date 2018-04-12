@@ -69,7 +69,7 @@ analyses/gsi_sim*
 stacks_b8_wgenome/*
 results/*
 analyses/Assignment/*
-analyses/Ne/*
+analyses/Ne/NeON/*
 analyses/Structure/Korea-PCod-2015/*
 analyses/Admixture/*
 analyses/*.ped
