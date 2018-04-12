@@ -82,3 +82,4 @@ analyses/Outliers/batch8_verif/*.sel
 analyses/Structure/verif/*
 analyses/Outliers/batch_8_BAYESCAN_output_Verif.txt
 analyses/Outliers/batch8_verif/.Rhistory
+otolith_analyses/data/*
