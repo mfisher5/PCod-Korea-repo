@@ -78,7 +78,6 @@ install_gsi_sim(fromSource = TRUE)
 library(devtools)
 library(assigner)
 library(stackr) # THIS DID NOT LOAD IN R
-library(assigner)
 library(reshape2)
 library(ggplot2)
 library(stringr)
