@@ -102,29 +102,26 @@ system.time(
 
 ## By Region ##
 # load in and transform data
-regdata <- read.table("verif_byreg_thl0-5_assignment.ranked.no.imputation.results.summary.stats", header=TRUE, sep="\t",stringsAsFactors=F)
+regdata <- read.table("verif_byreg_nomig_thl0-5/assignment.ranked.no.imputation.results.summary.stats.tsv", header=TRUE, sep="\t",stringsAsFactors=F)
 regdata$MARKER_NUMBER <- as.character(regdata$MARKER_NUMBER)
 neworder <- c("West", "South", "East", "OVERALL")
 regdata <- arrange(transform(regdata,
                              CURRENT=factor(CURRENT,levels=neworder)),CURRENT)
 View(regdata)
 
-# plot regions
-regionlist <- c("West", "South", "East")
-regdata_regions <- filter(regdata, CURRENT %in% regionlist)
-head(regdata_regions)
-plot <- ggplot(regdata_regions, aes(x=MARKER_NUMBER,y=MEAN))+
+# plot
+plot <- ggplot(regdata, aes(x=MARKER_NUMBER,y=MEAN))+
   geom_point()+
   geom_errorbar(aes(ymin=MEAN-SE, ymax = MEAN+SE))+
-  scale_x_discrete(limits=c("10","50","100","200","500","1000","2000","5000","5804"))
+  scale_x_discrete(limits=c("10","50","100","200","500","1000","2000","5000","5802"))
 x_title="Number of loci"
 y_title="Assignment success (%)"
 plot + facet_grid(~CURRENT)+
-  facet_wrap(~CURRENT, nrow=2,ncol=3)+
+  facet_wrap(~CURRENT, nrow=1,ncol=4)+
   labs(x=x_title)+
   labs(y=y_title)+
   guides(fill= FALSE, size= FALSE)+
-  coord_cartesian(ylim=c(0,100))+
+  coord_cartesian(ylim=c(50,100))+
   theme(panel.grid.major.x = element_blank(),
         panel.grid.minor.x = element_blank(),
         panel.grid.major.y = element_line(colour="black", linetype="dashed"),
@@ -140,7 +137,7 @@ scale_y_discrete(limits=c("0","10","20", "30","40","50","60","70","80","90","100
 
 
 
-## 9 populations ##
+## By Site ##
 # load in and transform data
 regdata <- read.table("verif_9pops_thl0-5/assignment.ranked.no.imputation.results.summary.stats.tsv", header=TRUE, sep="\t",stringsAsFactors=F)
 regdata$MARKER_NUMBER <- as.character(regdata$MARKER_NUMBER)
@@ -157,6 +154,7 @@ plot <- ggplot(regdata_pops, aes(x=MARKER_NUMBER,y=MEAN))+
   scale_x_discrete(limits=c("10","50","100","200","500","1000","2000","5000","5804"))
 x_title="Number of loci"
 y_title="Assignment success (%)"
+png("Assignment_bysite_sites_thl0-5.png", width=720, height = 960)
 plot + facet_grid(~CURRENT)+
   facet_wrap(~CURRENT, nrow=3,ncol=3)+
   labs(x=x_title)+
@@ -171,7 +169,7 @@ plot + facet_grid(~CURRENT)+
         axis.title.y=element_text(size=20, family="Helvetica",face="bold"),
         axis.text.y=element_text(size=18,family="Helvetica",face="bold"),
         strip.text=element_text(size=18))
-ggsave("Assignment_byregion_THL0-5.pdf",width=20,height=25,dpi=300,units="cm",useDingbats=F)
+#ggsave("Assignment_bysite_sites_THL0-5.pdf",width=20,height=30,dpi=300,units="cm",useDingbats=F)
 dev.off()
 
 # plot overall
