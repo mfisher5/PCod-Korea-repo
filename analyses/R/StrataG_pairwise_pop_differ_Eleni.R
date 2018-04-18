@@ -30,12 +30,12 @@ g_obj <- genind2gtypes(Adata)
 
 
 # Please do not break on my giant dataset!! This takes approximately 3 days to run.
-my_pwt <- pairwiseTest(g_obj, sats = c("Fst"))
+my_pwt <- pairwiseTest(g_obj, stats = c("Fst"))
 
 my_results <- as.data.frame(my_pwt$result)
 View(my_results)
 class(my_results)
-write.table(my_results, file = "PairwiseFstPVals_statag.txt", sep= "\t")
+write.table(my_results, file = "PairwiseFstPVals_stratag_rerun.txt", sep= "\t")
 
 #Make histograms
 hist(my_results$Chi2.p.val,breaks = 378,

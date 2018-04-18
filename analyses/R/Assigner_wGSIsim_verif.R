@@ -71,7 +71,7 @@ library(readr)
 setwd("/mnt/hgfs/PCod-Korea-repo/analyses/Assignment")
 
 
-gen.file <-"../../stacks_b8_verif/batch_8_filteredMAF_filteredIndivids30_filteredLoci_filteredHWE_filteredCR_byreg_nomigrants.gen"
+gen.file <-"../../stacks_b8_verif/batch_8_filteredMAF_filteredIndivids30_filteredLoci_filteredHWE_filteredCR_byreg_nomigrants10.gen"
 strata.file <- "verif_Strata_byreg_nomigrants.txt"
 
 system.time(
@@ -87,8 +87,8 @@ system.time(
     marker.number = c(10,50,100,200,500,1000,2000,5000,"all"),
     common.markers = TRUE,
     verbose = TRUE,                    #default = false. get more info when f(x) is running
-    folder = "verif_byreg_nomig_thl0-5", 
-    filename = "assignment_all_byreg_nomig_thl0-5.txt",
+    folder = "verif_byreg_nomig4-18_thl0-5", 
+    filename = "assignment_all_byreg_nomig4-18_thl0-5.txt",
     keep.gsi.files = TRUE,
     random.seed= NULL, 
     parallel.core = 4))
@@ -113,7 +113,7 @@ View(regdata)
 plot <- ggplot(regdata, aes(x=MARKER_NUMBER,y=MEAN))+
   geom_point()+
   geom_errorbar(aes(ymin=MEAN-SE, ymax = MEAN+SE))+
-  scale_x_discrete(limits=c("10","50","100","200","500","1000","2000","5000","5802"))
+  scale_x_discrete(limits=c("10","50","100","200","500","1000","2000","5000","5801"))
 x_title="Number of loci"
 y_title="Assignment success (%)"
 plot + facet_grid(~CURRENT)+
@@ -141,7 +141,17 @@ scale_y_discrete(limits=c("0","10","20", "30","40","50","60","70","80","90","100
 # load in and transform data
 regdata <- read.table("verif_9pops_thl0-5/assignment.ranked.no.imputation.results.summary.stats.tsv", header=TRUE, sep="\t",stringsAsFactors=F)
 regdata$MARKER_NUMBER <- as.character(regdata$MARKER_NUMBER)
-neworder <- c("YellowSea", "Boryeong", "Jukbyeon","OVERALL","Geoje_2014-15", "Geoje_2013-14", "Namhae", "JinhaeBay_Dec", "JinhaeBay_Feb", "Pohang")
+
+# rename populations for plotting
+regdata$CURRENT <- gsub("YellowSea", "Yellow Sea Block", regdata$CURRENT)
+regdata$CURRENT <- gsub("Geoje_2014-15", "Geoje, 2014-15", regdata$CURRENT)
+regdata$CURRENT <- gsub("Geoje_2013-14", "Geoje, 2013-14", regdata$CURRENT)
+regdata$CURRENT <- gsub("JinhaeBay_Dec", "Jinhae Bay, Dec.", regdata$CURRENT)
+regdata$CURRENT <- gsub("JinhaeBay_Feb", "Jinhae Bay, Feb.", regdata$CURRENT)
+View(regdata)
+
+# rearrange order 
+neworder <- c("Yellow Sea Block", "Boryeong", "Jukbyeon","OVERALL","Geoje, 2014-15", "Geoje, 2013-14", "Namhae", "Jinhae Bay, Dec.", "Jinhae Bay, Feb.", "Pohang")
 regdata <- arrange(transform(regdata,
                              CURRENT=factor(CURRENT,levels=neworder)),CURRENT)
 View(regdata)
@@ -154,7 +164,7 @@ plot <- ggplot(regdata_pops, aes(x=MARKER_NUMBER,y=MEAN))+
   scale_x_discrete(limits=c("10","50","100","200","500","1000","2000","5000","5804"))
 x_title="Number of loci"
 y_title="Assignment success (%)"
-png("Assignment_bysite_sites_thl0-5.png", width=720, height = 960)
+png("Assignment_bysite_sites_thl0-5_adj_names.png", width=720, height = 960)
 plot + facet_grid(~CURRENT)+
   facet_wrap(~CURRENT, nrow=3,ncol=3)+
   labs(x=x_title)+
@@ -164,11 +174,11 @@ plot + facet_grid(~CURRENT)+
   theme(panel.grid.major.x = element_blank(),
         panel.grid.minor.x = element_blank(),
         panel.grid.major.y = element_line(colour="black", linetype="dashed"),
-        axis.title.x=element_text(size=20, family="Helvetica",face="bold"),
-        axis.text.x=element_text(size=18,family="Helvetica",face="bold", angle=90, hjust=0, vjust=0.5),
-        axis.title.y=element_text(size=20, family="Helvetica",face="bold"),
-        axis.text.y=element_text(size=18,family="Helvetica",face="bold"),
-        strip.text=element_text(size=18))
+        axis.title.x=element_text(size=18, family="Helvetica",face="bold"),
+        axis.text.x=element_text(size=16,family="Helvetica",face="bold", angle=90, hjust=0, vjust=0.5),
+        axis.title.y=element_text(size=18, family="Helvetica",face="bold"),
+        axis.text.y=element_text(size=16,family="Helvetica",face="bold"),
+        strip.text=element_text(size=14))
 #ggsave("Assignment_bysite_sites_THL0-5.pdf",width=20,height=30,dpi=300,units="cm",useDingbats=F)
 dev.off()
 
