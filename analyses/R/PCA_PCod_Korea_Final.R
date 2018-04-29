@@ -73,6 +73,7 @@ add.scatter.eig(pca_all$eig[1:50],posi="bottom", 3,2,1,ratio=.2)
 eig.perc <- 100*pca_all$eig/sum(pca_all$eig)
 head(eig.perc)
 
+library(factoextra)
 pca_all_coords <- get_pca_ind(pca_all)
 pca_all_coords$coord
 
