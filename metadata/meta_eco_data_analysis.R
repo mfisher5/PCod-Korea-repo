@@ -162,3 +162,53 @@ ggplot(gsi_data, aes(x = Site, y = GSI)) +
   ylab("Gonadosomatic Index (%)") +
   scale_y_continuous(breaks = seq(0,40,5), labels = c(0,5,10,15,20,25,30,35,40))+
   theme(axis.title = element_text(size = 14), axis.text = element_text(size = 12))
+
+
+## GSI by mature v. immature (length-at-maturity)
+gsi_data <- mutate(gsi_data, maturity = ifelse(Sex == "F", ifelse(TL.cm > 44.02, "Mature", "Immature"), ifelse(TL.cm > 32.66, "Mature", "Immature")))
+
+View(gsi_data)
+
+gsi_migrant_data <- filter(gsi_data, Migrant == "Yes")
+
+ggplot(gsi_data, aes(x = Site, y = GSI)) +
+  geom_boxplot() +
+  geom_point(data = gsi_migrant_data, aes(x = Site, y = GSI, col=Sex), pch = 17, size = 5) +
+  facet_wrap(~maturity) +
+  xlab("Sampling Site") +
+  ylab("Gonadosomatic Index (%)") +
+  scale_y_continuous(breaks = seq(0,40,5), labels = c(0,5,10,15,20,25,30,35,40))+
+  theme(axis.title = element_text(size = 14), 
+        axis.text = element_text(size = 12),
+        strip.text = element_text(size = 12),
+        legend.title = element_text(size = 12, face = "bold"))
+
+
+# GSI and Length --------------------------------------------------------
+## colored by site, with line for maturity
+ggplot(gsi_data, aes(x=TL.cm, y=GSI)) +
+  geom_point(aes(col = Sex)) +
+  facet_wrap(~Site) +
+  xlab("Total Length (cm)") +
+  ylab("Gonadosomatic Index (%)") +
+  geom_vline(xintercept = 44.02, col = ggcols[1]) +
+  geom_vline(xintercept=32.66, col = ggcols[2]) +
+  theme(axis.title = element_text(size = 14, face = "bold"), axis.text = element_text(size = 12), 
+        legend.text = element_text(size = 12), legend.title = element_text(size = 12, face = "bold"),
+        strip.text = element_text(size = 12))
+
+
+Site <- c("YSBlock", "Namhae", "Geoje", "Pohang")
+LAM_Female = c(44.02, 44.02, 44.02,44.02,44.02,44.02,58.27)
+LAM_Male <- c(32.66,32.66,32.66,32.66,32.66,32.66,58.82)
+
+mat_data <- cbind(Site, LAM_Female, LAM_Male)
+mat_data <- as.data.frame(mat_data)
+mat_data$LAM_Female <- as.numeric(LAM_Female)
+mat_data$LAM_Male <- as.numeric(LAM_Male)
+head(mat_data)
+str(mat_data)
+
+
+
+
