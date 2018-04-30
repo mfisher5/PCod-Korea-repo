@@ -35,7 +35,7 @@ ggplot(data.sex, aes(x=Site, y = n, fill = Sex)) +
 
 
 
-# Length v. Weight --------------------------------------------------------
+# Length v. Weight, don't highlight migrants --------------------------------------------------------
 xmax <-  max(as.numeric(mydata$TL.cm), na.rm = TRUE) + 1
 data = subset(mydata, !is.na(BW.g))
 data$TL.cm <- as.numeric(data$TL.cm)
@@ -83,6 +83,64 @@ ggplot(data_ordered, aes(x=TL.cm, y=BW.g)) +
 
 
 
+# Length v. Weight, highlight migrants --------------------------------------------------------
+
+library(scales)
+squish_trans <- function(from, to, factor) {
+  
+  trans <- function(x) {
+    
+    # get indices for the relevant regions
+    isq <- x > from & x < to
+    ito <- x >= to
+    
+    # apply transformation
+    x[isq] <- from + (x[isq] - from)/factor
+    x[ito] <- from + (to - from)/factor + (x[ito] - to)
+    
+    return(x)
+  }
+  
+  inv <- function(x) {
+    
+    # get indices for the relevant regions
+    isq <- x > from & x < from + (to - from)/factor
+    ito <- x >= from + (to - from)/factor
+    
+    # apply transformation
+    x[isq] <- from + (x[isq] - from) * factor
+    x[ito] <- to + (x[ito] - (from + (to - from)/factor))
+    
+    return(x)
+  }
+  
+  # return the transformation
+  return(trans_new("squished", trans, inv))
+}
+
+
+plotdata = data %>%
+  filter(!is.na(TL.cm)) %>%
+  mutate(point = ifelse(Migrant == "Yes", 16,1))
+View(plotdata)
+
+ggplot(plotdata, aes(x=TL.cm, y=BW.g)) +
+  geom_point(aes(col = Sex, pch = Migrant), size = 3) +
+  geom_point(data=filter(plotdata, Migrant == "Yes"), aes(x=TL.cm, y=BW.g), col = "black", pch = 2, size = 3) +
+  facet_wrap(~Site, nrow = 4, ncol = 2) +
+  xlab("Total Length (cm)") +
+  ylab("Body Weight (g)") +
+  scale_x_continuous(trans = squish_trans(85,110,4)) +
+  theme(axis.title = element_text(size = 14, face = "bold"), 
+        axis.text = element_text(size = 12), 
+        legend.text = element_text(size = 12), 
+        legend.title = element_text(size = 12, face = "bold"),
+        strip.text = element_text(size = 12)) +
+  geom_vline(data=mat_data, aes(xintercept = LAM_Female, lty = linetype), col = ggcols[1]) +
+  geom_vline(data=mat_data, aes(xintercept = LAM_Male, lty = linetype), col = ggcols[2])
+
+
+
 # GSI --------------------------------------------------------
 gsi_data <- filter(data_ordered, !is.na(GSI))
 View(gsi_data)
@@ -92,7 +150,7 @@ gsi_migrant_data
 
 ggplot(gsi_data, aes(x = Site, y = GSI)) +
   geom_boxplot() +
-  geom_point(data = gsi_migrant_data, aes(x = Site, y = GSI, col = Sex), size = 5) +
+  geom_point(data = gsi_migrant_data, aes(x = Site, y = GSI, col = Sex), size = 5, pch = 17) +
   xlab("Sampling Site") +
   ylab("Gonadosomatic Index (%)") +
   scale_x_discrete(labels=c("Yellow Sea Block","Geoje '14-'15", "Namhae", "Pohang")) +

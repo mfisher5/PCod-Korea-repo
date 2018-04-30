@@ -105,10 +105,10 @@ ggplot(plotdata, aes(x=TL.cm, y=BW.g)) +
 
 
 
-Site <- c("Pohang", "Jukbyeon", "Jukbyeon","Namhae", "Geoje")
-LAM_Female = c(44.02, 58.27, 44.02, 44.02,44.02)
-LAM_Male <- c(32.66,58.82, 32.66,32.66,32.66)
-linetype <- c(1,2,1,1,1)
+Site <- c("Pohang", "Jukbyeon", "Jukbyeon","Namhae", "Geoje", "YSBlock", "Boryeong", "Jinhae Bay")
+LAM_Female = c(44.02, 58.27, 44.02, 44.02,44.02,44.02,44.02,44.02)
+LAM_Male <- c(32.66,58.82, 32.66,32.66,32.66,32.66,32.66,32.66)
+linetype <- c(1,1,2,1,1,1,1,1)
 
 mat_data <- cbind(Site, LAM_Female, LAM_Male, linetype)
 mat_data <- as.data.frame(mat_data)
@@ -118,18 +118,53 @@ head(mat_data)
 str(mat_data)
 
 
-
+# Length v. Weight all sites ----------------------------------------------------
 plotdata = data %>%
   filter(Site %in% c("Pohang", "Namhae", "Geoje", "Jukbyeon")) %>%
   filter(!is.na(TL.cm))
 View(plotdata)
 
+library(scales)
+squish_trans <- function(from, to, factor) {
+  
+  trans <- function(x) {
+    
+    # get indices for the relevant regions
+    isq <- x > from & x < to
+    ito <- x >= to
+    
+    # apply transformation
+    x[isq] <- from + (x[isq] - from)/factor
+    x[ito] <- from + (to - from)/factor + (x[ito] - to)
+    
+    return(x)
+  }
+  
+  inv <- function(x) {
+    
+    # get indices for the relevant regions
+    isq <- x > from & x < from + (to - from)/factor
+    ito <- x >= from + (to - from)/factor
+    
+    # apply transformation
+    x[isq] <- from + (x[isq] - from) * factor
+    x[ito] <- to + (x[ito] - (from + (to - from)/factor))
+    
+    return(x)
+  }
+  
+  # return the transformation
+  return(trans_new("squished", trans, inv))
+}
+
+
 ggplot(plotdata, aes(x=TL.cm, y=BW.g)) +
-  geom_point(aes(col = Sex, size = Migrant)) +
-  facet_wrap(~Site) +
+  geom_point(aes(col = Sex, pch = Migrant), size = 3) +
+  geom_point(data=filter(plotdata, Migrant == "Yes"), aes(x=TL.cm, y=BW.g), col = "black", pch = 2, size = 3) +
+  facet_wrap(~Site, nrow = 4, ncol = 2) +
   xlab("Total Length (cm)") +
   ylab("Body Weight (g)") +
-  scale_x_continuous(breaks = seq(0,max(plotdata$TL.cm) + 1, by=10)) +
+  scale_x_continuous(trans = squish_trans(85,110,4)) +
   theme(axis.title = element_text(size = 14, face = "bold"), 
         axis.text = element_text(size = 12), 
         legend.text = element_text(size = 12), 
