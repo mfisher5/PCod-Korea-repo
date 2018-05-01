@@ -38,7 +38,22 @@ ggplot(myne_ordered, aes(x = SiteYear, y = Ne1)) +
   xlab("Sampling Site") +
   ylab("Effective Population size (maf = 0.10)") +
   scale_y_continuous(breaks = seq(0,4000,500), labels = seq(0,4000,500)) +
-  scale_x_discrete(labels = c("YS Block", "Boryeong", "Geoje 2013-2014", "Geoje 2014-2015", "Jinhae Bay Dec.", "Jinhae Bay Feb.",  "Pohang", "Jukbyeon", "Southern Pop. 2007-2008", "Southern Pop. 2013-2014", "Southern Pop. 2014-2015")) +
+  scale_x_discrete(labels = c("Boryeong", "YS Block", "Geoje 2013-2014", "Geoje 2014-2015", "Jinhae Bay Dec.", "Jinhae Bay Feb.",  "Pohang", "Jukbyeon", "Southern Pop. 2007-2008", "Southern Pop. 2013-2014", "Southern Pop. 2014-2015")) +
+  theme(axis.text.x = element_text(angle=90, hjust = 0.9),
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 12), 
+        legend.title = element_blank(),
+        legend.text = element_text(size = 12))
+
+
+
+ggplot(myne_ordered, aes(x = SiteYear, y = Ne2)) +
+  geom_point(aes(col = type), size = 3) +
+  geom_errorbar(data = myne_ordered, aes(ymin = Ne2_lower, ymax = Ne2_upper, col = type), width = 0.1) +
+  xlab("Sampling Site") +
+  ylab("Effective Population size (maf = 0.20)") +
+  scale_y_continuous(breaks = seq(0,4000,500), labels = seq(0,4000,500)) +
+  scale_x_discrete(labels = c("Boryeong", "YS Block", "Geoje 2013-2014", "Geoje 2014-2015", "Jinhae Bay Dec.", "Jinhae Bay Feb.",  "Pohang", "Jukbyeon", "Southern Pop. 2007-2008", "Southern Pop. 2013-2014", "Southern Pop. 2014-2015")) +
   theme(axis.text.x = element_text(angle=90, hjust = 0.9),
         axis.title = element_text(size = 14),
         axis.text = element_text(size = 12), 
