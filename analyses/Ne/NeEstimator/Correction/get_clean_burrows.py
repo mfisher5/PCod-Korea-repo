@@ -2,6 +2,11 @@
 ##Wes Larson
 ## 4/30/14
 ##wlarson1@uw.edu
+#
+## Edited 4/30/2018 by Mary Fisher to take command line arguments
+######################################################################################
+
+import sys
 
 import re
 def dirty_to_clean_r2_distr(r2_dirty_file):
@@ -23,4 +28,4 @@ def dirty_to_clean_r2_distr(r2_dirty_file):
           clean_r2_file.write(combo_line)
   clean_r2_file.close()
   
-dirty_to_clean_r2_distr("All_loci_single_cohorts_2010SEG_genepopBur.txt")
+dirty_to_clean_r2_distr(sys.argv[1])

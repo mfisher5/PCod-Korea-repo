@@ -78,7 +78,7 @@ head(align_data)
 
 
 map_info_locus1 = align_data[,2:3]
-head(map_info_locus2)
+head(map_info_locus1)
 
 colnames(map_info_locus1) <- c("Chrom_locus1", "locus1")
 map_info_locus2 <- map_info_locus1

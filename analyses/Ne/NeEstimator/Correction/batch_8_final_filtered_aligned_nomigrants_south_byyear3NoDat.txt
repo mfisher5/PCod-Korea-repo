@@ -1,0 +1,90 @@
+Missing data from input file batch_8_final_filtered_aligned_nomigrants_south_byyear3.txt.
+
+Possible four types of missing data at a locus:
+	1. Genotype contains only zeros or partially scored.
+	2. Genotype has less digits than normal one.
+	3. Genotype has more digits than normal one.
+	4. Genotype contains non-digit character.
+Types 3 and 4 stop the program.
+
+In the table, each row is for an individual with missing data
+(a) If column 'Locus' has only one number, then it is the first
+    locus with missing data and also of highest missing data type.
+(b) If column 'Locus' has 2 numbers, then the first number is
+    the first locus with data missing, and the second number is
+    the first locus that has highest missing data type.
+(c) Genotype column contains the genotype of the locus in case (a)
+    or the second locus in case (b).
+
+Population 1 [PO010715_02]
+-----------------------------------------------------------
+Individual       Locus         Genotype     Number of Loci
+                                          with missing data
+       1          422             0000            10
+       2          395             0000            16
+       3           65             0000            78
+       4          379             0000            42
+       5          195             0000            28
+       6          751             0000            23
+       7          150             0000            50
+       8            3             0000            35
+       9           65             0000            45
+      10         2718             0000            28
+      11          175             0000            38
+      12          552             0000            25
+      13           60             0000            33
+      14           13             0000            66
+      15           32             0000            43
+      16           65             0000            93
+      17          116             0000            49
+      18          430             0000            27
+      19          887             0000            15
+      20          407             0000            30
+      21          175             0000            28
+      22          383             0000            31
+      23          195             0000            21
+      24           60             0000            22
+      25           40             0000            80
+      26          346             0000            18
+      27           60             0000            28
+      28          544             0000            18
+      29           15             0000            16
+      30          248             0000            29
+      31           65             0000            63
+      32           65             0000           118
+      33          407             0000            34
+      34          187             0000            25
+      35           65             0000            26
+      36           60             0000            26
+      37           65             0000            56
+      38          198             0000            14
+      39           65             0000            24
+      40          908             0000            15
+      41           65             0000            36
+      42           13             0000            15
+      43           13             0000            27
+      44          394             0000            18
+      45          105             0000           135
+      46          175             0000            66
+      47           65             0000            81
+      48           60             0000            25
+      49          756             0000            30
+      50          389             0000            23
+      51            3             0000            70
+      52           37             0000            52
+      53          399             0000            20
+      54           13             0000            49
+      55          104             0000            40
+      56          248             0000            15
+      57           65             0000            58
+      58           52             0000           120
+      59           59             0000            20
+      60           99             0000            23
+      61          929             0000            20
+      62          170             0000            18
+      63           86             0000            32
+      64          557             0000            11
+      65          430             0000            13
+-----------------------------------------------------------
+Total missing data for population    1:         2483
+

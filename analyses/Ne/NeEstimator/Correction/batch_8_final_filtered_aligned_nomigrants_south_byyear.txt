@@ -1,4 +1,4 @@
-Subsample	of	loci	2018-04-30	16:21:43
+Subsample of loci 2018-04-30 16:21:43
 10000
 10004
 10009

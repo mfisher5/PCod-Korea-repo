@@ -1,6 +1,6 @@
 Output from NeEstimator v.2
-Starting time: Mon Apr 30 16:24:53 2018
-Input File: "batch_8_final_filtered_aligned_nomigrants_south_byyear.txt"
+Starting time: Mon Apr 30 17:59:57 2018
+Input File: "batch_8_final_filtered_aligned_nomigrants_south_byyear3.txt"
 
 Number of Loci = 4319
 
@@ -75,3 +75,23 @@ Population     1 [PO010715_02]  (Number of Individuals = 65)
 --------------------------------------------------------------------------
 Lowest Allele Frequency Used     0.050       0.020       0.010         0+
 --------------------------------------------------------------------------
+
+LINKAGE DISEQUILIBRIUM METHOD
+
+Harmonic Mean Sample Size =       63.8        63.8        63.7        63.7
+Independent Comparisons =    3253288     5153464     5785366     6870038
+OverAll r^2 =                  0.01666     0.01663     0.01662     0.01662
+Expected r^2 Sample =          0.01640     0.01641     0.01641     0.01641
+Estimated Ne^ =                 1275.3      1505.3      1563.9      1631.6
+
+95% CIs for Ne^
+* Parametric                    1161.0      1378.4      1434.5      1501.9
+                                1414.1      1657.5      1718.6      1785.4
+
+* CIs by Jackknife are skipped when number of polymorphic loci > 100
+
+**************************************************************************
+
+Ending time: Mon Apr 30 18:03:35 2018
+-------------------------------------
+
