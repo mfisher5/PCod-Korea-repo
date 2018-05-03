@@ -26,7 +26,7 @@ Samples were taken across three spawning seasons (2007-2008, 2014-2015, 2015-201
 [**nb_pictures**](https://github.com/mfisher5/PCod-Korea-repo/tree/master/nb_pictures) : pictures used in Jupyter notebooks. 
 <br>
 
-[**notebooks**](https://github.com/mfisher5/PCod-Korea-repo/tree/master/nb_pictures) : Jupyter notebooks containing information on raw data, stacks pipeline, filtering steps, and popgen analyses. See README within folder for description of notebooks. 
+[**notebooks**](https://github.com/mfisher5/PCod-Korea-repo/tree/master/notebooks) : Jupyter notebooks containing information on raw data, stacks pipeline, filtering steps, and popgen analyses. See README within folder for description of notebooks. 
 <br>
 
 [**raw_data**](https://github.com/mfisher5/PCod-Korea-repo/tree/master/raw_data) : FastQC files with summary information for raw data files. 
