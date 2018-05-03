@@ -11,6 +11,4 @@ This folder contains all of my Jupyter notebooks. These notebooks have notes det
 
 **Reference Genome**: Details steps for building a reference genome de novo for the second runthrough of the stacks pipeline. Was practiced using Lanes 1 and 2 samples. 
 
-**Stacks batch 4 -1**: *in progress*. This is the first notebook of batch 4. This batch includes all samples from Lanes 1 - 4. 
-
-**Stacks batch 4 - pipeline meristics**: *in progress*. This tracks loci counts and visualizes data throughout the batch 4 run of the stacks pipeline. 
+**Batch 8 ...**: Stacks batch used for final analyses. If notebook title includes "verif", I re-ran the final analysis. 
