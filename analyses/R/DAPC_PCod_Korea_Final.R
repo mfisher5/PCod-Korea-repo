@@ -60,5 +60,7 @@ legend(x=-3.75,y=-2, bty = 'n', legend = pop_labels,pch=19,col=pop_cols,cex=1, p
 add.scatter.eig(mydata_dapc$eig[1:5],posi="bottomright", 3,2,1,ratio=.2)
 
 
-?legend
+## -- Eigenvalues as percentages of the total variation in the data
+eig.perc <- 100*mydata_dapc$eig/sum(mydata_dapc$eig)
+head(eig.perc)
 

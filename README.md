@@ -5,17 +5,17 @@
 
 <br>
 
-The Korean peninsula is the southern edge of the Pacific cod's (*Gadus macrocephalus*) range in the western Pacific Ocean. Pacific cod used to be a productive domestic fishery for South Korea, but there have been recent declines and high variability in catch between fishing seasons. This has led to stock enhancement programs which release hatchery-raised juveniles and larvae. 
+The Korean peninsula is the southern edge of the Pacific cod's (*Gadus macrocephalus*) range in the western Pacific Ocean. Pacific cod used to be a productive domestic fishery for South Korea, but there have been recent declines and high variability in catch between fishing seasons. This has led to new fishery management plans and stock enhancement programs which release hatchery-raised juveniles and larvae. 
 
-A better understanding of the genetic population structure of Pacific cod around the Korean peninsula can address two critical research needs of Korean fisheries management: (1) the correct way to subset the domestic fishery into separate stocks for assessment and policy, and (2) the creation of a quantitative genetic baseline (such as divergence between spawning aggregates, per aggregate heterozygosity, etc.) to allow for future monitoring of hatchery effects on the wild populations.
+By describing the fine-scale genetic population structure of Pacific cod around the Korean peninsula, we can: (1) identify the correct way to subset the domestic fishery into separate stocks for assessment and policy, (2) establish a quantitative genetic baseline (such as divergence between spawning aggregates, per aggregate heterozygosity, etc.) to allow for future monitoring of hatchery effects on the wild populations, and (3) supply fisheries managers with genetic tools for further research on Pacific cod spawning migration behavior, and seafood traceability.
 <br>
 <br>
 <br>
-### Project Goal: Clarify population structure of Pacific cod spawning aggregates in South Korean waters 
+### Project Goal: Describe fine-scale population structure of Pacific cod spawning aggregates in South Korean waters 
 
 Samples were taken across three spawning seasons (2007-2008, 2014-2015, 2015-2016 at various sampling sites around the Korean peninsula. Two of these sites have a temporal replicate. As of 4/24/2017, there were 276 samples from 2 sites on the western coast, 3 sites on the southern coast, one site on the southeastern coast, and one site on the eastern coast. 
 
-
+![img-samplesite-map](https://github.com/mfisher5/PCod-Korea-repo/blob/master/nb_pictures/ggplot_sitemap_final.png?raw=true)
 <br>
 
 <br>
@@ -41,18 +41,18 @@ Samples were taken across three spawning seasons (2007-2008, 2014-2015, 2015-201
 [**analyses**](https://github.com/mfisher5/PCod-Korea-repo/tree/master/analyses) : post-Stacks analyses. Includes anything in GENEPOP, Structure, assignment tests with GSIsim / Assigner, DAPC / PCA, etc.
 <br>
 
+[**metadata**](https://github.com/mfisher5/PCod-Korea-repo/tree/master/metadata) : graphical summary of data collected during sampling, including [total length](https://github.com/mfisher5/PCod-Korea-repo/blob/master/metadata/AllData_BWvTL_colS_pchM_matLines_bysite.png) and [gonadosomatic index](https://github.com/mfisher5/PCod-Korea-repo/blob/master/metadata/AllData_GSI_boxplots_wrapMat_wMigrants_pchTri.png). 
+<br>
+
 **Not Shown on Github:** results folder (saved on google drive). folders with stacks output files from `ustacks` to `populations`, for runs without and with a *de novo* reference database of loci. various files from analyses that are too large to store. 
 
 <br>
 <br>
-
-### Recent Progress: 
-
-Completed the final run-through of stacks (batch 8). 
-
-Currently working on [Ne](https://github.com/mfisher5/PCod-Korea-repo/blob/master/notebooks/Batch%208%20Ne%20and%20Migration.ipynb) estimates, both short-term (NeEstimator v2) and long-term. Long-term estimates require [alignment to Atlantic cod genome](https://github.com/mfisher5/PCod-Korea-repo/blob/master/notebooks/Batch%208%20-%20Alignment%20to%20Atlantic%20cod%20Genome.ipynb) to produce PLINK files.
 <br>
 
-**Code Running**
+### Recent Progress / New Code: 
 
-I am still running several replicates of Structure to see if results match DAPC / PCA when the east/west and the southern sampling sites are run in two separate analyses.
+Final analyses completed, draft of thesis chapter sent to committee 5/2/2018.
+
+Recently updated graphics looking at total length and gsi.
+Although this is not included in my final results, I also re-calculated Ne for one of the sites using a script to correct for downward bias from physical linkage between loci. [Jupyter notebook](https://github.com/mfisher5/PCod-Korea-repo/blob/master/notebooks/Ne%20Bias%20Correction.ipynb).
