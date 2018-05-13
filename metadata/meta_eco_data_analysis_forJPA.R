@@ -79,6 +79,7 @@ gg_color_hue <- function(n) {
 }
 ggcols <- gg_color_hue(2)
 
+## wrapped by site
 ggplot(data_ordered, aes(x=TL.cm, y=BW.g)) +
   geom_point(aes(col = Sex)) +
   facet_wrap(~Site) +
@@ -89,7 +90,6 @@ ggplot(data_ordered, aes(x=TL.cm, y=BW.g)) +
   theme(axis.title = element_text(size = 14, face = "bold"), axis.text = element_text(size = 12), 
         legend.text = element_text(size = 12), legend.title = element_text(size = 12, face = "bold"),
         strip.text = element_text(size = 12))
-
 
 
 # Length v. Weight, highlight migrants --------------------------------------------------------
@@ -133,6 +133,7 @@ plotdata = data %>%
   mutate(point = ifelse(Migrant == "Yes", 16,1))
 View(plotdata)
 
+## wrapped by site
 ggplot(plotdata, aes(x=TL.cm, y=BW.g)) +
   geom_point(aes(col = Sex, pch = Migrant), size = 3) +
   geom_point(data=filter(plotdata, Migrant == "Yes"), aes(x=TL.cm, y=BW.g), col = "black", pch = 2, size = 3) +
@@ -148,43 +149,89 @@ ggplot(plotdata, aes(x=TL.cm, y=BW.g)) +
   geom_vline(data=mat_data, aes(xintercept = LAM_Female, lty = linetype), col = ggcols[1]) +
   geom_vline(data=mat_data, aes(xintercept = LAM_Male, lty = linetype), col = ggcols[2])
 
+## colored by population
+ggplot(plotdata, aes(x=TL.cm, y=BW.g)) +
+  geom_point(aes(col = Assigned.Pop, pch = Migrant), size = 3) +
+  geom_point(data=filter(plotdata, Migrant == "Yes"), aes(x=TL.cm, y=BW.g), col = "black", pch = 2, size = 3) +
+  xlab("Total Length (cm)") +
+  ylab("Body Weight (g)") +
+  scale_x_continuous(breaks = seq(0,110,by=10), labels = seq(0,110,by=10), limits = c(30,105)) +
+  scale_color_manual(name = "Pop. of Origin", values = c("South" = "deepskyblue2", "West" = "firebrick4", "East" = "chartreuse")) +
+  theme(axis.title = element_text(size = 14, face = "bold"), 
+        axis.text = element_text(size = 12), 
+        legend.text = element_text(size = 12), 
+        legend.title = element_text(size = 12, face = "bold"),
+        strip.text = element_text(size = 12))
+
+  
+gg_color_hue <- function(n) {
+  hues = seq(15, 375, length = n + 1)
+  hcl(h = hues, l = 65, c = 100)[1:n]
+}
+ggcols <- gg_color_hue(2)
+  
+  
+## only western sites
+plotwest = plotdata %>%
+  filter(Assigned.Pop == "West")
+
+ggplot(plotwest, aes(x=TL.cm, y=BW.g)) +
+  geom_point(aes(col = Sex, pch = Migrant), size = 3) +
+  geom_point(data=filter(plotwest, Migrant == "Yes"), aes(x=TL.cm, y=BW.g), col = "black", pch = 2, size = 3) +
+  xlab("Total Length (cm)") +
+  ylab("Body Weight (g)") +
+  ggtitle("Western Coast Population") +
+  scale_x_continuous(breaks = seq(0,80,by=10), labels = seq(0,80,by=10), limits = c(30,80)) +
+  scale_y_continuous(breaks = seq(0,6000, by = 1000), labels = seq(0,6000, by = 1000)) +
+  theme(axis.title = element_text(size = 14, face = "bold"), 
+        axis.text = element_text(size = 12), 
+        legend.text = element_text(size = 12), 
+        legend.title = element_text(size = 12, face = "bold"),
+        strip.text = element_text(size = 12)) +
+  geom_vline(xintercept = 32.66, lty = 1, col = ggcols[2]) +
+  geom_vline(xintercept = 44.02, lty = 1, col = ggcols[1])
+
+## only southern sites
+plotsouth = plotdata %>%
+  filter(Assigned.Pop == "South")
+
+ggplot(plotsouth, aes(x=TL.cm, y=BW.g)) +
+  geom_point(aes(col = Sex, pch = Migrant), size = 3) +
+  geom_point(data=filter(plotsouth, Migrant == "Yes"), aes(x=TL.cm, y=BW.g), col = "black", pch = 2, size = 3) +
+  xlab("Total Length (cm)") +
+  ylab("Body Weight (g)") +
+  ggtitle("Southern Coast Population") +
+  scale_x_continuous(breaks = seq(0,110,by=10), labels = seq(0,110,by=10), limits = c(30,110)) +
+  scale_y_continuous(breaks = seq(0,12000, by = 1000), labels = seq(0,12000, by = 1000)) +
+  theme(axis.title = element_text(size = 14, face = "bold"), 
+        axis.text = element_text(size = 12), 
+        legend.text = element_text(size = 12), 
+        legend.title = element_text(size = 12, face = "bold"),
+        strip.text = element_text(size = 12)) +
+  geom_vline(xintercept = 32.66, lty = 1, col = ggcols[2]) +
+  geom_vline(xintercept = 44.02, lty = 1, col = ggcols[1])
+
+plotwest %>%
+  group_by(Migrant) %>%
+  summarise(mean(BW.g))
+mean(plotwest$BW.g)
+
 
 
 # GSI --------------------------------------------------------
-gsi_data <- filter(data_ordered, !is.na(GSI))
-View(gsi_data)
-
-gsi_migrant_data <- filter(gsi_data, Migrant == "Yes")
-gsi_migrant_data
-
-ggplot(gsi_data, aes(x = Site, y = GSI)) +
-  geom_boxplot() +
-  geom_point(data = gsi_migrant_data, aes(x = Site, y = GSI, col = Sex), size = 5, pch = 17) +
-  xlab("Sampling Site") +
-  ylab("Gonadosomatic Index (%)") +
-  scale_x_discrete(labels=c("Yellow Sea Block","Geoje '14-'15", "Namhae", "Pohang")) +
-  theme(axis.title = element_text(size = 14), axis.text = element_text(size = 12))
-  
-ggplot(gsi_data, aes(x = Site, y = GSI)) +
-  geom_point(aes(col=Sex), size = 3) +
-  xlab("Sampling Site") +
-  ylab("Gonadosomatic Index (%)") +
-  scale_y_continuous(breaks = seq(0,40,5), labels = c(0,5,10,15,20,25,30,35,40))+
-  theme(axis.title = element_text(size = 14), axis.text = element_text(size = 12))
-
-
-## GSI by mature v. immature (length-at-maturity)
-gsi_data <- mutate(gsi_data, maturity = ifelse(Sex == "F", ifelse(TL.cm > 44.02, "Mature", "Immature"), ifelse(TL.cm > 32.66, "Mature", "Immature")))
+gsi_data <- data_ordered %>%
+  filter(!is.na(GSI)) %>%
+  mutate(maturity = ifelse(Sex == "F", ifelse(TL.cm > 44.02, "Mature", "Immature"), ifelse(TL.cm > 32.66, "Mature", "Immature")))
 
 View(gsi_data)
 
 gsi_migrant_data <- filter(gsi_data, Migrant == "Yes")
 
-ggplot(gsi_data, aes(x = Site, y = GSI)) +
+ggplot(gsi_data, aes(x = Assigned.Pop, y = GSI)) +
   geom_boxplot() +
-  geom_point(data = gsi_migrant_data, aes(x = Site, y = GSI, col=Sex), pch = 17, size = 5) +
+  geom_point(data = gsi_migrant_data, aes(x = Assigned.Pop, y = GSI, col=Sex), pch = 17, size = 5) +
   facet_wrap(~maturity) +
-  xlab("Sampling Site") +
+  xlab("Population") +
   ylab("Gonadosomatic Index (%)") +
   scale_y_continuous(breaks = seq(0,40,5), labels = c(0,5,10,15,20,25,30,35,40))+
   theme(axis.title = element_text(size = 14), 
@@ -263,6 +310,26 @@ ggplot(plotdata, aes(x=TL.cm, y=BW.g)) +
   geom_vline(data=mat_data, aes(xintercept = LAM_Female, lty = linetype), col = ggcols[1]) +
   geom_vline(data=mat_data, aes(xintercept = LAM_Male, lty = linetype), col = ggcols[2])
 
+## just jukbyeon
+plotdata_juk <- subset(plotdata, Site == "Jukbyeon")
+ggplot(plotdata_juk, aes(x=TL.cm, y=BW.g)) +
+  geom_point(aes(col = Sex, pch = Migrant), size = 3) +
+  geom_point(data=filter(plotdata_juk, Migrant == "Yes"), aes(x=TL.cm, y=BW.g), col = "black", pch = 2, size = 3) +
+  # facet_wrap(~Site, nrow = 2, ncol = 2, scales = "free") +
+  xlab("Total Length (cm)") +
+  ylab("Body Weight (g)") +
+  scale_x_continuous(breaks = seq(0,60,by=5), labels = seq(0,60,by=5), limits = c(30,60)) +
+  scale_y_continuous(breaks = seq(0,2000,by=500), labels = seq(0,2000,by=500), limits = c(0,2000)) +
+  theme(axis.title = element_text(size = 14, face = "bold"), 
+        axis.text = element_text(size = 12),
+        legend.text = element_text(size = 12),
+        legend.title = element_text(size = 12, face = "bold"),
+        strip.text = element_text(size = 12)) +
+  geom_vline(data=subset(mat_data, Site == "Jukbyeon"), aes(xintercept = LAM_Female, lty = linetype), col = ggcols[1]) +
+  geom_vline(data=subset(mat_data, Site == "Jukbyeon"), aes(xintercept = LAM_Male, lty = linetype), col = ggcols[2])
 
 
-
+##
+gsi_data %>%
+  group_by(Assigned.Pop) %>%
+  count(maturity)

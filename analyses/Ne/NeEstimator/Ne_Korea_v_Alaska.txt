@@ -1,0 +1,20 @@
+Population	Site	Year	Ne1	Ne1_upper	Ne1_lower
+Korea	West Coast	2016	943.4	838.3	1078.3
+Korea	West Coast	2008	2051.6	1564	2987.5
+Korea	East Coast	2008	1074.8	958.1	1223.6
+Korea	South Coast	2008	445.1	436.9	453.7
+Korea	South Coast	2014	938.7	802.4	1130.4
+Korea	South Coast	2015	1580.3	1479.4	1695.8
+Korea	Geoje	2014	1083.1	959	1243.8
+Korea	Geoje	2015	938.7	802.4	1130.4
+Korea	Jinhae Bay	2008 Dec.	236.4	231.2	241.9
+Korea	Jinhae Bay	2008 Feb.	654.8	623.2	689.8
+Korea	Pohang	2015	2307.4	1837.1	3099.4
+North America	Salish Sea	2013	2861	2028	4850
+North America	Juan de Fuca	2012	3479	1937	16913
+North America	Wash. Coast	2005	2326	1884	3038
+North America	Hecate Strait	2004	30750	7852	NA
+North America	PWSound	2012	8648	5283	23751
+North America	Kodiak	2003	5328	3639	9922
+North America	Unimak Pass	2003	7416	4446	22267
+North America	Adak	2006	2832	2103	4326
