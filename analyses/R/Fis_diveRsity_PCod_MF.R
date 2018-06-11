@@ -34,10 +34,37 @@ pops <- colnames(mydata_het)[2:length(colnames(mydata_het))]
 colMeans(mydata_het[,2:length(colnames(mydata_het))])
 
 
-### If you run option 5 >> suboption 2 in genepop (.DIV output file), the `1-Qintra` estimate across all loci should equal colMeans output
+### If you run option 5 >> suboption 2 in genepop (.DIV output file), the `1-Qintra` estimate across all loci should equal colMeans output ###
+
+# Test for Statistical significance between groups
+## is data normal?
+hist(mydata_het$YS_121316_01) #nope!
+hist(mydata_het$BOR07_02.1) #also no
+
+## Wilcoxon Rank Sum test, to determine if two data sets come from the same population (have similar distributions)
+library(reshape2)
+mydata_het_melted <- melt(mydata_het)
+west_het_melted <- filter(mydata_het_melted, variable %in% c("YS_121316_01","BOR07_02.1"))
+unique(west_het_melted$variable)
+wilcox.test(value ~ variable, data = west_het_melted)
 
 
 
+
+# Fis ---------------------------------------------------------------------
+
+mydata_fis <- mydata_stats$fis
+# Test for Statistical significance between groups
+## is data normal?
+hist(mydata_fis$YS_121316_01) #nope!
+hist(mydata_fis$BOR07_02.1) #also no
+
+## Wilcoxon Rank Sum test, to determine if two data sets come from the same population (have similar distributions)
+library(reshape2)
+mydata_fis_melted <- melt(mydata_fis)
+west_fis_melted <- filter(mydata_fis_melted, variable %in% c("YS_121316_01","BOR07_02.1"))
+unique(west_fis_melted$variable)
+wilcox.test(value ~ variable, data = west_fis_melted)
 
 
 
