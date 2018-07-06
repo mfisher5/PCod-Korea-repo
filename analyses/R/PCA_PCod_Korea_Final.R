@@ -21,7 +21,7 @@ library (gplots)
 # Read in Data as a genepop file ------------------------------------------------------------
 # File can be delimited by tabs or spaces but there must abe a comma after each individual. 
 # Specify how many characters code each allele with ncode. 
-my_data_all <-read.genepop("../../stacks_b8_verif/batch_8_filteredMAF_filteredIndivids30_filteredLoci_filteredHWE_filteredCR.gen")
+my_data_all <-read.genepop("D:/Pacific cod/DataAnalysis/PCod-Korea-repo/stacks_b8_verif/batch_8_filteredMAF_filteredIndivids30_filteredLoci_filteredHWE_filteredCR.gen")
 
 # To retreive useful data summaries
 (summary(my_data_all))
@@ -63,9 +63,9 @@ s.class(pca_all$li, fac=pop(my_data_all),
         cpoint=1.5,
         grid=FALSE, #otherwise will have light gray grid markers
         pch=c(16,16,16,17,15,16, 16, 17, 16)[as.numeric(pop(my_data_all))], #change point shapes
-        axesell=TRUE)
+        axesell=FALSE)
 # add legend
-legend ("topleft", legend = c("YellowSeaBlock", "Boryeong", "Namhae", "Geoje '14-'15", "Geoje '13-'14", "Jinhae Bay Dec.", "Jinhae Bay Feb.", "Pohang", "Jukbyeon"), col = col_leg, border = FALSE, bty = "n", cex = 0.9, pt.cex=1.5, y.intersp = 1, title = "Sampling Site",pch=points_leg)
+legend (x = -35, y = 52, legend = c("YS Block", "Boryeong", "Namhae", "Geoje 2014-15", "Geoje 2013-14", "Jinhae Bay Dec.", "Jinhae Bay Feb.", "Pohang", "Jukbyeon"), col = col_leg, border = FALSE, bty = "n", cex = 0.9, pt.cex=1.5, y.intersp = 1, title = "Sampling Site",pch=points_leg)
 # add eigenvalues plot as inset
 add.scatter.eig(pca_all$eig[1:50],posi="bottom", 3,2,1,ratio=.2)
 
@@ -106,7 +106,7 @@ pca_all_coords$coord
 # Read in Data as a genepop file ------------------------------------------------------------
 # File can be delimited by tabs or spaces but there must abe a comma after each individual. 
 # Specify how many characters code each allele with ncode. 
-my_data_south <-read.genepop("../../stacks_b8_verif/batch_8_filteredMAF_filteredIndivids30_filteredLoci_filteredHWE_filteredCR_south_nomigrants.gen")
+my_data_south <-read.genepop("D:/Pacific cod/DataAnalysis/PCod-Korea-repo/stacks_b8_verif/batch_8_filteredMAF_filteredIndivids30_filteredLoci_filteredHWE_filteredCR_south_nomigrants.gen")
 
 # To retreive useful data summaries
 (summary(my_data_south))
@@ -150,7 +150,7 @@ s.class(pca_south$li, fac=pop(my_data_south),
         pch=16, #change point shapes
         axesell=TRUE)
 # add legend
-legend ("bottomleft", legend = c("Namhae", "Geoje '14-'15", "Geoje '13-'14", "Jinhae Bay Dec.", "Jinhae Bay Feb.", "Pohang"), col = col_leg, border = FALSE, bty = "n", cex = 0.9, pt.cex=1.5, y.intersp = 1, title = "Sampling Site",pch=points_leg)
+legend (x=-60,y=35, legend = c("Namhae", "Geoje 2014-15", "Geoje 2013-14", "Jinhae Bay Dec.", "Jinhae Bay Feb.", "Pohang"), col = col_leg, border = FALSE, bty = "n", cex = 0.9, pt.cex=1.5, y.intersp = 1, title = "Sampling Site",pch=points_leg)
 # add eigenvalues plot as inset
 add.scatter.eig(pca_south$eig[1:50],posi="bottomright", 3,2,1,ratio=.2)
 

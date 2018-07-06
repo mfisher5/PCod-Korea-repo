@@ -102,35 +102,49 @@ system.time(
 
 ## By Region ##
 # load in and transform data
-regdata <- read.table("verif_byreg_nomig_thl0-5/assignment.ranked.no.imputation.results.summary.stats.tsv", header=TRUE, sep="\t",stringsAsFactors=F)
+regdata <- read.table("verif_byreg_nomig_thl0-5/assignment.ranked.no.imputation.results.summary.stats.subsample.tsv", header=TRUE, sep="\t",stringsAsFactors=F)
 regdata$MARKER_NUMBER <- as.character(regdata$MARKER_NUMBER)
-neworder <- c("West", "South", "East", "OVERALL")
+regdata <- filter(regdata, MARKER_NUMBER %in% c("10","50","100","200","500","1000","5801"))
+
+regdata$CURRENT <- as.character(regdata$CURRENT)
+regdata$CURRENT[regdata$CURRENT == "OVERALL"] <- "Overall"
+regdata$CURRENT <- as.factor(regdata$CURRENT)
+
+neworder <- c("West", "South", "East", "Overall")
 regdata <- arrange(transform(regdata,
                              CURRENT=factor(CURRENT,levels=neworder)),CURRENT)
+
 View(regdata)
 
 # plot
-plot <- ggplot(regdata, aes(x=MARKER_NUMBER,y=MEAN))+
-  geom_point()+
-  geom_errorbar(aes(ymin=MEAN-SE, ymax = MEAN+SE))+
-  scale_x_discrete(limits=c("10","50","100","200","500","1000","2000","5000","5801"))
+scaleFUN <- function(x){
+  y = x / 100
+  sprintf("%.2f", y)
+}
+
+plot <- ggplot(regdata, aes(x=MARKER_NUMBER,ymin=MIN,lower=QUANTILE25,middle=MEDIAN,upper=QUANTILE75,ymax=MAX))+
+  geom_boxplot(stat="identity", aes(fill = CURRENT))+
+  scale_x_discrete(limits=c("10","50","100","200","500","1000","5801")) +
+  scale_y_continuous(breaks = c(25, 50, 75, 100), labels=scaleFUN) +
+  scale_fill_manual(values=c("firebrick4","deepskyblue4", "chartreuse", "gray"))
 x_title="Number of loci"
-y_title="Assignment success (%)"
+y_title="Assignment success (Proportion)"
 plot + facet_grid(~CURRENT)+
   facet_wrap(~CURRENT, nrow=1,ncol=4)+
   labs(x=x_title)+
   labs(y=y_title)+
   guides(fill= FALSE, size= FALSE)+
-  coord_cartesian(ylim=c(50,100))+
+  coord_cartesian(ylim=c(15,100))+
   theme(panel.grid.major.x = element_blank(),
         panel.grid.minor.x = element_blank(),
-        panel.grid.major.y = element_line(colour="black", linetype="dashed"),
-        axis.title.x=element_text(size=20, family="Helvetica",face="bold"),
-        axis.text.x=element_text(size=18,family="Helvetica",face="bold", angle=90, hjust=0, vjust=0.5),
-        axis.title.y=element_text(size=20, family="Helvetica",face="bold"),
-        axis.text.y=element_text(size=18,family="Helvetica",face="bold"),
-        strip.text=element_text(size=18))
-ggsave("Assignment_byregion_THL0-5.pdf",width=20,height=25,dpi=300,units="cm",useDingbats=F)
+        panel.grid.major.y = element_blank(),
+        panel.background = element_rect(fill="white"),
+        axis.title.x=element_text(size=18, family="Helvetica",face="bold"),
+        axis.text.x=element_text(size=14,family="Helvetica", angle=90, hjust=0, vjust=0.5,face="bold"),
+        axis.title.y=element_text(size=18, family="Helvetica",face="bold"),
+        axis.text.y=element_text(size=14,family="Helvetica",face="bold"),
+        strip.text=element_text(size=16,face="bold"))
+ggsave("Assignment_byregion_THL0-5_forFSBI.png",width=20,height=15,dpi=300,units="cm")
 dev.off()
 
 scale_y_discrete(limits=c("0","10","20", "30","40","50","60","70","80","90","100"))
